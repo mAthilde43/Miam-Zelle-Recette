@@ -18,8 +18,8 @@ function App() {
       <Routes>
           <Route path='/home' element={<Home/>}></Route>
           <Route path='/seconnecter' element={<Seconnecter/>}></Route>
-          <Route path='/aperitifs' element={<Aperitifs/>}></Route>
           <Route path='/ptitdej' element={<Ptitdej/>}></Route>
+          <Route path='/aperitifs' element={<Aperitifs/>}></Route>
           <Route path='/entrees' element={<Entrees/>}></Route>
           <Route path='/plats' element={<Plats/>}></Route>
           <Route path='/fromages' element={<Fromages/>}></Route>

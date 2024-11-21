@@ -117,8 +117,6 @@
 .header .navbar li:hover {
     background-color: #CDA274; 
     color: #fff; 
-    border-radius: 10px 0 10px 0;
+    border-radius: 10px;
 }
-
-
 

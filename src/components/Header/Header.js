@@ -34,8 +34,8 @@ const Header = ({isHome = false}) => {
 
             <div className={classes.navbar}>
                 <ul>
-                    <li><NavLink to="/aperitifs" className={linkActive}>Apéritifs</NavLink></li>
                     <li><NavLink to="/ptitdej" className={linkActive}>P'tit dej</NavLink></li>
+                    <li><NavLink to="/aperitifs" className={linkActive}>Apéritifs</NavLink></li>
                     <li><NavLink to="/entrees" className={linkActive}>Entrées</NavLink></li>
                     <li><NavLink to="/plats" className={linkActive}>Plats</NavLink></li>
                     <li><NavLink to="/fromages" className={linkActive}>Fromages</NavLink></li>
