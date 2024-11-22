@@ -32,11 +32,6 @@ const RecipeCard = ({ title, img, id }) => {
         setIsShow(bool)
     }
 
-    // const modal = (
-    //     <h1>{recipe.title}</h1>
-    // )
-
-
   return (
     <div className={classes.recipeCard}>
       {/* <img src={`../../images/recipe/${img}`} alt={title} className={classes.recipeImage} /> lien pour fichier */}

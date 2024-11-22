@@ -23,6 +23,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
   
 h1 {
@@ -34,9 +36,10 @@ h1 {
 .modalHeader {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 35px;
     margin: 8px 6px;
+    flex-wrap: wrap;
 }
   
 .recipeImage {
@@ -44,6 +47,41 @@ h1 {
     height: 250px;
     border-radius: 8px;
     object-fit: cover;
+}
+
+.tipContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.tipImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+.description {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.description h2 {
+    font-size: 20px;
+    color: #643300;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 17px;
+    color: #643300;
+    text-align: justify;
 }
   
 .ingredients {

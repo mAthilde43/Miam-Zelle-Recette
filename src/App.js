@@ -7,9 +7,9 @@ import Plats from './pages/Plats';
 import Fromages from './pages/Fromages';
 import Desserts from './pages/Desserts';
 import Boissons from './pages/Boissons';
-import Seconnecter from './pages/Seconnecter';
+import Seconnecter from './pages/Seconnecter/Seconnecter';
 import Footer from './components/Footer/Footer';
-import Home from './pages/Home';
+import Home from './pages/Home'
 
 
 function App() {

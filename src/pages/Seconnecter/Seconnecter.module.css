@@ -1,0 +1,52 @@
+.seconnecter {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 40px; 
+    padding: 20px;
+}
+
+.seconnecter form div {
+    margin-bottom: 20px;
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    gap: 10px;
+}
+
+.seconnecter label {
+    width: 30%; 
+    text-align: left; 
+    font-size: 14px;
+}
+
+.seconnecter input {
+    width: 70%; 
+    padding: 8px;
+    border: 1.5px solid #CDA274; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+.login, 
+.account {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #CDA274;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 365px;
+
+}
+
+
+.buttonForm {
+    background-color: #CDA274;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 13px;
+    cursor: pointer;
+}

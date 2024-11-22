@@ -11,6 +11,9 @@ const Title = ({type, children}) => {
     else if (type === "h2"){
         title = <h2 className={classes["titreh2"]}>{children}</h2>
     }
+    else if (type === "h4"){
+        title = <h4 className={classes["titreh4"]}>{children}</h4>
+    }
 
     return title;
 }
