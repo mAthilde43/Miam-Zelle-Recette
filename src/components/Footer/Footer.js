@@ -27,8 +27,8 @@ const Footer = ({footer}) => {
             <div className={classes.pages}>
                 <p>Pages</p>
                 <ul>
-                    <li><NavLink to="/aperitifs" className={linkActive}>Apéritifs</NavLink></li>
                     <li><NavLink to="/ptitdej" className={linkActive}>P'tit dej</NavLink></li>
+                    <li><NavLink to="/aperitifs" className={linkActive}>Apéritifs</NavLink></li>
                     <li><NavLink to="/entrees" className={linkActive}>Entrées</NavLink></li>
                     <li><NavLink to="/plats" className={linkActive}>Plats</NavLink></li>
                     <li><NavLink to="/fromages" className={linkActive}>Fromages</NavLink></li>
@@ -42,8 +42,8 @@ const Footer = ({footer}) => {
                 <ul>
                     <li><NavLink to="/seconnecter" className={linkActive}>Se connecter</NavLink></li>
                     <li><NavLink to="/seconnecter" className={linkActive}>Créer un compte</NavLink></li>
-                    <li>Mes favoris</li>
-                    <li>Ajouter une recette</li>
+                    <li><NavLink to="/favoris" className={linkActive}>Mes favoris</NavLink></li>
+                    <li><NavLink to="/recipes" className={linkActive}>Ajouter une recette</NavLink></li>
                 </ul>
             </div>
 

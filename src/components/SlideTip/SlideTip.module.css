@@ -1,5 +1,5 @@
 .carousel {
-    height: 250px;
+    height: 270px;
     width: 850px;
     margin: 0 auto;
     border-radius: 18px;
@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 30px;
+    margin-top: 15px;
   }
 
 .slide {

@@ -43,4 +43,11 @@
   border-radius: 50px;
 }
 
+.buttonHeart.favori {
+  color: #643300;
+}
+
+.buttonHeart.nonFavori {
+  color: #fff;
+}
 

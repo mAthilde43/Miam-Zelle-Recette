@@ -1,7 +1,5 @@
 import Header from "../../components/Header/Header"
 import { useState } from 'react';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEye } from "@fortawesome/free-regular-svg-icons";
 import Title from "../../components/Title/Title";
 import classes from './Seconnecter.module.css'
 
@@ -13,31 +11,6 @@ const Seconnecter = () => {
     const [firstName, setFirstName ] = useState("");
     const [usernameAccount, setUsernameAccount] = useState("");
     const [passwordAccount, setPasswordAccount] = useState("");
-
-
-    // const inputUserNameLoginHandler = (e) => {
-    //     setUsernameLogin(e.target.value);
-    // }
-
-    // const inputPasswordLoginHandler = (e) => {
-    //     setPasswordLogin(e.target.value);
-    // }
-
-    // const inputNameHandler = (e) => {
-    //     setName(e.target.value);
-    // }
-
-    // const inputFirstNameHandler = (e) => {
-    //     setFirstName(e.target.value);
-    // }
-
-    // const inputUserNameAccountHandler = (e) => {
-    //     setUsernameAccount(e.target.value);
-    // }
-
-    // const inputPasswordAccountHandler = (e) => {
-    //     setPasswordAccount(e.target.value);
-    // }
 
     const inputChangeHandler = (e) => {
         const { name, value } = e.target;
@@ -65,7 +38,8 @@ const Seconnecter = () => {
         console.log("Mot de passe soumis :", passwordAccount);
     }
     return (
-        <> <Header/>
+        <> 
+        <Header/>
 <div className={classes.seconnecter}>
         <div className={classes.login} >
         <Title type="h4">Se connecter</Title>
@@ -148,9 +122,7 @@ const Seconnecter = () => {
              <button className={classes.buttonForm} type='Submit'>Créer un compte</button>
             </form>
         </div>
-        </div>
-
-   
+        </div>   
         </>
         
     );

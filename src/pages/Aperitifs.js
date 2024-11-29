@@ -47,7 +47,6 @@ const Aperitifs = () => {
     return (
         <><Header/>
         <div style={{height: "100%"}}>
-            <Title type="h1">Apéritifs</Title>
             <Title type="h3">Verrines salées</Title>
             <SlideRecipe recipes={recipesVerrinesSalees}/> 
             <Title type="h3">Cakes salés</Title>

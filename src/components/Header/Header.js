@@ -2,7 +2,9 @@ import classes from "./Header.module.css"
 import logo from "../../images/logo.png"
 import { NavLink} from 'react-router-dom';
 import Wrapper from "../Wrapper/Wrapper";
-import Home from "../../pages/Home";
+import Home from "../../pages/Home/Home";
+import Favoris from "../../pages/Favoris/Favoris";
+
 
 const Header = ({isHome = false}) => {
 
@@ -24,6 +26,8 @@ const Header = ({isHome = false}) => {
                 <img className={classes.logo} src={logo} alt="Logo" />
             </NavLink>
                 <p><NavLink to="/seconnecter" className={linkActive}>Se connecter</NavLink></p>
+                <p><NavLink to="/favoris" className={linkActive}>Mes favoris</NavLink></p>
+                <p><NavLink to="/recipes" className={linkActive}>Mes recettes</NavLink></p>
             </div>
 
             <div className={heroClass}>

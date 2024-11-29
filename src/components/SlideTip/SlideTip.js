@@ -59,8 +59,9 @@ const SlideTip = () => {
 
   return (
     <>
+    <div>
       <Title type="h1">Trucs & Astuces</Title>
-      <Title type="h2">Quels vins pour quels plats ?</Title>
+      <Title type="h3">Quels vins pour quels plats ?</Title>
       <div
         className={classes.carousel}
         style={{
@@ -102,7 +103,7 @@ const SlideTip = () => {
         </button>
       </div>
 
-      <Title type="h2">Astuces de Grand-mère ?</Title>
+      <Title type="h3">Astuces de Grand-mère ?</Title>
       <div
         className={classes.carousel}
         style={{
@@ -145,6 +146,7 @@ const SlideTip = () => {
       {isTipShow && activeTip && (
         <ModalTip funcEvent={updateStateModalTip} tipData={activeTip} isWine={isWine} />
       )}
+      </div>
     </>
   );
 };

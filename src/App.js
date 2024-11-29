@@ -9,7 +9,9 @@ import Desserts from './pages/Desserts';
 import Boissons from './pages/Boissons';
 import Seconnecter from './pages/Seconnecter/Seconnecter';
 import Footer from './components/Footer/Footer';
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
+import Recipes from './components/Recipes/Recipes';
+import Favoris from './pages/Favoris/Favoris';
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
       <Routes>
           <Route path='/home' element={<Home/>}></Route>
           <Route path='/seconnecter' element={<Seconnecter/>}></Route>
+          <Route path='/recipes' element={<Recipes/>}></Route>
+          <Route path='/favoris' element={<Favoris/>}></Route>
+          
           <Route path='/ptitdej' element={<Ptitdej/>}></Route>
           <Route path='/aperitifs' element={<Aperitifs/>}></Route>
           <Route path='/entrees' element={<Entrees/>}></Route>
