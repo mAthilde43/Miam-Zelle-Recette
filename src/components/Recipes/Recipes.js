@@ -2,7 +2,6 @@ import classes from './Recipes.module.css';
 import Header from '../Header/Header';
 import Title from '../Title/Title';
 import RecipeCard from '../RecipeCard/RecipeCard';
-import Modal from '../Modal/Modal';
 import { useState } from 'react';
 
 const Recipes = () => {
@@ -28,7 +27,7 @@ const Recipes = () => {
         Desserts: ["Gâteaux", "Tartes & Tartelettes", "Mousses & Crèmes", "Glaces & Sorbets", "Biscuits"],
         Boissons: ["Cocktails", "Mocktails", "Smoothies", "Boissons chaudes", "Boissons saisonnières"]
     };
-
+    
     const inputRecipeHandler = (e) => {
         const { name, value } = e.target;
 
@@ -151,16 +150,19 @@ const Recipes = () => {
                         />
                     </div>
 
-                    {/* <div>
+                    <div>
                         <label>Difficulté :</label>
-                        <input
-                            type="text"
+                        <select
                             name="difficulty"
                             value={difficulty}
-                            placeholder="Difficulté"
                             onChange={inputRecipeHandler}
-                        />
-                    </div> */}
+                        >
+                            <option value="">Difficulté</option>
+                            <option value="Facile">Facile</option>
+                            <option value="Moyen">Moyen</option>
+                            <option value="Difficile">Difficile</option>
+                        </select>
+                    </div>
 
                     <div className={classes.inputContainer}>
                         <label>Ingrédients :</label>

@@ -1,0 +1,54 @@
+.userInfo {
+    flex: 1 1;
+    padding: 5px 20px 20px 20px;
+    border: 2px solid #CDA274;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 340px;
+}
+
+.userInfo p {
+    font-size: 17px;
+}
+
+.logoutButton,
+.deleteButton {
+    font-family: "DM Serif Display", serif;
+    font-size: 14px;
+    background-color: #CDA274;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 11px;
+    cursor: pointer;
+}
+
+.buttonSection {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 20px;
+}
+
+button {
+    background: none;
+    border: none; 
+    color: inherit;
+    cursor: pointer;
+    padding: 0 10px; 
+}
+
+.iconStyle {
+    color: #643300;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.iconStyleButton {
+    color: #643300;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 0 0 10px;
+}
