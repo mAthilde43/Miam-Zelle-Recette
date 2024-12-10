@@ -13,6 +13,19 @@ const Modal = ({ funcEvent, recipeData }) => {
         <div className={classes.modalScrollable}>
         <div className={classes.modalHeader}>
       <img src={recipeData.img} alt={recipeData.title} className={classes.recipeImage} />
+
+      <div className={classes.recipeDetails}>
+      {/* Temps de préparation et difficulté côte à côte */}
+      <div className={classes.recipeInfo}>
+        <div className={classes.preparationTime}>
+          Temps de préparation : {recipeData.preparationTime}
+        </div>
+        <div className={classes.difficulty}>
+          Difficulté : {recipeData.difficulty}
+        </div>
+      </div>
+
+      
       <div className={classes.ingredients}>
         <h2>Ingrédients :</h2>
         <ul>
@@ -21,7 +34,7 @@ const Modal = ({ funcEvent, recipeData }) => {
           ))}
         </ul>
       </div>
-    </div>
+          </div>
 
     <div className={classes.etapes}>
       <h2>Étapes de préparation :</h2>
@@ -35,6 +48,7 @@ const Modal = ({ funcEvent, recipeData }) => {
 
         <button className={classes.buttonClose} onClick={isHiddenHandler}>FERMER</button>
       </div>
+    </div>
     </div>
     
   );

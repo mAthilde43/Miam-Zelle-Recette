@@ -6,8 +6,10 @@ import ModalTip from '../Modal/ModalTip';
 const SlideTip = () => {
   const [wineTips, setWineTips] = useState([]);
   const [gmTips, setGmTips] = useState([]);
+  const [breadTips, setBreadTips] = useState([]);
   const [currentWineIndex, setCurrentWineIndex] = useState(0);
   const [currentGmIndex, setCurrentGmIndex] = useState(0);
+  const [currentBreadIndex, setCurrentBreadIndex] = useState(0);
   const [isTipShow, setIsTipShow] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTip, setActiveTip] = useState(null);
@@ -19,12 +21,14 @@ const SlideTip = () => {
       const data = await response.json();
       setWineTips(data.filter((tip) => tip.title)); // Général
       setGmTips(data.filter((tip) => tip.titleGM)); // Grand-mère
+      setBreadTips(data.filter((tip) => tip.titleBread)); // Pain
+
     };
 
     fetchTips();
   }, []);
 
-  const updateStateModalTip = (bool, tip, wine) => {
+  const updateStateModalTip = (bool, tip, wine, bread) => {
     setIsModalOpen(bool);
     setIsTipShow(bool);
     if (bool) {
@@ -38,7 +42,7 @@ const SlideTip = () => {
 
     const intervalId = setInterval(() => {
       setCurrentWineIndex((prevIndex) => (prevIndex + 1) % wineTips.length);
-    }, 5000);
+    }, 4900);
 
     return () => clearInterval(intervalId);
   }, [wineTips, isModalOpen]);
@@ -53,7 +57,18 @@ const SlideTip = () => {
     return () => clearInterval(intervalId);
   }, [gmTips, isModalOpen]);
 
-  if (wineTips.length === 0 && gmTips.length === 0) {
+  useEffect(() => {
+    if (breadTips.length === 0 || isModalOpen) return;
+
+    const intervalId = setInterval(() => {
+      setCurrentBreadIndex((prevIndex) => (prevIndex + 1) % breadTips.length);
+    }, 5100);
+
+    return () => clearInterval(intervalId);
+  }, [breadTips, isModalOpen]);
+
+
+  if (wineTips.length === 0 && gmTips.length === 0 && breadTips.length === 0) {
     return <p>Chargement des conseils...</p>;
   }
 
@@ -138,6 +153,47 @@ const SlideTip = () => {
         <button
           className={classes.moreButton}
           onClick={() => updateStateModalTip(true, gmTips[currentGmIndex], false)}
+        >
+          Voir plus
+        </button>
+      </div>
+
+
+      <Title type="h3">Quels pains pour quels plats ?</Title>
+      <div
+        className={classes.carousel}
+        style={{
+          backgroundImage: `url(${breadTips[currentBreadIndex]?.imageBread || ''})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className={classes.slide}>
+          <h3>{breadTips[currentBreadIndex]?.titleBread}</h3>
+        </div>
+        <div className={classes.navigation}>
+          <button
+            className={classes.arrowButton}
+            onClick={() =>
+              setCurrentBreadIndex(
+                (prevIndex) => (prevIndex - 1 + breadTips.length) % breadTips.length
+              )
+            }
+          >
+            &lt;
+          </button>
+          <button
+            className={classes.arrowButton}
+            onClick={() =>
+              setCurrentBreadIndex((prevIndex) => (prevIndex + 1) % breadTips.length)
+            }
+          >
+            &gt;
+          </button>
+        </div>
+        <button
+          className={classes.moreButton}
+          onClick={() => updateStateModalTip(true, breadTips[currentBreadIndex], false)}
         >
           Voir plus
         </button>

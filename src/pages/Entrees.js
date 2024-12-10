@@ -49,11 +49,11 @@ const Entrees = () => {
             <Title type="h1">Entrées</Title>
             <Title type="h3">Salades</Title>
             <SlideRecipe recipes={recipesSalades}/> 
-            <Title type="h3">Soupe & Velouté</Title>
+            <Title type="h3">Soupes & Veloutés</Title>
             <SlideRecipe recipes={recipesSoupeVeloute}/>
             <Title type="h3">Tartes & Quiches</Title>
             <SlideRecipe recipes={recipesTartesQuiches}/>
-            <Title type="h3">Carpaccio & tartare</Title>
+            <Title type="h3">Carpaccio & Tartares</Title>
             <SlideRecipe recipes={recipesCarpaccioTartare}/>
             <Title type="h3">Terrines & Patés</Title>
             <SlideRecipe recipes={recipesTerrinesPates}/>

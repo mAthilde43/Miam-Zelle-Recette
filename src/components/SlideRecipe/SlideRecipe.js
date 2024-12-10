@@ -31,7 +31,7 @@ const SlideRecipe = ({recipes}) => {
                 <span className={classes.arrowCircle}>&larr;</span>
             </button>
             <div className={classes.carousel} >
-                {visibleRecipes.map((recipe, index) => (
+                {visibleRecipes.map((recipe) => (
                     <RecipeCard key={recipe.id} title={recipe.title} img={recipe.img} id={recipe.id} />
             ))}
             </div>

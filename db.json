@@ -21,7 +21,9 @@
                 "Disposez la préparation dans des verrines.",
                 "Décorez avec une petite tranche de citron, un peu de zeste et une branche d'aneth.",
                 "Réfrigérez pendant 1 heure avant de servir."
-                ]
+                ],
+            "preparationTime" : "20min",
+            "difficulty" : "Facile"
         },
         {
             "id": "2",
@@ -40,7 +42,9 @@
                 "Mixez les courgettes avec le pesto, le fromage frais, le sel et le poivre.",
                 "Versez la préparation dans des verrines.",
                 "Laissez refroidir au réfrigérateur avant de servir."
-            ]
+            ],
+            "preparationTime" : "25min",
+            "difficulty" : "Facile"
         },
         {
             "id": "3",
@@ -62,7 +66,9 @@
                 "Mixez le tout avec la crème fraîche.",
                 "Coupez le pain d'épices en petits dés et faites-les griller.",
                 "Servez le velouté dans des verrines avec des morceaux de pain d'épices."
-            ] 
+            ],
+            "preparationTime" : "35min",
+            "difficulty" : "Moyen" 
         },
         {
             "id": "4",
@@ -82,7 +88,9 @@
                 "Coupez le foie gras en dés et le pain d'épices en petits morceaux.",
                 "Disposez les poires au fond des verrines, ajoutez le foie gras et terminez par le pain d'épices.",
                 "Réservez au frais avant de servir."
-            ] 
+            ],
+            "preparationTime" : "30min",
+            "difficulty" : "Moyen" 
         },
         {
             "id": "5",
@@ -90,7 +98,9 @@
             "categorie": "verrines-salees", 
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
     
         {
@@ -115,7 +125,9 @@
                 "Incorporez le jambon, les olives et le gruyère.",
                 "Versez dans un moule à cake et enfournez 40 minutes.",
                 "Laissez refroidir avant de servir."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "7",
@@ -141,7 +153,9 @@
                 "Salez, poivrez et versez la préparation dans un moule à cake.",
                 "Enfournez pendant 40 à 45 minutes. Vérifiez la cuisson avec la pointe d’un couteau.",
                 "Laissez refroidir avant de démouler."
-            ] 
+            ],
+            "preparationTime" : "15min",
+            "difficulty" : "Facile"
         },
         {
             "id": "8",
@@ -168,7 +182,9 @@
                 "Salez, poivrez et versez la préparation dans un moule à cake.",
                 "Enfournez pendant 40 à 45 minutes. Vérifiez la cuisson avec la pointe d’un couteau.",
                 "Laissez refroidir avant de démouler."
-            ] 
+            ],
+            "preparationTime" : "20min",
+            "difficulty" : "Moyen" 
         },
 
         {
@@ -194,7 +210,9 @@
                 "Salez, poivrez et versez la préparation dans un moule à cake.",
                 "Enfournez pendant 35 à 40 minutes. Vérifiez la cuisson avec la pointe d’un couteau.",
                 "Laissez refroidir avant de démouler."
-            ] 
+            ],
+            "preparationTime" : "10min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "10",
@@ -202,7 +220,9 @@
             "categorie": "cakes-sales",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
 
         {
@@ -225,7 +245,9 @@
                 "Repliez les coins de la pâte pour former un feuilleté.",
                 "Badigeonnez le dessus avec le jaune d'œuf.",
                 "Enfournez pendant 15 à 20 minutes jusqu'à ce que les feuilletés soient dorés."
-            ] 
+            ],
+            "preparationTime" : "10min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "12",
@@ -245,7 +267,9 @@
                 "Badigeonnez le dessus avec le jaune d'œuf et saupoudrez de graines de sésame si souhaité.",
                 "Disposez les feuilletés sur une plaque de cuisson recouverte de papier sulfurisé.",
                 "Enfournez pendant 15 à 20 minutes jusqu'à ce qu'ils soient bien dorés."
-            ] 
+            ],
+            "preparationTime" : "10min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "13",
@@ -268,7 +292,9 @@
                 "Salez, poivrez, puis repliez la pâte pour former des feuilletés.",
                 "Badigeonnez le dessus avec le jaune d'œuf.",
                 "Enfournez pendant 20 minutes jusqu'à ce que les feuilletés soient dorés."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "14",
@@ -290,7 +316,9 @@
                 "Découpez le boudin en tranches et disposez-les sur une plaque recouverte de papier sulfurisé.",
                 "Badigeonnez le dessus avec le jaune d'œuf.",
                 "Enfournez pendant 12 à 15 minutes jusqu'à ce que les roulés soient dorés."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "15",
@@ -298,7 +326,9 @@
             "categorie": "feuilletes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
 
         {
@@ -318,7 +348,9 @@
                 "Enfilez les cubes de jambon sur les bâtonnets de brochette.",
                 "Badigeonnez les brochettes avec le mélange miel-moutarde.",
                 "Faites cuire les brochettes au four ou sur une poêle chaude pendant 5 minutes, en les retournant régulièrement."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "17",
@@ -339,7 +371,9 @@
                 "Faites mariner les cubes de tofu pendant 30 minutes au réfrigérateur.",
                 "Enfilez les cubes de tofu sur les bâtonnets de brochette.",
                 "Parsemez de graines de sésame et faites cuire à la poêle ou au four pendant 10 minutes, en les retournant."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "18",
@@ -361,7 +395,9 @@
                 "Enfilez les saucisses torsadées sur les bâtonnets de brochette.",
                 "Badigeonnez avec le jaune d'œuf et saupoudrez de graines si souhaité.",
                 "Faites cuire au four pendant 15 minutes jusqu'à ce que la pâte soit dorée."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "19",
@@ -391,7 +427,9 @@
             "categorie": "brochettes-apéro",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : "" 
         },
 
         {
@@ -415,7 +453,9 @@
                 "Ajoutez la mayonnaise et mélangez bien. Salez et poivrez.",
                 "Décorez avec l'œuf dur coupé en rondelles sur le dessus.",
                 "Servez frais."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "22",
@@ -437,7 +477,9 @@
                 "Disposez une tranche de chorizo sur chaque toast.",
                 "Ajoutez une cuillère de mélange à la tomate sur le chorizo.",
                 "Servez immédiatement."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "23",
@@ -461,7 +503,9 @@
                 "Mélangez la chair d'aubergine avec le yaourt, l'ail haché, le jus de citron et l'huile d'olive. Salez et poivrez.",
                 "Disposez dans un bol et décorez avec des graines de grenade et des feuilles de menthe.",
                 "Servez frais avec du pain pita."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "24",
@@ -482,7 +526,9 @@
                 "Ajoutez une tranche de chorizo par-dessus.",
                 "Versez un filet de miel et saupoudrez d'herbes de Provence.",
                 "Arrosez d'un filet d'huile d'olive avant de servir."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "25",
@@ -490,7 +536,9 @@
             "categorie": "tapas-mezze",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
         
         {
@@ -515,7 +563,9 @@
                 "Faites chauffer une poêle légèrement huilée et versez une petite louche de pâte.",
                 "Cuisez chaque pancake 2 à 3 minutes de chaque côté jusqu'à ce qu'il soit doré.",
                 "Servez chaud avec du sirop d'érable."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "27",
@@ -538,7 +588,9 @@
                 "Couvrez et laissez reposer pendant 1 heure.",
                 "Ajoutez le sucre perlé à la pâte et mélangez.",
                 "Faites cuire dans un gaufrier préchauffé jusqu'à ce que les gaufres soient dorées."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "28",
@@ -563,7 +615,9 @@
                 "Faites chauffer une poêle légèrement huilée et versez une petite louche de pâte.",
                 "Cuisez chaque pancake 2 à 3 minutes de chaque côté.",
                 "Servez chaud avec un filet de chocolat fondu si souhaité."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "29",
@@ -586,7 +640,9 @@
                 "Incorporez le beurre fondu.",
                 "Faites cuire la pâte dans un gaufrier préchauffé jusqu'à obtenir des gaufres dorées.",
                 "Servez avec des fruits rouges frais et un peu de sucre glace."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "30",
@@ -594,7 +650,9 @@
             "categorie": "pancakes-gauffres",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
         
         {
@@ -618,7 +676,9 @@
                 "Étalez le granola sur une plaque recouverte de papier cuisson.",
                 "Faites cuire pendant 20 à 25 minutes en remuant à mi-cuisson.",
                 "Laissez refroidir avant de conserver dans un bocal hermétique."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "32",
@@ -638,7 +698,9 @@
                 "Conservez le mélange dans un bocal hermétique.",
                 "Pour servir, ajoutez du lait, du yaourt ou une boisson végétale et mélangez.",
                 "Laissez reposer quelques minutes pour que les graines de chia s'hydratent."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "33",
@@ -660,7 +722,9 @@
                 "Ajoutez les pépites de chocolat et mélangez rapidement pour éviter qu'elles fondent.",
                 "Étalez le mélange dans un moule rectangulaire recouvert de papier cuisson.",
                 "Laissez refroidir au réfrigérateur pendant 2 heures avant de découper en barres."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "34",
@@ -683,7 +747,9 @@
                 "Étalez le granola sur une plaque recouverte de papier cuisson.",
                 "Faites cuire pendant 20 à 25 minutes en remuant à mi-cuisson.",
                 "Laissez refroidir avant de conserver dans un bocal hermétique."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "35",
@@ -691,7 +757,9 @@
             "categorie": "cereales-granola",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
      
         {
@@ -713,7 +781,9 @@
                 "Ajoutez le sel, le poivre et le jus de citron à l’avocat écrasé.",
                 "Tartinez l’avocat écrasé sur les tranches de pain grillé.",
                 "Si désiré, saupoudrez de flocons de piment ou ajoutez un peu d'huile d'olive pour plus de goût."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "37",
@@ -734,7 +804,9 @@
                 "Disposez les tranches de saumon fumé sur le fromage frais.",
                 "Ajoutez quelques brins de ciboulette ciselée et un filet de jus de citron.",
                 "Poivrez à votre convenance et refermez le bagel."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "38",
@@ -758,7 +830,9 @@
                 "Tartinez chaque tranche de pain avec du houmous.",
                 "Disposez les légumes grillés sur les tartines de houmous.",
                 "Ajoutez du sel, du poivre et quelques feuilles de basilic pour décorer."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "39",
@@ -778,7 +852,9 @@
                 "Ajoutez les tranches de jambon et de fromage à l’intérieur du croissant.",
                 "Si vous le souhaitez, étalez un peu de beurre sur le croissant.",
                 "Faites chauffer au four pendant 5-7 minutes jusqu’à ce que le fromage soit fondu et que le croissant soit doré."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "40",
@@ -786,7 +862,9 @@
             "categorie": "dej-sales",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
      
         {
@@ -809,7 +887,9 @@
                 "Faites chauffer le beurre dans une poêle antiadhésive.",
                 "Versez le mélange d'œufs et faites cuire à feu moyen jusqu'à ce que l'omelette soit prise.",
                 "Servez chaud avec une salade verte."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "42",
@@ -828,7 +908,9 @@
                 "Faites fondre le beurre dans une casserole à feu doux.",
                 "Versez le mélange d'œufs et remuez doucement jusqu'à ce que les œufs soient crémeux.",
                 "Servez immédiatement avec du pain grillé."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "43",
@@ -849,7 +931,9 @@
                 "Retirez les épinards et réservez.",
                 "Dans la même poêle, cassez les œufs et faites-les cuire au plat.",
                 "Servez les œufs sur le lit d’épinards."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "44",
@@ -870,7 +954,9 @@
                 "Ajoutez du fromage râpé et des herbes fraîches sur le dessus.",
                 "Placez les ramequins dans un plat rempli d'eau chaude et enfournez pour 12-15 minutes.",
                 "Servez chaud avec du pain."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "45",
@@ -878,7 +964,9 @@
             "categorie": "oeufs-omelettes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
      
         {
@@ -902,7 +990,9 @@
                 "Étalez la pâte en un rectangle, placez le beurre au centre, puis pliez et tournez 3 fois pour incorporer le beurre.",
                 "Découpez et façonnez les croissants, puis laissez lever 1 heure.",
                 "Badigeonnez de jaune d'œuf et faites cuire à 180°C pendant 15-20 minutes."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "47",
@@ -919,7 +1009,9 @@
                 "Placez une barre de chocolat à une extrémité de chaque rectangle, roulez, puis fermez bien les bords.",
                 "Badigeonnez de jaune d'œuf et placez les pains au chocolat sur une plaque recouverte de papier cuisson.",
                 "Enfournez à 200°C pendant 15 minutes, jusqu'à ce qu'ils soient bien dorés."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "48",
@@ -943,7 +1035,9 @@
                 "Laissez reposer 1h30 jusqu'à ce que la pâte double de volume.",
                 "Divisez la pâte en 3, roulez en boudins, puis tressez-les.",
                 "Laissez lever à nouveau 30 minutes, badigeonnez de jaune d'œuf, et faites cuire à 180°C pendant 25 minutes."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "49",
@@ -963,7 +1057,9 @@
                 "Découpez des cercles dans la pâte feuilletée.",
                 "Déposez une cuillère de compote au centre de chaque cercle, repliez, et scellez les bords.",
                 "Badigeonnez de jaune d'œuf et enfournez à 200°C pendant 15-20 minutes."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "50",
@@ -971,7 +1067,9 @@
             "categorie": "viennoiserie",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : "" 
         },
      
 
@@ -999,7 +1097,9 @@
                 "Ajouter le thon émietté, les olives noires et les œufs coupés en quartiers.",
                 "Parsemer de basilic frais.",
                 "Assaisonner avec une vinaigrette à base d'huile d'olive et de vinaigre."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "52",
@@ -1024,7 +1124,9 @@
                 "Laver et essorer la laitue romaine.",
                 "Dans un saladier, mélanger la laitue, les lamelles de poulet, les croûtons et le parmesan râpé.",
                 "Ajouter la sauce césar avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "53",
@@ -1048,7 +1150,9 @@
                 "Dans un saladier, mélanger le boulgour, les herbes, les tomates et le concombre.",
                 "Assaisonner avec le jus de citron, l'huile d'olive, le sel et le poivre.",
                 "Laisser reposer au frais avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "54",
@@ -1072,7 +1176,9 @@
                 "Préparer une vinaigrette avec le miel, le vinaigre balsamique, l'huile d'olive, le sel et le poivre.",
                 "Dans un saladier, mélanger la salade verte avec les noix et la vinaigrette.",
                 "Disposer les tranches de pain au chèvre chaud sur la salade avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "55",
@@ -1080,7 +1186,9 @@
             "categorie": "salades",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : "" 
         },
         
         {
@@ -1106,7 +1214,9 @@
                 "Mixer le tout jusqu'à obtention d'un velouté.",
                 "Incorporer la crème fraîche et assaisonner avec le sel, le poivre et la noix de muscade.",
                 "Servir chaud, éventuellement avec des croûtons."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "57",
@@ -1129,7 +1239,9 @@
                 "Laisser mijoter à feu doux pendant 30 minutes.",
                 "Verser la soupe dans des bols individuels, ajouter une tranche de pain et parsemer de gruyère.",
                 "Faire gratiner au four quelques minutes avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "58",
@@ -1152,7 +1264,9 @@
                 "Incorporer le bouillon de légumes et laisser cuire 20 minutes supplémentaires.",
                 "Mixer la soupe avec les feuilles de basilic.",
                 "Assaisonner avec le sel et le poivre, puis servir chaud ou froid."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "59",
@@ -1175,7 +1289,9 @@
                 "Ajouter la pomme de terre et le bouillon, et laisser cuire 20 minutes.",
                 "Mixer jusqu'à obtention d'un velouté.",
                 "Incorporer la crème liquide, rectifier l'assaisonnement et parsemer de persil haché avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "60",
@@ -1183,7 +1299,9 @@
             "categorie": "soupe-veloute",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : "" 
         },
 
         {
@@ -1208,7 +1326,9 @@
                 "Répartir les lardons sur la pâte, puis verser le mélange aux œufs par-dessus.",
                 "Parsemer de gruyère râpé et enfourner pendant 30 à 35 minutes.",
                 "Servir chaud ou tiède."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "62",
@@ -1234,7 +1354,9 @@
                 "Répartir les poireaux sur la pâte, puis verser le mélange aux œufs par-dessus.",
                 "Parsemer de gruyère râpé et enfourner pendant 30 à 35 minutes.",
                 "Servir chaud."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "63",
@@ -1258,7 +1380,9 @@
                 "Répartir les épinards sur la pâte, ajouter des rondelles de chèvre, puis verser le mélange aux œufs.",
                 "Enfourner pendant 30 à 35 minutes jusqu'à ce que la quiche soit bien dorée.",
                 "Servir chaud ou tiède."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "64",
@@ -1286,7 +1410,9 @@
                 "Répartir les légumes grillés sur la pâte, puis verser le mélange aux œufs.",
                 "Enfourner pendant 30 à 35 minutes jusqu'à ce que la tarte soit bien dorée.",
                 "Servir chaud ou froid."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "65",
@@ -1294,7 +1420,9 @@
             "categorie": "tartes-quiches",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : "" 
         },
 
         {
@@ -1319,7 +1447,9 @@
                 "Parsemer de copeaux de parmesan, de câpres, et de roquette.",
                 "Assaisonner avec du sel et du poivre.",
                 "Servir immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "67",
@@ -1342,7 +1472,9 @@
                 "Ajouter le saumon haché, l'échalote, et la ciboulette. Bien mélanger.",
                 "Assaisonner avec du sel et du poivre selon le goût.",
                 "Servir frais avec des toasts ou une salade verte."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "68",
@@ -1364,7 +1496,9 @@
                 "Parsemer de copeaux de parmesan et de feuilles de basilic.",
                 "Assaisonner avec du sel et du poivre.",
                 "Servir frais en entrée légère."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "69",
@@ -1389,7 +1523,9 @@
                 "Assaisonner avec du sel et du poivre selon le goût.",
                 "Former des portions individuelles à l'aide d'un emporte-pièce ou servir directement dans une assiette.",
                 "Accompagner de frites ou de pain grillé."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "70",
@@ -1397,7 +1533,9 @@
             "categorie": "carpaccio-tartare",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -1419,7 +1557,9 @@
                 "Tasser le foie gras dans une terrine.",
                 "Cuire au bain-marie pendant 40 minutes.",
                 "Laisser refroidir puis réfrigérer au moins 24 heures avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "72",
@@ -1442,7 +1582,9 @@
                 "Déposer une couche de viande, ajouter des morceaux de foie gras, puis recouvrir avec le reste de la farce.",
                 "Fermer le pâté avec le reste de la pâte, en scellant bien les bords. Découper une cheminée au centre.",
                 "Cuire au four pendant 50 minutes. Laisser refroidir avant de démouler."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "73",
@@ -1464,7 +1606,9 @@
                 "Incorporer les légumes dans le mélange.",
                 "Verser dans un moule à terrine tapissé de papier sulfurisé.",
                 "Cuire au bain-marie pendant 45 minutes. Laisser refroidir avant de démouler et servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "74",
@@ -1486,7 +1630,9 @@
                 "Verser la préparation dans un moule à terrine beurré.",
                 "Cuire au bain-marie pendant 45 minutes.",
                 "Laisser refroidir avant de démouler. Servir froid avec une sauce à base de citron ou de mayonnaise."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "75",
@@ -1494,7 +1640,9 @@
             "categorie": "terrines-pates",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": [] 
+            "etapes": [] ,
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
 
@@ -1523,7 +1671,9 @@
                 "Déglacer avec le vin rouge, ajouter le bouillon, les herbes, et les carottes coupées en rondelles.",
                 "Couvrir et laisser mijoter à feu doux pendant 2 à 3 heures.",
                 "Ajouter les champignons dans la dernière demi-heure de cuisson (facultatif)."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "77",
@@ -1546,7 +1696,9 @@
                 "Déposer le poulet dans un plat, arroser d'un filet d'huile d'olive.",
                 "Cuire au four pendant 1h30 en arrosant régulièrement avec le jus de cuisson.",
                 "Servir avec des légumes rôtis ou une purée."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "78",
@@ -1568,7 +1720,9 @@
                 "Remettre les côtes dans la poêle, saler et poivrer.",
                 "Laisser mijoter à feu doux pendant 10 minutes.",
                 "Servir avec du riz ou des pommes de terre sautées."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "79",
@@ -1590,7 +1744,9 @@
                 "Déposer le gigot dans un plat, ajouter un verre d'eau au fond pour éviter qu'il ne sèche.",
                 "Enfourner et cuire 1h30 en arrosant régulièrement avec le jus de cuisson.",
                 "Laisser reposer 10 minutes avant de trancher."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "80",
@@ -1598,7 +1754,9 @@
             "categorie": "viandes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -1622,7 +1780,9 @@
                 "Ajouter les légumes autour du saumon, arroser d’un filet de jus de citron et d’huile d’olive.",
                 "Saler, poivrer et ajouter de l'aneth si désiré.",
                 "Refermer la papillote hermétiquement et enfourner pendant 20 minutes."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "82",
@@ -1645,7 +1805,9 @@
                 "Ajouter les rondelles de tomates et d’oignons par-dessus.",
                 "Parsemer d’ail haché, d’herbes de Provence, de sel et de poivre.",
                 "Arroser d’un filet d’huile d’olive et enfourner pendant 25 minutes."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "83",
@@ -1665,21 +1827,15 @@
                 "Faire cuire les filets côté peau pendant 3-4 minutes, puis retourner et cuire 2 minutes supplémentaires.",
                 "Dans une petite casserole, faire fondre le beurre avec le jus de citron et le persil.",
                 "Servir les filets de dorade nappés de beurre citronné."
-            ]
-        },
-        {
-            "id": "84",
-            "title": "Paelle aux fruits de mer",
-            "categorie": "poissons",
-            "img": "https://cdn.pratico-pratiques.com/app/uploads/sites/4/2018/08/30191438/paella-traditionnelle-aux-fruits-de-mer.jpeg",
-            "ingredients": [],
-            "etapes": []
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "85",
-            "title": "+ de recette poisons",
+            "title": "Paelle aux fruits de mer",
             "categorie": "poissons",
-            "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
+            "img": "https://cdn.pratico-pratiques.com/app/uploads/sites/4/2018/08/30191438/paella-traditionnelle-aux-fruits-de-mer.jpeg",
             "ingredients": [
                 "300 g de riz à paella",
                 "200 g de moules",
@@ -1702,7 +1858,19 @@
                 "Laisser mijoter à feu doux jusqu'à absorption du liquide.",
                 "Ajouter les fruits de mer (moules, crevettes, calamars) et cuire 10 minutes supplémentaires.",
                 "Servir chaud avec du citron."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
+        },
+        {
+            "id": "84",
+            "title": "+ de recette poissons",
+            "categorie": "poissons",
+            "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
+            "ingredients": [],
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -1729,7 +1897,9 @@
                 "Incorporer la pâte de curry, mélanger et ajouter le lait de coco.",
                 "Saler, poivrer, puis laisser mijoter à feu doux pendant 20 minutes.",
                 "Servir chaud avec du riz."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "87",
@@ -1755,7 +1925,9 @@
                 "Ajouter les légumes, la ricotta et du coulis de tomate, puis alterner les couches.",
                 "Terminer par une couche de lasagnes, de coulis et de parmesan.",
                 "Enfourner pendant 30 à 40 minutes."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "88",
@@ -1779,7 +1951,9 @@
                 "Ajouter le riz et mélanger jusqu’à ce qu’il soit nacré.",
                 "Incorporer une louche de bouillon chaud et remuer jusqu'à absorption. Répéter jusqu’à ce que le riz soit cuit.",
                 "Ajouter le parmesan et le beurre en fin de cuisson, mélanger et servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "89",
@@ -1802,7 +1976,9 @@
                 "Former des galettes avec la préparation.",
                 "Faire chauffer l’huile dans une poêle et cuire les galettes 3 minutes de chaque côté.",
                 "Servir chaud avec une salade."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "90",
@@ -1810,7 +1986,9 @@
             "categorie": "plats-vegetariens",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -1837,7 +2015,9 @@
                 "Incorporer les tomates pelées, le concentré de tomate et l'origan. Saler, poivrer.",
                 "Laisser mijoter à feu doux pendant 20 minutes.",
                 "Égoutter les spaghetti et les mélanger à la sauce. Servir chaud avec du parmesan."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "92",
@@ -1861,7 +2041,9 @@
                 "Incorporer une louche de bouillon au riz, remuer jusqu’à absorption. Répéter l’opération jusqu’à cuisson complète du riz.",
                 "Hors du feu, ajouter le beurre et le parmesan. Mélanger.",
                 "Servir immédiatement, bien chaud."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "93",
@@ -1884,7 +2066,9 @@
                 "Saler légèrement, poivrer et laisser mijoter 2 minutes.",
                 "Égoutter les tagliatelles et les mélanger avec la sauce.",
                 "Servir chaud avec un peu d’aneth en décoration."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "94",
@@ -1908,7 +2092,9 @@
                 "Incorporer les légumes, les dés de jambon et les lanières d'omelette.",
                 "Assaisonner avec la sauce soja, saler légèrement et poivrer. Mélanger bien.",
                 "Servir chaud en accompagnement ou en plat principal."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "95",
@@ -1916,7 +2102,9 @@
             "categorie": "pates-riz",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
     
         {
@@ -1940,7 +2128,9 @@
                 "Mélanger la crème avec du sel, du poivre et une pincée de muscade. Verser sur les pommes de terre.",
                 "Parsemer de petites noisettes de beurre sur le dessus.",
                 "Cuire au four pendant 1h à 1h15, jusqu’à ce que le gratin soit doré et fondant."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "97",
@@ -1964,7 +2154,9 @@
                 "Dans un plat à gratin, étaler une couche de viande, puis une couche de purée.",
                 "Parsemer de gruyère râpé et enfourner à 200°C pendant 20 minutes, jusqu’à ce que le dessus soit doré.",
                 "Servir chaud avec une salade verte."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "98",
@@ -1992,7 +2184,9 @@
                 "Incorporer les pois chiches égouttés et 200 ml d’eau.",
                 "Couvrir et laisser mijoter à feu doux pendant 40 minutes, en remuant de temps en temps.",
                 "Servir chaud avec du pain ou de la semoule."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "99",
@@ -2017,7 +2211,9 @@
                 "Ajouter les haricots, les viandes et un peu d’eau. Saler, poivrer.",
                 "Cuire à feu doux pendant 2 heures en remuant de temps en temps.",
                 "Servir bien chaud, idéalement dans une cassole."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "100",
@@ -2025,7 +2221,9 @@
             "categorie": "gratins-mijotes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
 
@@ -2048,7 +2246,9 @@
                 "Ajoutez des fruits secs entre les morceaux de fromage pour décorer.",
                 "Placez des ramequins contenant les confitures sur le plateau.",
                 "Servez avec une variété de pains tranchés."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "102",
@@ -2069,7 +2269,9 @@
                 "Ajoutez des grissini et des olives sur le plateau.",
                 "Décorez avec des feuilles de basilic pour une touche italienne.",
                 "Servez accompagné d'un verre de vin italien pour compléter l'expérience."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "103",
@@ -2090,7 +2292,9 @@
                 "Ajoutez des morceaux de fruits frais entre les fromages.",
                 "Placez des ramequins de confiture et des noix sur les côtés.",
                 "Servez avec du pain tranché pour accompagner."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "104",
@@ -2110,7 +2314,9 @@
                 "Ajoutez des légumes croquants autour des fromages pour donner de la couleur.",
                 "Ajoutez des ramequins de graines de courge pour la décoration.",
                 "Servez avec des crackers ou du pain complet."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "105",
@@ -2118,7 +2324,9 @@
             "categorie": "plateaux-fromages",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2140,7 +2348,9 @@
                 "Ajoutez les noix et le romarin si désiré.",
                 "Enfournez pendant 15 minutes jusqu'à ce que le fromage soit bien fondant.",
                 "Servez avec des morceaux de pain à tremper."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "107",
@@ -2161,7 +2371,9 @@
                 "Ajoutez un filet de miel sur chaque crottin et poivrez légèrement.",
                 "Enfournez pendant 10 minutes jusqu'à ce que le lard soit croustillant.",
                 "Servez chaud avec une salade verte."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "108",
@@ -2183,7 +2395,9 @@
                 "Dans un plat à gratin, disposez une couche de pommes de terre, une couche de lardons et d'oignons, puis recouvrez de crème fraîche.",
                 "Coupez le reblochon en deux et déposez-le croûte vers le haut sur le plat.",
                 "Enfournez pendant 20 minutes jusqu'à ce que le fromage soit bien fondu et doré."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "109",
@@ -2202,7 +2416,9 @@
                 "Creusez légèrement le centre du fromage et insérez la gousse d’ail émincée.",
                 "Versez le vin blanc dans le creux et enfournez pendant 20 minutes.",
                 "Servez chaud avec du pain frais ou des pommes de terre vapeur."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "110",
@@ -2210,7 +2426,9 @@
             "categorie": "fromages-chauds",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2236,7 +2454,9 @@
                 "Ajoutez progressivement le fromage en remuant constamment jusqu'à ce qu'il soit fondu.",
                 "Ajoutez le mélange de maïzena pour épaissir si nécessaire.",
                 "Poivrez et servez avec des morceaux de pain à tremper."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "112",
@@ -2257,7 +2477,9 @@
                 "Chauffez l'appareil à raclette et faites fondre le fromage.",
                 "Servez les pommes de terre chaudes avec le fromage fondu, la charcuterie et les accompagnements.",
                 "Poivrez selon vos goûts."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "113",
@@ -2278,7 +2500,9 @@
                 "Faites chauffer la bière dans le caquelon jusqu'à frémissement.",
                 "Ajoutez les fromages progressivement en remuant jusqu'à ce qu'ils soient fondus.",
                 "Servez chaud avec du pain ou des légumes (brocolis, carottes, etc.)."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "114",
@@ -2300,7 +2524,9 @@
                 "Chauffez l'appareil à raclette et faites fondre le fromage.",
                 "Servez les pommes de terre et légumes chauds avec le fromage fondu et les accompagnements.",
                 "Poivrez selon vos goûts."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "115",
@@ -2308,7 +2534,9 @@
             "categorie": "fondues-raclettes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2329,7 +2557,9 @@
                 "Ajoutez une pincée de sel et poivrez selon vos goûts.",
                 "Mélangez jusqu’à obtention d’une préparation homogène.",
                 "Disposez dans des verrines ou servez avec des tranches de pain grillé."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "117",
@@ -2348,7 +2578,9 @@
                 "Dans un bol, mélangez le fromage frais, le jus de citron, l’aneth et le poivre.",
                 "Dans une verrine, alternez une couche de fromage frais et une couche de saumon fumé.",
                 "Décorez avec un brin d’aneth et servez frais."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "118",
@@ -2371,7 +2603,9 @@
                 "Disposez les légumes croquants par-dessus.",
                 "Arrosez d’un filet d’huile d’olive, salez et poivrez.",
                 "Servez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "119",
@@ -2389,7 +2623,9 @@
                 "Étalez la préparation sur chaque tranche de jambon.",
                 "Roulez les tranches sur elles-mêmes pour former des roulés.",
                 "Réservez au frais jusqu’au moment de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "120",
@@ -2397,7 +2633,9 @@
             "categorie": "fromages-frais",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2418,7 +2656,9 @@
                 "Étalez des morceaux de fromage de chèvre sur chaque tranche.",
                 "Ajoutez un filet de miel, quelques cerneaux de noix et saupoudrez de thym.",
                 "Faites gratiner au four pendant 5 minutes et servez chaud."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "122",
@@ -2439,7 +2679,9 @@
                 "Ajoutez des rondelles de mozzarella et de tomate sur chaque tranche.",
                 "Arrosez d’un filet d’huile d’olive, salez et poivrez.",
                 "Faites cuire au four pendant 8 minutes et ajoutez le basilic frais avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "123",
@@ -2459,7 +2701,9 @@
                 "Étalez le fromage bleu sur les tranches de pain.",
                 "Disposez les tranches de poire par-dessus, ajoutez un filet de miel et parsemez de noix.",
                 "Faites gratiner au four pendant 5 à 7 minutes avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "124",
@@ -2479,7 +2723,9 @@
                 "Ajoutez des morceaux de camembert et une tranche de lard fumé sur chaque tartine.",
                 "Arrosez d’un filet de miel si désiré et poivrez.",
                 "Faites gratiner au four pendant 8 à 10 minutes, jusqu’à ce que le fromage soit fondu et le lard croustillant."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "125",
@@ -2487,7 +2733,9 @@
             "categorie": "tartines-fromages",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
 
@@ -2510,7 +2758,9 @@
                 "Incorporez le chocolat fondu au mélange sucre-œufs, puis ajoutez la farine en remuant délicatement.",
                 "Versez la pâte dans un moule beurré et fariné.",
                 "Faites cuire au four pendant environ 20 minutes. Le cœur doit rester fondant."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "127",
@@ -2531,7 +2781,9 @@
                 "Ajoutez la farine et la levure, puis l'huile. Mélangez jusqu'à obtenir une pâte homogène.",
                 "Versez la pâte dans un moule beurré et fariné.",
                 "Enfournez pour environ 30 minutes. Vérifiez la cuisson avec la pointe d'un couteau."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "128",
@@ -2555,7 +2807,9 @@
                 "Incorporez les œufs battus et l'huile, puis mélangez jusqu'à obtention d'une pâte homogène.",
                 "Versez dans un moule beurré et fariné.",
                 "Faites cuire pendant environ 40 minutes. Laissez refroidir avant de déguster."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "129",
@@ -2576,7 +2830,9 @@
                 "Ajoutez les œufs un par un, puis le beurre fondu. Mélangez bien pour obtenir une pâte homogène.",
                 "Versez la pâte dans un moule beurré et fariné.",
                 "Enfournez pendant 25 à 30 minutes. Le fondant doit être légèrement doré."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "130",
@@ -2584,7 +2840,9 @@
             "categorie": "gateaux",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2606,7 +2864,9 @@
                 "Disposez les tranches de pommes en cercle sur la pâte.",
                 "Saupoudrez de sucre et de cannelle, puis déposez quelques noisettes de beurre.",
                 "Enfournez pendant 30 à 35 minutes, jusqu'à ce que la pâte soit dorée."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "132",
@@ -2629,13 +2889,15 @@
                 "Versez la crème au citron sur la pâte précuite.",
                 "Montez les blancs d'œufs en neige avec le sucre glace et déposez-les sur la crème.",
                 "Faites dorer la meringue au four pendant 10 minutes."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "133",
             "title": "Tartelettes au chocolat",
             "categorie": "tartes-tartelettes",
-            "img": "https://www.guydemarle.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOUtSQWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ee85bb5e09ebcc9984ca4b23c32d9fd357296ee4/mini-tartelettes-chocolat-pralin.jpg",
+            "img": "https://www.royalchill.com/wp-content/uploads/2016/11/tartelettes-chocolat-noisettes-erable.jpeg",
             "ingredients": [
                 "1 pâte sablée",
                 "200 g de chocolat noir",
@@ -2648,7 +2910,9 @@
                 "Faites cuire les fonds de tarte pendant 10 minutes.",
                 "Faites fondre le chocolat avec la crème et le sucre à feu doux.",
                 "Versez le chocolat fondu dans les fonds de tartelettes et laissez refroidir avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "134",
@@ -2667,7 +2931,9 @@
                 "Faites cuire les fonds de tarte pendant 10 minutes.",
                 "Faites fondre le chocolat avec la crème et le sucre à feu doux.",
                 "Versez le chocolat fondu dans les fonds de tartelettes et laissez refroidir avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "135",
@@ -2675,7 +2941,9 @@
             "categorie": "tartes-tartelettes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2696,7 +2964,9 @@
                 "Mélangez les jaunes avec le sucre, puis incorporez le chocolat fondu.",
                 "Ajoutez délicatement les blancs en neige à la préparation au chocolat.",
                 "Répartissez la mousse dans des verrines et laissez reposer au frais pendant au moins 2 heures."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "137",
@@ -2717,7 +2987,9 @@
                 "Versez lentement la crème chaude sur les œufs en mélangeant bien.",
                 "Répartissez la préparation dans des ramequins et enfournez au bain-marie pendant 35 à 40 minutes.",
                 "Laissez refroidir, puis saupoudrez de sucre cassonade et caramélisez avec un chalumeau."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "138",
@@ -2736,7 +3008,9 @@
                 "Montez la crème liquide en chantilly avec le reste du sucre.",
                 "Mélangez délicatement la purée de fruits et la chantilly.",
                 "Répartissez dans des verrines et laissez reposer au frais pendant 2 heures avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "139",
@@ -2755,7 +3029,9 @@
                 "Une fois la crème chaude, ajoutez la gélatine essorée et mélangez bien.",
                 "Versez dans des verrines et laissez refroidir à température ambiante, puis mettez au réfrigérateur pendant 4 heures.",
                 "Servez avec des fruits frais ou un coulis de fruits."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "140",
@@ -2763,7 +3039,9 @@
             "categorie": "mousses-cremes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2782,7 +3060,9 @@
                 "Laissez refroidir le sirop puis ajoutez-y le jus de citron.",
                 "Versez la préparation dans une sorbetière et laissez turbiner pendant environ 30 minutes.",
                 "Transférez le sorbet dans un contenant et placez-le au congélateur pendant 2 heures avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "142",
@@ -2803,7 +3083,9 @@
                 "Reverser le tout dans la casserole et faites chauffer à feu doux jusqu'à épaississement.",
                 "Laissez refroidir puis placez au réfrigérateur pendant 4 heures.",
                 "Versez la préparation dans une sorbetière et turbiner selon les instructions."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "143",
@@ -2825,7 +3107,9 @@
                 "Reversez la préparation dans la casserole et faites chauffer jusqu'à épaississement.",
                 "Ajoutez le chocolat fondu, mélangez bien et laissez refroidir.",
                 "Versez la préparation dans une sorbetière et turbiner pendant 30 minutes."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "144",
@@ -2842,7 +3126,9 @@
                 "Mixez les mangues avec le sucre et l'eau pour obtenir une purée lisse.",
                 "Versez la purée dans une sorbetière et turbiner pendant 30 minutes.",
                 "Transférez le sorbet dans un contenant et laissez durcir au congélateur pendant 2 heures avant de servir."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "145",
@@ -2850,7 +3136,9 @@
             "categorie": "glaces-sorbets",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -2875,7 +3163,9 @@
                 "Formez des boules de pâte et disposez-les sur une plaque recouverte de papier sulfurisé.",
                 "Enfournez pour 10-12 minutes ou jusqu'à ce que les bords soient dorés.",
                 "Laissez refroidir avant de déguster."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "147",
@@ -2898,7 +3188,9 @@
                 "Découpez des formes avec un emporte-pièce et déposez-les sur une plaque recouverte de papier sulfurisé.",
                 "Enfournez pendant 15-20 minutes, jusqu'à ce que les sablés soient légèrement dorés.",
                 "Laissez refroidir avant de déguster."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "148",
@@ -2922,7 +3214,9 @@
                 "Répartissez la pâte dans les moules à madeleines beurrés.",
                 "Enfournez pendant 10-12 minutes, jusqu'à ce que les madeleines soient dorées.",
                 "Laissez refroidir avant de démouler."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "149",
@@ -2948,7 +3242,9 @@
                 "Enfournez pendant 12-15 minutes, puis laissez refroidir.",
                 "Dans une casserole, chauffez la purée de framboises avec le sucre pour obtenir une compote.",
                 "Garnissez les macarons refroidis avec la compote de framboises avant de les assembler."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "150",
@@ -2956,7 +3252,9 @@
             "categorie": "biscuits",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
 
@@ -2979,7 +3277,9 @@
                 "Ajoutez les glaçons et le rhum blanc.",
                 "Complétez avec de l'eau gazeuse et mélangez doucement.",
                 "Décorez avec une branche de menthe et servez."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "152",
@@ -2998,7 +3298,9 @@
                 "Ajoutez une poignée de glaçons et mixez jusqu'à obtenir une texture onctueuse.",
                 "Versez dans un verre et décorez avec une tranche d'ananas.",
                 "Servez bien frais."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "153",
@@ -3019,7 +3321,9 @@
                 "Secouez énergiquement pendant quelques secondes.",
                 "Versez dans le verre préparé et décorez avec une tranche de citron vert.",
                 "Servez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "154",
@@ -3040,7 +3344,9 @@
                 "Secouez bien pour mélanger les saveurs.",
                 "Versez dans un verre rempli de glaçons.",
                 "Décorez avec une tranche d'orange et servez."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "155",
@@ -3048,7 +3354,9 @@
             "categorie": "cocktails",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -3069,7 +3377,9 @@
                 "Ajoutez des glaçons pour remplir le verre.",
                 "Complétez avec de l'eau gazeuse et mélangez doucement.",
                 "Décorez avec une branche de menthe et servez frais."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "157",
@@ -3088,7 +3398,9 @@
                 "Ajoutez délicatement le jus de grenade ou le sirop de grenadine pour créer un effet dégradé.",
                 "Complétez avec un peu d'eau gazeuse si souhaité.",
                 "Servez avec une paille et mélangez avant de déguster."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "158",
@@ -3106,7 +3418,9 @@
                 "Ajoutez une poignée de glaçons et mixez jusqu'à obtenir une texture crémeuse.",
                 "Versez dans un verre et décorez avec une tranche d'ananas.",
                 "Servez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "159",
@@ -3126,7 +3440,9 @@
                 "Versez la ginger beer par-dessus.",
                 "Mélangez doucement et ajoutez quelques rondelles de citron vert pour décorer.",
                 "Servez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "160",
@@ -3134,7 +3450,9 @@
             "categorie": "mocktails",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -3153,7 +3471,9 @@
                 "Placez tous les ingrédients dans un mixeur.",
                 "Mixez jusqu'à obtenir une consistance lisse.",
                 "Servez immédiatement dans un verre et dégustez."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "162",
@@ -3172,7 +3492,9 @@
                 "Placez tous les ingrédients dans un mixeur.",
                 "Mixez jusqu'à obtenir une texture homogène.",
                 "Servez frais avec des glaçons supplémentaires si souhaité."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "163",
@@ -3191,7 +3513,9 @@
                 "Placez tous les ingrédients dans un mixeur.",
                 "Mixez jusqu'à ce que le mélange soit bien lisse.",
                 "Servez immédiatement pour profiter des vitamines."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "164",
@@ -3210,7 +3534,9 @@
                 "Mixez jusqu'à obtenir une texture onctueuse.",
                 "Ajoutez des glaçons si souhaité pour une boisson bien fraîche.",
                 "Versez dans un verre et dégustez après une séance de sport."
-            ] 
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile" 
         },
         {
             "id": "165",
@@ -3218,7 +3544,9 @@
             "categorie": "smoothie",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []  
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""  
         },
 
         {
@@ -3239,7 +3567,9 @@
                 "Remuez constamment jusqu'à ce que le chocolat soit complètement fondu.",
                 "Versez dans une tasse et ajoutez de la crème fouettée si désiré.",
                 "Servez chaud."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "167",
@@ -3256,7 +3586,9 @@
                 "Faites chauffer le lait et utilisez un mousseur pour le rendre crémeux.",
                 "Versez le lait mousseux sur l'expresso.",
                 "Ajoutez du sucre si souhaité et servez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "168",
@@ -3275,7 +3607,9 @@
                 "Dans une casserole, chauffez le lait avec le sucre ou le miel jusqu'à ce qu'il soit bien chaud.",
                 "Versez le thé dans une tasse et ajoutez le lait chaud.",
                 "Saupoudrez de cannelle si désiré et servez."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "169",
@@ -3296,7 +3630,9 @@
                 "Chauffez à feu doux sans laisser bouillir, en remuant régulièrement.",
                 "Laissez infuser pendant 15 minutes.",
                 "Filtrez et servez chaud dans des tasses."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "170",
@@ -3304,7 +3640,9 @@
             "categorie": "boissons-chaudes",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         },
 
         {
@@ -3325,7 +3663,9 @@
                 "Ajoutez les tranches d'orange pour la décoration.",
                 "Ajoutez les bonbons en forme de yeux ou araignées pour un effet effrayant.",
                 "Servez bien frais dans des verres."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "172",
@@ -3348,7 +3688,9 @@
                 "Remettez le mélange dans la casserole et chauffez doucement sans faire bouillir jusqu'à épaississement.",
                 "Ajoutez la vanille, la noix de muscade, et le rhum si désiré.",
                 "Laissez refroidir et servez frais ou chaud."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "173",
@@ -3367,7 +3709,9 @@
                 "Ajoutez des glaçons et secouez vigoureusement.",
                 "Versez dans des verres et décorez avec des mini œufs en chocolat.",
                 "Servez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "174",
@@ -3388,7 +3732,9 @@
                 "Versez dans un blender avec la crème liquide et des glaçons.",
                 "Mixez jusqu'à obtenir une texture mousseuse.",
                 "Servez dans des verres et dégustez immédiatement."
-            ]
+            ],
+            "preparationTime" : "50min",
+            "difficulty" : "Facile"
         },
         {
             "id": "175",
@@ -3396,7 +3742,9 @@
             "categorie": "boissons-saisonnieres",
             "img": "https://static.750g.com/images/1200-630/2bb28ae83807e3f46e861587586c6aee/adobestock-182827481.jpeg",
             "ingredients": [],
-            "etapes": []
+            "etapes": [],
+            "preparationTime" : "",
+            "difficulty" : ""
         }
     ],
     "tips" : [
@@ -3485,6 +3833,37 @@
             "titleGM": "Ôter l'amertume des endives",
             "descriptionGM": "L'endive, c'est un légume excellent pour la santé et la ligne. Mais de nombreux détracteurs lui reprochent son amertume trop prononcée. Alors pour atténuer celle-ci, il suffit de retirer le petit cône à la base de l'endive, responsable de son amertume légendaire. Et voilà le travail, merci Mamie !",
             "imageGM": "https://ffcuisine.fr/wp-content/uploads/2024/10/44939_endives-decouvrez-les-secrets-de-cyril-lignac-pour-une-recette-sans-amertume.jpg"
+          },
+
+          {
+            "titleBread": "Le pain parfait pour les salades",
+            "descriptionBread": "Les salades, qu’elles soient composées ou simplement accompagnées d’une vinaigrette maison, se marient à merveille avec du pain. Pour sublimer vos repas tout en les rendant plus consistants, optez pour un pain aux céréales : croustillant et gourmand, il apporte une touche de rusticité et d’énergie à vos plats.",
+            "imageBread": "https://sf1.viepratique.fr/wp-content/uploads/sites/2/2015/04/Salade-aux-œufs-mollets-et-pain-aux-céréales-176283-2.jpg"
+          },
+          {
+            "titleBread": "L’accord pain et légumes",
+            "descriptionBread": "Pour un plat de légumes, choisissez un pain avec du caractère pour équilibrer les saveurs. Le pain au levain, avec son goût légèrement acidulé, est un excellent choix. Si vous aimez les textures croquantes, optez pour un pain multigrains ou un pain aux noix, qui se marient également très bien avec des légumes en version sucré-salé.",
+            "imageBread": "https://lapetitebette.com/wp-content/uploads/2022/05/pain-sans-chichi-miniature-blog-1200x675.jpg"
+          },
+          {
+            "titleBread": "Le pain pour accompagner un plat de poissons",
+            "descriptionBread": "Que ce soit pour des poissons grillés, fumés ou des crustacés, le choix du pain est essentiel. Les poissons fumés (saumon, thon) s’associent idéalement avec un pain de seigle ou un pain norvégien aux grains, pour une dégustation à la mode scandinave. Pour accompagner des crustacés comme les crevettes ou le homard, privilégiez un pain complet aux graines ou un pain au levain, qui mettront en valeur leur fraîcheur.",
+            "imageBread": "https://www.maisondelamouche.fr/wp-content/uploads/2024/09/1726720317_tartine-de-truite-sur-pain-de-seigle-une-recette-gourmande.jpg"
+          },
+          {
+            "titleBread": "Associer le pain avec un plat de viande ou votre charcuterie",
+            "descriptionBread": "Pour sublimer un plateau de charcuterie, rien de tel qu’un pain aux noix, dont le goût subtil rehausse celui des viandes fumées et des pâtés. Si vous aimez les saveurs sucrées-salées, essayez un pain aux cranberries : une combinaison audacieuse et délicieuse. Pour les viandes rôties ou en sauce, le pain de campagne ou le pain au levain sont particulièrement indiqués pour s’accorder avec la richesse des plats.",
+            "imageBread": "https://img.cuisineaz.com/660x495/2016/07/14/i11037-planche-charcuterie.webp"
+          },
+          {
+            "titleBread": "Le pain parfait pour les fromages",
+            "descriptionBread": "Les amateurs de fromage savent qu’un bon pain est essentiel. Les pains de campagne ou aux céréales conviennent à une grande variété de fromages. Pour des fromages à pâte persillée, comme le Roquefort, le pain de seigle est un classique incontournable. Enfin, pour des fromages plus doux comme le chèvre, testez un pain aux figues ou aux abricots pour une touche de douceur fruitée.",
+            "imageBread": "https://www.paul-bakeries.com/media/wysiwyg/Pain-Fromage-08.jpg"
+          },
+          {
+            "titleBread": "Le pain idéal pour vos plats épicés",
+            "descriptionBread": "Pour les plats épicés comme les tajines ou les currys, tournez-vous vers des pains typiques des régions concernées : le pain oriental (comme la pita ou le naan) est parfait pour accompagner les saveurs relevées. Ces pains moelleux permettent de savourer les sauces riches tout en adoucissant le piquant des épices.",
+            "imageBread": "https://www.latabledesandrine.com/wp-content/uploads/2023/04/orientales-recettes-faciles-epicees.jpg"
           }
     ]
   }

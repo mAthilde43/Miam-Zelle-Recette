@@ -34,6 +34,16 @@
     color: #643300;
     text-decoration: none;
 }
+
+.header-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.header .header-logo-container p a:hover {
+    color: #CDA274;
+}
+
 .header .dropdownMenu {
     position: absolute;
     top: 100px; /* Ajuste en fonction de la position de ton bouton */

@@ -54,9 +54,9 @@ const Ptitdej = () => {
             <SlideRecipe recipes={recipesCerealesGranola}/>
             <Title type="h3">Dej Salés</Title>
             <SlideRecipe recipes={recipesDejSales}/>
-            <Title type="h3">Oeufs & Omelette</Title>
+            <Title type="h3">Oeufs & Omelettes</Title>
             <SlideRecipe recipes={recipesOeufsOmelettes}/>
-            <Title type="h3">Viennoiserie</Title>
+            <Title type="h3">Viennoiseries</Title>
             <SlideRecipe recipes={recipesViennoiserie}/>
         </div>
         </>

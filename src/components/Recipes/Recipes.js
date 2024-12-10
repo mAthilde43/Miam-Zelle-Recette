@@ -1,12 +1,16 @@
 import classes from './Recipes.module.css';
 import Header from '../Header/Header';
 import Title from '../Title/Title';
+import RecipeCard from '../RecipeCard/RecipeCard';
+import Modal from '../Modal/Modal';
 import { useState } from 'react';
 
 const Recipes = () => {
     const [titleRecipe, setTitleRecipe] = useState("");
     const [category, setCategory] = useState("");
     const [subCategory, setSubCategory] = useState("");
+    const [preparationTime, setPreparationTime] = useState("");
+    const [difficulty, setDifficulty] = useState("");
     const [ingredients, setIngredients] = useState("");
     const [steps, setSteps] = useState("");
     const [photo, setPhoto] = useState(null);
@@ -14,12 +18,25 @@ const Recipes = () => {
     const [ingredientsLength, setIngredientsLength] = useState(0);
     const [stepsLength, setStepsLength] = useState(0);
 
+
+    const subCategoryOptions = {
+        Ptitdej: ["Pancakes & Gauffres", "Céréales & Ganola", "Dej salés", "Oeufs & Omelettes", "Viennoiseries"],
+        Apéritifs: ["Verrines salées", "Cakes salés", "Feuilletés", "Brochettes apéro", "Tapas & Mezze"],
+        Entrees: ["Salades", "Soupes & Veloutés", "Tartes & Quiches", "Carpaccio & Tartares", "Terrines & Patés"],
+        Plats: ["Viandes", "Poissons", "Plats végétariens", "Pâtes & Riz", "Gratins & Mijotés"],
+        Fromages: ["Plateaux de fromages", "Fromages chauds", "Fondues & Raclettes", "Fromage frais", "Tartines au fromage"],
+        Desserts: ["Gâteaux", "Tartes & Tartelettes", "Mousses & Crèmes", "Glaces & Sorbets", "Biscuits"],
+        Boissons: ["Cocktails", "Mocktails", "Smoothies", "Boissons chaudes", "Boissons saisonnières"]
+    };
+
     const inputRecipeHandler = (e) => {
         const { name, value } = e.target;
 
         if (name === "titleRecipe") setTitleRecipe(value);
         else if (name === "category") setCategory(value);
         else if (name === "subCategory") setSubCategory(value);
+        else if (name === "preparationTime") setPreparationTime(value);
+        else if (name === "difficulty") setDifficulty(value);
         else if (name === "ingredients") {
             setIngredients(value); // Garde le texte brut pour ingrédients
             setIngredientsLength(value.length);
@@ -44,6 +61,8 @@ const Recipes = () => {
             title: titleRecipe,
             category,
             subCategory,
+            preparationTime,
+            difficulty,
             ingredients,
             steps,
             photo,
@@ -55,6 +74,8 @@ const Recipes = () => {
         setTitleRecipe("");
         setCategory("");
         setSubCategory("");
+        setPreparationTime("");
+        setDifficulty("");
         setIngredients("");
         setSteps("");
         setPhoto(null);
@@ -94,7 +115,7 @@ const Recipes = () => {
                             <option value="">Catégorie</option>
                             <option value="Ptitdej">P'tit Dej</option>
                             <option value="Apéritifs">Apéritifs</option>
-                            <option value="Entrées">Entrées</option>
+                            <option value="Entrees">Entrées</option>
                             <option value="Plats">Plats</option>
                             <option value="Fromages">Fromages</option>
                             <option value="Desserts">Desserts</option>
@@ -107,11 +128,40 @@ const Recipes = () => {
                             name="subCategory"
                             value={subCategory}
                             onChange={inputRecipeHandler}
+                            disabled={!category} // Désactive si aucune catégorie sélectionnée
                         >
                             <option value="">Sous-catégorie</option>
-                            {/* Votre logique pour les sous-catégories ici */}
+                            {category &&
+                                subCategoryOptions[category]?.map((subCat) => (
+                                    <option key={subCat} value={subCat}>
+                                        {subCat}
+                                    </option>
+                                ))}
                         </select>
                     </div>
+
+                    <div>
+                        <label>Temps de préparation :</label>
+                        <input
+                            type="text"
+                            name="preparationTime"
+                            value={preparationTime}
+                            placeholder="Temps de préparation"
+                            onChange={inputRecipeHandler}
+                        />
+                    </div>
+
+                    {/* <div>
+                        <label>Difficulté :</label>
+                        <input
+                            type="text"
+                            name="difficulty"
+                            value={difficulty}
+                            placeholder="Difficulté"
+                            onChange={inputRecipeHandler}
+                        />
+                    </div> */}
+
                     <div className={classes.inputContainer}>
                         <label>Ingrédients :</label>
                         <textarea
@@ -154,28 +204,19 @@ const Recipes = () => {
                     </button>
                 </form>
 
-                <Title type="h2">Mes Recettes Ajoutées</Title>
+                <Title type="h2">Mes recettes ajoutées</Title>
                 <div className={classes.recipeList}>
-                    {recipes.map((recipe, index) => (
-                        <div key={index} className={classes.recipeCard}>
-                            <h3>{recipe.title}</h3>
-                            <p><strong>Catégorie :</strong> {recipe.category}</p>
-                            <p><strong>Sous-catégorie :</strong> {recipe.subCategory}</p>
-                            <p><strong>Ingrédients :</strong> 
-                                {recipe.ingredients.split("\n").map((line, i) => (
-                                    <span key={i}>{line}<br /></span>
-                                ))}
-                            </p>
-                            <p><strong>Étapes :</strong> 
-                                {recipe.steps.split("\n").map((line, i) => (
-                                    <span key={i}>{line}<br /></span>
-                                ))}
-                            </p>
-                            {recipe.photo && <img src={recipe.photo} alt={`Recette - ${recipe.title}`} className={classes.recipeImage} />}
-                        </div>
+                    {recipes.map((recipe) => (
+                        <RecipeCard
+                        key={recipe.id}
+                        title={recipe.title}
+                        img={recipe.photoNewRecipe}
+                      />
                     ))}
-                </div>
-            </div>
+                    
+
+                </div> 
+             </div>
         </>
     );
 };

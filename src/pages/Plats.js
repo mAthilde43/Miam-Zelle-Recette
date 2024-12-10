@@ -55,7 +55,7 @@ const Plats = () => {
             <SlideRecipe recipes={recipesPlatsVegetariens}/>
             <Title type="h3">Pâtes & Riz</Title>
             <SlideRecipe recipes={recipesPatesRiz}/>
-            <Title type="h3">Gratin & Mijotés</Title>
+            <Title type="h3">Gratins & Mijotés</Title>
             <SlideRecipe recipes={recipesGratinMijotes}/>
         </div>
         </>

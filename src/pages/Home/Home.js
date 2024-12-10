@@ -18,7 +18,7 @@ const Home = () => {
                     Aujourd'hui, j'ai crée ce site pour vous permettre de retrouver ces précieux conseils et recettes, et bien plus encore.<br />
                     Miam'Zelle Recette est conçu pour vous simplifier la cuisine au quotidien.<br />
                     Grâce à une interface simple et intuitive, vous pouvez facilement explorer, ajouter vos recettes favorites, et même ajouter vos propres création culinaires.<br />
-                    Que vous soyez un cuisiner novice ou passioné, ce site vous aidera à réussir vos plats et à épater vos proches avec des recettes pleines de saveurs.
+                    Que vous soyez un cuisinier novice ou passionné, ce site vous aidera à réussir vos plats et à épater vos proches avec des recettes pleines de saveurs.
         </p></div>
         <SlideTip/>
         <Suggestion/>

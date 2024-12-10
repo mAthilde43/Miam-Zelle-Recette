@@ -37,7 +37,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 35px;
+    column-gap: 35px;
     margin: 8px 6px;
     flex-wrap: wrap;
 }
@@ -47,6 +47,29 @@ h1 {
     height: 250px;
     border-radius: 8px;
     object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.recipeDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipeInfo {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 10px;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.preparationTime, 
+.difficulty {
+    background-color: #CDA274; 
+    padding: 8px;
+    border-radius: 25px;
+    text-align: center;
 }
 
 .tipContainer {
@@ -101,7 +124,6 @@ h1 {
 }
   
 .etapes {
-    margin-top: 20px;
     text-align: left;
 }
   
@@ -118,7 +140,7 @@ h1 {
     font-size: 17px;
     line-height: 30px;
 }
-  
+
 .buttonClose {
     margin-top: 20px;
     padding: 10px 15px;

@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home'
 import Recipes from './components/Recipes/Recipes';
 import Favoris from './pages/Favoris/Favoris';
+import MyAccount from './pages/MyAccount/MyAccount';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Routes>
           <Route path='/home' element={<Home/>}></Route>
           <Route path='/seconnecter' element={<Seconnecter/>}></Route>
+          <Route path='/myaccount' element={<MyAccount/>}></Route>
           <Route path='/recipes' element={<Recipes/>}></Route>
           <Route path='/favoris' element={<Favoris/>}></Route>
           
