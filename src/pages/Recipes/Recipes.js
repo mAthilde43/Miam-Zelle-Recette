@@ -16,15 +16,11 @@ const Recipes = () => {
     const [steps, setSteps] = useState([]);
     const [ingredientValue, setIngredientValue] = useState("");
     const [stepValue, setStepValue] = useState(""); 
-    const [photo, setPhoto] = useState(null);
+    const [img, setImg] = useState(null);
     const [recipes, setRecipes] = useState([]);
-    const [ingredientOptions, setIngredientOptions] = useState([]);
-    const [ingredientKg, setIngredientKg] = useState([]);
-    const [preparationStep, setPreparationStep] = useState([]);
     // const [ingredientsLength, setIngredientsLength] = useState(0);
     // const [stepsLength, setStepsLength] = useState(0);
     const [isFetch, setIsFetch] = useState(false)
-
 
     useEffect(
         function(){
@@ -43,43 +39,6 @@ const Recipes = () => {
                     setIsFetch(false)
                 }
             )
-
-            fetch("http://localhost:5001/ingredientsOptions")
-        .then(
-            function(response){
-                return response.json()
-            }
-        )
-        .then(
-            function(data){
-                setIngredientOptions(data)
-            }
-        );
-    
-    fetch("http://localhost:5001/ingredientsKg")
-        .then(
-            function(response){
-                return response.json()
-            }
-        )
-        .then(
-            function(data){
-                setIngredientKg(data)
-            }
-        );
-
-    fetch("http://localhost:5001/preparationSteps")
-        .then(
-            function(response){
-                return response.json()
-            }
-        )
-        .then(
-            function(data){
-                setPreparationStep(data)
-            }
-        );
-
         }, [isFetch]
     )
 
@@ -111,18 +70,15 @@ const Recipes = () => {
         }
     };
 
-    const photoChangeHandler = (e) => {
+    const imgChangeHandler = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setPhoto(URL.createObjectURL(file));
+            setImg(URL.createObjectURL(file));
         }
     };
 
     const submitRecipeHandler = (e) => {
         e.preventDefault();
-
-        setIngredients((prevTab) => [...prevTab, ingredientValue])
-        setSteps((prevTab) => [...prevTab, stepValue])
 
         const newRecipe = {
             title: titleRecipe,
@@ -132,7 +88,7 @@ const Recipes = () => {
             difficulty,
             ingredients,
             etapes: steps,
-            photo,
+            img,
             userId: 1
         };
 
@@ -160,10 +116,12 @@ const Recipes = () => {
         setSubCategory("");
         setPreparationTime("");
         setDifficulty("");
-        setIngredients("");
-        setSteps("");
-        setPhoto(null);
+        setIngredients([]);
+        setSteps([]);
+        setImg(null);
     };
+
+
 
     // // Redimensionner textarea en fonction de son contenu
     // const autoResize = (e) => {
@@ -171,9 +129,7 @@ const Recipes = () => {
     //     e.target.style.height = `${e.target.scrollHeight}px`;
     // };
 
-
     
-
     return (
         <>
             <Header />
@@ -265,16 +221,13 @@ const Recipes = () => {
                         <div className={classes.charCount}>{500 - ingredientsLength}/500</div> */}
 
                         <div className={classes.selectRow}>
-                            <CreatableSelect 
+                        <CreatableSelect 
                                 isMulti 
-                                options={ingredientOptions}
-                                placeholder="Sélectionner ou entrer les ingrédients" 
-                            />
-                            
-                            <CreatableSelect 
-                                isMulti 
-                                options={ingredientKg} 
-                                placeholder="Sélectionner ou entrer le grammage"
+                                placeholder="Insérer les ingrédients et leur dosage" 
+                                onChange={(choice) => {
+                                    const values = choice.map(c => c.value)
+                                    setIngredients(values)
+                                }}
                             />
                         </div>
                         </div>
@@ -291,10 +244,14 @@ const Recipes = () => {
                         />
                         <div className={classes.charCount}>{1000 - stepsLength}/1000</div> */}
                         <CreatableSelect 
+                            className={classes.selectDropdown}
                             isMulti 
-                            options={preparationStep} 
-                            className={classes.selectDropdown} 
-                            placeholder="Entrer les étapes à suivre"/>
+                            placeholder="Insérer les étapes de préparation" 
+                            onChange={(choice) => {
+                                const values = choice.map(c => c.value)
+                                setSteps(values)
+                            }}
+                        />
                         </div>
 
                     <div className={classes.formGroup}>
@@ -302,11 +259,11 @@ const Recipes = () => {
                         <input
                             type="file"
                             accept="image/*"
-                            onChange={photoChangeHandler}
+                            onChange={imgChangeHandler}
                         />
-                        {photo && (
+                        {img && (
                             <div className={classes.imagePreview}>
-                                <img src={photo} alt="Prévisualisation" />
+                                <img src={img} alt="Prévisualisation" />
                             </div>
                         )}
                     </div>
@@ -317,8 +274,7 @@ const Recipes = () => {
 
                 <Title type="h2">Mes recettes ajoutées</Title>
                 <div className={classes.recipeList}>
-                    {console.log(recipes)}
-                    {recipes.map((recipe) => <RecipeCard key={recipe.id} title={recipe.title} img={recipe.photo} id={recipe.id}/>)}
+                    {recipes.map((recipe) => <RecipeCard key={recipe.id} title={recipe.title} img={recipe.img} id={recipe.id}/>)}
                 </div> 
              </div>
         </>

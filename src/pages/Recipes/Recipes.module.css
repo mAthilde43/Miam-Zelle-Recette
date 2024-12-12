@@ -89,16 +89,7 @@
     text-align: left;
 } */
 
-.selectRow{
-    display: flex;
-    flex: 1;
-    gap: 10px;
-}
-
-.selectRow>*{
-    width: 50%;
-}
-
+.selectRow, 
 .selectDropdown{
     flex: 1;
 }

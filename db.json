@@ -3712,31 +3712,26 @@
       "difficulty": ""
     },
     {
-      "id": "2ffe",
-      "title": "Tarte à la fraise",
-      "category": "Desserts",
-      "subCategory": "Tartes & Tartelettes",
+      "id": "8082",
+      "title": "Recette Test",
+      "category": "Ptitdej",
+      "subCategory": "Pancakes & Gauffres",
       "preparationTime": "20min",
-      "difficulty": "Moyen",
+      "difficulty": "Facile",
       "ingredients": [
-        "fraises"
+        "6 oeufs",
+        "500g de farine",
+        "1L de lait",
+        "1 pincée de sel",
+        "1 cas d'huile"
       ],
       "etapes": [
-        "test"
+        "Mettre tous les ingrédients dans un grand saladier",
+        "Mélanger le tout avec le fouet ou le batteur",
+        "Mettre de l'huile sur la crêprière",
+        "Mettre de la pate à crêpe sur la crépière et les faire chauffer"
       ],
-      "photo": null,
-      "userId": 1
-    },
-    {
-      "id": "e804",
-      "title": "ngfd",
-      "category": "Apéritifs",
-      "subCategory": "Verrines salées",
-      "preparationTime": "20min",
-      "difficulty": "Moyen",
-      "ingredients": [],
-      "etapes": [],
-      "photo": "blob:http://localhost:3000/ebbecbb7-c951-45f6-bfe0-d7dfab0c6461",
+      "img": "blob:http://localhost:3000/69c3b56a-654c-4168-a0b5-cf9a43b01947",
       "userId": 1
     }
   ],
@@ -3879,243 +3874,5 @@
       "imageBread": "https://www.latabledesandrine.com/wp-content/uploads/2023/04/orientales-recettes-faciles-epicees.jpg",
       "id": "cc7c"
     }
-  ],
-  "ingredientsOptions": [
-    {
-      "value": "ail",
-      "label": "Ail"
-    },
-    {
-      "value": "amandes",
-      "label": "Amandes"
-    },
-    {
-      "value": "beurre",
-      "label": "Beurre"
-    },
-    {
-      "value": "boeuf",
-      "label": "Bœuf"
-    },
-    {
-      "value": "camembert",
-      "label": "Camembert"
-    },
-    {
-      "value": "carottes",
-      "label": "Carottes râpées"
-    },
-    {
-      "value": "cafe",
-      "label": "Café"
-    },
-    {
-      "value": "champignons",
-      "label": "Champignons"
-    },
-    {
-      "value": "chocolat",
-      "label": "Chocolat noir"
-    },
-    {
-      "value": "chocolat_poudre",
-      "label": "Chocolat en poudre"
-    },
-    {
-      "value": "citron",
-      "label": "Citron"
-    },
-    {
-      "value": "concombre",
-      "label": "Concombre"
-    },
-    {
-      "value": "confiture",
-      "label": "Confiture"
-    },
-    {
-      "value": "creme_fraiche",
-      "label": "Crème fraîche"
-    },
-    {
-      "value": "emmental",
-      "label": "Emmental"
-    },
-    {
-      "value": "epinards",
-      "label": "Épinards"
-    },
-    {
-      "value": "farine",
-      "label": "Farine"
-    },
-    {
-      "value": "flocons_avoine",
-      "label": "Flocons d\"avoine"
-    },
-    {
-      "value": "huile_olive",
-      "label": "Huile d\"olive"
-    },
-    {
-      "value": "lait",
-      "label": "Lait"
-    },
-    {
-      "value": "levure",
-      "label": "Levure chimique"
-    },
-    {
-      "value": "miel",
-      "label": "Miel"
-    },
-    {
-      "value": "mozzarella",
-      "label": "Mozzarella"
-    },
-    {
-      "value": "noisettes",
-      "label": "Noisettes"
-    },
-    {
-      "value": "oeufs",
-      "label": "Œufs"
-    },
-    {
-      "value": "oignons",
-      "label": "Oignons"
-    },
-    {
-      "value": "pate_feuilletee",
-      "label": "Pâte feuilletée"
-    },
-    {
-      "value": "pates",
-      "label": "Pâtes"
-    },
-    {
-      "value": "pepites_chocolat",
-      "label": "Pépites de chocolat"
-    },
-    {
-      "value": "poisson",
-      "label": "Poisson"
-    },
-    {
-      "value": "pommes_de_terre",
-      "label": "Pommes de terre"
-    },
-    {
-      "value": "poulet",
-      "label": "Poulet"
-    },
-    {
-      "value": "quinoa",
-      "label": "Quinoa"
-    },
-    {
-      "value": "ricotta",
-      "label": "Ricotta"
-    },
-    {
-      "value": "riz",
-      "label": "Riz"
-    },
-    {
-      "value": "roquefort",
-      "label": "Roquefort"
-    },
-    {
-      "value": "sauce_tomate",
-      "label": "Sauce tomate"
-    },
-    {
-      "value": "saumon_fume",
-      "label": "Saumon fumé"
-    },
-    {
-      "value": "sucre",
-      "label": "Sucre"
-    },
-    {
-      "value": "tapenade",
-      "label": "Tapenade"
-    },
-    {
-      "value": "tomates",
-      "label": "Tomates"
-    },
-    {
-      "value": "tomates_cerises",
-      "label": "Tomates cerises"
-    },
-    {
-      "value": "vanille",
-      "label": "Vanille"
-    },
-    {
-      "value": "yaourt",
-      "label": "Yaourt"
-    }
-  ],
-  "ingredientsKg": [
-    {
-      "value": "5g",
-      "label": "5g"
-    },
-    {
-      "value": "10g",
-      "label": "10g"
-    },
-    {
-      "value": "15g",
-      "label": "15g"
-    },
-    {
-      "value": "20g",
-      "label": "20g"
-    },
-    {
-      "value": "25g",
-      "label": "25g"
-    },
-    {
-      "value": "30g",
-      "label": "30g"
-    },
-    {
-      "value": "50g",
-      "label": "50g"
-    },
-    {
-      "value": "100g",
-      "label": "100g"
-    },
-    {
-      "value": "150g",
-      "label": "150g"
-    },
-    {
-      "value": "200g",
-      "label": "200g"
-    },
-    {
-      "value": "250g",
-      "label": "250g"
-    },
-    {
-      "value": "500g",
-      "label": "500g"
-    },
-    {
-      "value": "1kg",
-      "label": "1kg"
-    }
-  ],
-  "preparationSteps": [
-    {
-      "value": "",
-      "label": ""
-    }
-]
+  ]
 }
