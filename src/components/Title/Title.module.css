@@ -3,7 +3,7 @@
     font-weight: 400;
     font-style: normal;
     color: #643300;
-    font-size: 36px;
+    font-size: clamp(30px, 4vw, 36px);
 }
 
 .titreh2 {
@@ -20,9 +20,9 @@
     font-weight: 400;
     font-style: normal;
     color: #643300;
-    font-size: 30px;
+    font-size: clamp(25px, 4vw, 30px);
     text-align: left;
-    margin-left: 120px;
+    margin-left: clamp(30px, 5vw, 120px);
     margin-top: 50px;
 }
 

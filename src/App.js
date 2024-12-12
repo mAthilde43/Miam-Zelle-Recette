@@ -10,7 +10,7 @@ import Boissons from './pages/Boissons';
 import Seconnecter from './pages/Seconnecter/Seconnecter';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home'
-import Recipes from './components/Recipes/Recipes';
+import Recipes from './pages/Recipes/Recipes';
 import Favoris from './pages/Favoris/Favoris';
 import MyAccount from './pages/MyAccount/MyAccount';
 

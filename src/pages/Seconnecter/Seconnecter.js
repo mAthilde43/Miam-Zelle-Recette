@@ -14,13 +14,13 @@ const Seconnecter = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  // Récupérer les utilisateurs depuis LocalStorage
+  //recupere user depuis localStorage
   const getStoredUsers = () => {
     const users = localStorage.getItem("users");
-    return users ? JSON.parse(users) : []; // Retourne un tableau vide si aucun utilisateur n'est stocké
+    return users ? JSON.parse(users) : []; // retour vide si aucun user n'est stocke
   };
 
-  // Sauvegarder les utilisateurs dans LocalStorage
+  //save user dans localStorage
   const saveUsersToStorage = (users) => {
     localStorage.setItem("users", JSON.stringify(users));
   };
@@ -46,8 +46,8 @@ const Seconnecter = () => {
     );
 
     if (user) {
-      localStorage.setItem("loggedInUser", user.username); // Stocke l'utilisateur connecté avec la bonne clé
-      navigate("/home"); // Redirige vers la page d'accueil si trouvé
+      localStorage.setItem("loggedInUser", user.username); //stoke user connecté avec bonne clé
+      navigate("/home"); //redirige page home
     } else {
       setErrorMessage(
         "Compte non trouvé. Veuillez vérifier vos informations ou créer un compte."
@@ -59,14 +59,14 @@ const Seconnecter = () => {
     e.preventDefault();
     const users = getStoredUsers();
 
-    // Vérifier si le nom d'utilisateur est déjà utilisé
+    //verifie nom user si déjà utilisé
     const existingUser = users.find((u) => u.username === usernameAccount);
     if (existingUser) {
       alert("Ce nom d'utilisateur est déjà pris. Veuillez en choisir un autre.");
       return;
     }
 
-    // Ajouter le nouvel utilisateur
+    //add new user
     const newUser = {
       name,
       firstName,
@@ -75,7 +75,7 @@ const Seconnecter = () => {
     };
 
     users.push(newUser);
-    saveUsersToStorage(users); // Sauvegarder dans LocalStorage
+    saveUsersToStorage(users); //save dans localStorage
     alert("Compte créé avec succès !");
   };
 

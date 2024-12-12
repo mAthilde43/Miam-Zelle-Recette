@@ -37,7 +37,8 @@
 
 .header-nav {
     display: flex;
-    gap: 40px;
+    gap: clamp(20px, 3vw, 40px);
+    margin-right: clamp(5px, 3vw, 0px);
 }
 
 .header .header-logo-container p a:hover {
@@ -94,21 +95,21 @@
 }
 
 .hero--home{
-    height: 620px;
+    height: clamp(485px, 77vw, 620px);
 }
 
 .header .hero h1{
     font-family: "Allura", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 135px;
+    font-size: clamp(110px, 13vw, 135px);
     color: #643300;
     margin: -40px;
     text-align: center;
 }
 
 .header .hero h2{
-    font-size: 70px;
+    font-size: clamp(55px, 8vw, 70px);
     color: #643300;
     font-weight: 400;
     margin: 0;
@@ -116,7 +117,7 @@
 }
 
 .header .hero h3{
-    font-size: 26px;
+    font-size: clamp(22px, 3vw, 26px);
     color: #643300;
     font-weight: 400;
     margin: 40px;
@@ -131,7 +132,7 @@
     border: 2px solid #CDA274;
     padding: 5px 0;
     border-radius: 18px;
-    width: 850px;
+    width: clamp(575px, 85vw, 850px);
     margin: 0 auto;
 }
 
@@ -163,4 +164,3 @@
     color: #fff; 
     border-radius: 10px;
 }
-

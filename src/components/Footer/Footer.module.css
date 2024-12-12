@@ -37,12 +37,12 @@
 
 .footer .footer-image .imageFooter {
     width: 100vw;
-    height: 300px;
+    height: clamp(140px, 19vw, 300px);
     object-fit: cover;
 }
 
 .footer .footer-logo .logo {
-    width: 250px;
+    width: clamp(200px, 18vw, 250px);
     height: auto;
 }
 

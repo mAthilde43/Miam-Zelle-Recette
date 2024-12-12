@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import classes from './SlideTip.module.css';
 import Title from '../Title/Title';
 import ModalTip from '../Modal/ModalTip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const SlideTip = () => {
   const [wineTips, setWineTips] = useState([]);
@@ -97,7 +100,7 @@ const SlideTip = () => {
               )
             }
           >
-            &lt;
+            <FontAwesomeIcon icon={faArrowLeft}/>
           </button>
           <button
             className={classes.arrowButton}
@@ -105,7 +108,7 @@ const SlideTip = () => {
               setCurrentWineIndex((prevIndex) => (prevIndex + 1) % wineTips.length)
             }
           >
-            &gt;
+            <FontAwesomeIcon icon={faArrowRight}/>
           </button>
         </div>
         <button
@@ -139,7 +142,7 @@ const SlideTip = () => {
               )
             }
           >
-            &lt;
+            <FontAwesomeIcon icon={faArrowLeft}/>
           </button>
           <button
             className={classes.arrowButton}
@@ -147,7 +150,7 @@ const SlideTip = () => {
               setCurrentGmIndex((prevIndex) => (prevIndex + 1) % gmTips.length)
             }
           >
-            &gt;
+            <FontAwesomeIcon icon={faArrowRight}/>
           </button>
         </div>
         <button
@@ -180,7 +183,7 @@ const SlideTip = () => {
               )
             }
           >
-            &lt;
+            <FontAwesomeIcon icon={faArrowLeft}/>
           </button>
           <button
             className={classes.arrowButton}
@@ -188,7 +191,7 @@ const SlideTip = () => {
               setCurrentBreadIndex((prevIndex) => (prevIndex + 1) % breadTips.length)
             }
           >
-            &gt;
+            <FontAwesomeIcon icon={faArrowRight}/>
           </button>
         </div>
         <button

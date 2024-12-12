@@ -1,8 +1,10 @@
 import classes from './Recipes.module.css';
-import Header from '../Header/Header';
-import Title from '../Title/Title';
-import RecipeCard from '../RecipeCard/RecipeCard';
-import { useState } from 'react';
+import Header from '../../components/Header/Header';
+import Title from '../../components/Title/Title';
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import { useState, useEffect } from 'react';
+import React from 'react';
+import CreatableSelect from 'react-select/creatable';
 
 const Recipes = () => {
     const [titleRecipe, setTitleRecipe] = useState("");
@@ -10,13 +12,76 @@ const Recipes = () => {
     const [subCategory, setSubCategory] = useState("");
     const [preparationTime, setPreparationTime] = useState("");
     const [difficulty, setDifficulty] = useState("");
-    const [ingredients, setIngredients] = useState("");
-    const [steps, setSteps] = useState("");
+    const [ingredients, setIngredients] = useState([]);
+    const [steps, setSteps] = useState([]);
+    const [ingredientValue, setIngredientValue] = useState("");
+    const [stepValue, setStepValue] = useState(""); 
     const [photo, setPhoto] = useState(null);
     const [recipes, setRecipes] = useState([]);
-    const [ingredientsLength, setIngredientsLength] = useState(0);
-    const [stepsLength, setStepsLength] = useState(0);
+    const [ingredientOptions, setIngredientOptions] = useState([]);
+    const [ingredientKg, setIngredientKg] = useState([]);
+    const [preparationStep, setPreparationStep] = useState([]);
+    // const [ingredientsLength, setIngredientsLength] = useState(0);
+    // const [stepsLength, setStepsLength] = useState(0);
+    const [isFetch, setIsFetch] = useState(false)
 
+
+    useEffect(
+        function(){
+            fetch("http://localhost:5001/recipe")
+            .then(
+                function(response){
+                    return response.json()
+                }
+            )
+            .then(
+                function(data){
+                    
+                    const recette = data.filter(r => r.userId == 1)
+
+                    setRecipes(recette);
+                    setIsFetch(false)
+                }
+            )
+
+            fetch("http://localhost:5001/ingredientsOptions")
+        .then(
+            function(response){
+                return response.json()
+            }
+        )
+        .then(
+            function(data){
+                setIngredientOptions(data)
+            }
+        );
+    
+    fetch("http://localhost:5001/ingredientsKg")
+        .then(
+            function(response){
+                return response.json()
+            }
+        )
+        .then(
+            function(data){
+                setIngredientKg(data)
+            }
+        );
+
+    fetch("http://localhost:5001/preparationSteps")
+        .then(
+            function(response){
+                return response.json()
+            }
+        )
+        .then(
+            function(data){
+                setPreparationStep(data)
+            }
+        );
+
+        }, [isFetch]
+    )
 
     const subCategoryOptions = {
         Ptitdej: ["Pancakes & Gauffres", "Céréales & Ganola", "Dej salés", "Oeufs & Omelettes", "Viennoiseries"],
@@ -37,12 +102,12 @@ const Recipes = () => {
         else if (name === "preparationTime") setPreparationTime(value);
         else if (name === "difficulty") setDifficulty(value);
         else if (name === "ingredients") {
-            setIngredients(value); // Garde le texte brut pour ingrédients
-            setIngredientsLength(value.length);
+            setIngredientValue(value); 
+            // setIngredientsLength(value.length);
         }
         else if (name === "steps") {
-            setSteps(value); // Garde le texte brut pour les étapes
-            setStepsLength(value.length);
+            setStepValue(value);
+            // setStepsLength(value.length);
         }
     };
 
@@ -56,6 +121,9 @@ const Recipes = () => {
     const submitRecipeHandler = (e) => {
         e.preventDefault();
 
+        setIngredients((prevTab) => [...prevTab, ingredientValue])
+        setSteps((prevTab) => [...prevTab, stepValue])
+
         const newRecipe = {
             title: titleRecipe,
             category,
@@ -63,11 +131,28 @@ const Recipes = () => {
             preparationTime,
             difficulty,
             ingredients,
-            steps,
+            etapes: steps,
             photo,
+            userId: 1
         };
 
-        setRecipes((prevRecipes) => [...prevRecipes, newRecipe]);
+        console.log("SUBMIT RECIP ", newRecipe)
+
+        fetch("http://localhost:5001/recipe", {
+            method: "POST",
+            headers: {"Content-type": "application/json"},
+            body: JSON.stringify(newRecipe)
+        })
+        .then(
+            function(data){
+                console.log(data)
+                setIsFetch(true)
+            })
+        .catch(
+            function(err){
+                console.log(err)
+            }
+        )
 
         // Reset form
         setTitleRecipe("");
@@ -80,11 +165,14 @@ const Recipes = () => {
         setPhoto(null);
     };
 
-    // Redimensionner textarea en fonction de son contenu
-    const autoResize = (e) => {
-        e.target.style.height = "auto";
-        e.target.style.height = `${e.target.scrollHeight}px`;
-    };
+    // // Redimensionner textarea en fonction de son contenu
+    // const autoResize = (e) => {
+    //     e.target.style.height = "auto";
+    //     e.target.style.height = `${e.target.scrollHeight}px`;
+    // };
+
+
+    
 
     return (
         <>
@@ -94,7 +182,7 @@ const Recipes = () => {
                 <Title type="h2">Ajouter une recette</Title>
 
                 <form onSubmit={submitRecipeHandler}>
-                    <div>
+                    <div className={classes.formGroup}>
                         <label>Titre de la recette :</label>
                         <input
                             type="text"
@@ -104,7 +192,7 @@ const Recipes = () => {
                             onChange={inputRecipeHandler}
                         />
                     </div>
-                    <div>
+                    <div className={classes.formGroup}>
                         <label>Catégorie :</label>
                         <select
                             name="category"
@@ -121,7 +209,7 @@ const Recipes = () => {
                             <option value="Boissons">Boissons</option>
                         </select>
                     </div>
-                    <div>
+                    <div className={classes.formGroup}>
                         <label>Sous-catégorie :</label>
                         <select
                             name="subCategory"
@@ -139,7 +227,7 @@ const Recipes = () => {
                         </select>
                     </div>
 
-                    <div>
+                    <div className={classes.formGroup}>
                         <label>Temps de préparation :</label>
                         <input
                             type="text"
@@ -150,7 +238,7 @@ const Recipes = () => {
                         />
                     </div>
 
-                    <div>
+                    <div className={classes.formGroup}>
                         <label>Difficulté :</label>
                         <select
                             name="difficulty"
@@ -164,31 +252,52 @@ const Recipes = () => {
                         </select>
                     </div>
 
-                    <div className={classes.inputContainer}>
+                    <div className={`${classes.formGroup} ${classes.formGroupSelect}`}>
                         <label>Ingrédients :</label>
-                        <textarea
+                        {/* <textarea
                             name="ingredients"
-                            value={ingredients}
+                            value={ingredientValue}
                             placeholder="Ingrédients"
                             onChange={inputRecipeHandler}
-                            maxLength={500}
+                            maxLength={500}@
                             onInput={autoResize}
                         />
-                        <div className={classes.charCount}>{500 - ingredientsLength}/500</div>
-                    </div>
-                    <div className={classes.inputContainer}>
+                        <div className={classes.charCount}>{500 - ingredientsLength}/500</div> */}
+
+                        <div className={classes.selectRow}>
+                            <CreatableSelect 
+                                isMulti 
+                                options={ingredientOptions}
+                                placeholder="Sélectionner ou entrer les ingrédients" 
+                            />
+                            
+                            <CreatableSelect 
+                                isMulti 
+                                options={ingredientKg} 
+                                placeholder="Sélectionner ou entrer le grammage"
+                            />
+                        </div>
+                        </div>
+                    
+                    <div className={classes.formGroup}>
                         <label>Étapes de préparation :</label>
-                        <textarea
+                        {/* <textarea
                             name="steps"
-                            value={steps}
+                            value={stepValue}
                             placeholder="Étapes de préparation"
                             onChange={inputRecipeHandler}
                             maxLength={1000}
                             onInput={autoResize}
                         />
-                        <div className={classes.charCount}>{1000 - stepsLength}/1000</div>
-                    </div>
-                    <div>
+                        <div className={classes.charCount}>{1000 - stepsLength}/1000</div> */}
+                        <CreatableSelect 
+                            isMulti 
+                            options={preparationStep} 
+                            className={classes.selectDropdown} 
+                            placeholder="Entrer les étapes à suivre"/>
+                        </div>
+
+                    <div className={classes.formGroup}>
                         <label>Image de la recette :</label>
                         <input
                             type="file"
@@ -208,15 +317,8 @@ const Recipes = () => {
 
                 <Title type="h2">Mes recettes ajoutées</Title>
                 <div className={classes.recipeList}>
-                    {recipes.map((recipe) => (
-                        <RecipeCard
-                        key={recipe.id}
-                        title={recipe.title}
-                        img={recipe.photoNewRecipe}
-                      />
-                    ))}
-                    
-
+                    {console.log(recipes)}
+                    {recipes.map((recipe) => <RecipeCard key={recipe.id} title={recipe.title} img={recipe.photo} id={recipe.id}/>)}
                 </div> 
              </div>
         </>

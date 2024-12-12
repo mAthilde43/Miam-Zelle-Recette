@@ -79,6 +79,7 @@ const RecipeCard = ({ title, img, id, className, imgClassName }) => {
                 <FontAwesomeIcon icon={faArrowRight}/>
             </div>
             {/* {isShow && <Modal funcEvent={updateStateModal}/>} */}
+       
             {isShow && recipe && (
         <Modal funcEvent={updateStateModal} recipeData={recipe} />
       )}

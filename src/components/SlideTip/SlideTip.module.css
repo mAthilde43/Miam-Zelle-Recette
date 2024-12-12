@@ -1,6 +1,6 @@
 .carousel {
     height: 270px;
-    width: 850px;
+    width: clamp(580px, 55vw, 850px);
     margin: 0 auto;
     border-radius: 18px;
     position: relative;
@@ -41,6 +41,7 @@
     z-index: -1; 
 }
   
+
 .image {
     width: 500px;
     height: 300px;

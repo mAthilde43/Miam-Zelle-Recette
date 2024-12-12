@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import classes from "./Suggestion.module.css";
 import Title from "../Title/Title";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 const Suggestion = () => {
   const [allRecipes, setAllRecipes] = useState([]);
@@ -44,7 +48,7 @@ const Suggestion = () => {
 
       <div className={classes.carouselContainer}>
         <button onClick={handlePrev} className={classes.navButton}>
-          <span className={classes.arrowCircle}>&larr;</span>
+          <span className={classes.arrowCircle}><FontAwesomeIcon icon={faArrowLeft}/></span>
         </button>
 
         <div className={classes.carousel}>
@@ -62,7 +66,7 @@ const Suggestion = () => {
         </div>
 
         <button onClick={handleNext} className={classes.navButton}>
-          <span className={classes.arrowCircle}>&rarr;</span>
+          <span className={classes.arrowCircle}><FontAwesomeIcon icon={faArrowRight}/></span>
         </button>
       </div>
       {/*barre horizontale*/}

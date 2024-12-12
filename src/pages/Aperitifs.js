@@ -22,7 +22,7 @@ const Aperitifs = () => {
             )
             .then(
                 function(data){
-                    console.log(data) 
+              
 
                     const verrinesSalees = data.filter(recipe => recipe.categorie === "verrines-salees")
                     setRecipesVerrinesSalees(verrinesSalees)
