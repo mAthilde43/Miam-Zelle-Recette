@@ -1,60 +1,71 @@
 .userInfo {
-    flex: 1 1;
-    padding: 5px 20px 20px 20px;
-    border: 2px solid #CDA274;
-    border-radius: 30px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 340px;
+  flex: 1 1;
+  padding: 5px 20px 20px 20px;
+  border: 2px solid #cda274;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 340px;
 }
 
 .userInfo p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .logoutButton,
-.deleteButton {
-    font-family: "DM Serif Display", serif;
-    font-size: 14px;
-    background-color: #CDA274;
-    border: none;
-    border-radius: 50px;
-    padding: 6px 11px;
-    cursor: pointer;
+.deleteButton,
+.dowloadButton {
+  font-family: "DM Serif Display", serif;
+  font-size: 14px;
+  background-color: #cda274;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 11px;
+  cursor: pointer;
 }
 
 .logoutButton:hover,
-.deleteButton:hover {
-    background-color: #643300;
-    color: #fff;
+.deleteButton:hover,
+.dowloadButton:hover {
+  background-color: #643300;
+  color: #fff;
 }
 
 .buttonSection {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 button {
-    background: none;
-    border: none; 
-    color: inherit;
-    cursor: pointer;
-    padding: 0 10px; 
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 10px;
 }
 
 .iconStyle {
-    color: #643300;
-    font-size: 15px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  color: #643300;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .iconStyleButton {
-    color: #643300;
-    font-size: 15px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    padding: 0 0 0 10px;
+  color: #643300;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0 0 0 10px;
 }
