@@ -1,24 +1,24 @@
-const User = require('../models/User')
+//dans ce fichier on va avoir toutes nos requêtes à la db
+const { where } = require("sequelize");
+const User = require("../models/User");
 
-//création d'une fonction qui va sauvegarder un nouvel utilisateur
-const saveUser = async (userData) => { //asynchrone pour traiter la reponse
-    const newUser = new User(userData)
-    return await newUser.save();
-}
+//création d'une fct qui va save un new user
+const saveUser = async (userData) => {
+  const newUser = await User.create(userData);
+  return newUser;
+};
 
-const getUser = async (userId) => {
-    try {
-        return await User.findOne ({
-            id: userId
-        })
-    } catch (error) {
-        return error
-    }
-}
+//créer une fct qui va récupérer un user (select * from email)
+const getUserByEmail = async (emailParam) => {
+  try {
+    return await User.findOne({
+      where: {
+        email: emailParam,
+      },
+    });
+  } catch (error) {
+    return error;
+  }
+};
 
-//recupere la liste dune ressource,recup une ressource en fct d'un id, faire modif et suppression
-//save / update/ findOne/ findAll / deleteOne
-module.exports = {saveUser, getUser};
-
-
-//db –> repository –> service –> controller –> routes –> app
+module.exports = { saveUser, getUserByEmail };
