@@ -4,38 +4,25 @@ const sequelize = require("../config/db");
 const { DataTypes } = require("sequelize");
 
 //créer nouvelle variable avec define de sequelize
-const User = sequelize.define("User", {
+const Recipes = sequelize.define("User", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
     allowNull: false,
   },
-  firstName: {
+  title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  name: {
-    type: DataTypes.STRING,
+  preparationTime: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
-  username: {
-    type: DataTypes.STRING,
-    unique: true,
-    allowNull: false,
-  },
-  email: {
-    type: DataTypes.STRING(45),
-    unique: true,
-    allowNull: false,
-    validate: {
-      isEmail: true,
-    },
-  },
-  password: {
+  image: {
     type: DataTypes.STRING,
     allowNull: false,
   },
 });
 
-module.exports = User;
+module.exports = Recipes;
