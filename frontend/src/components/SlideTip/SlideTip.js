@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react';
-import classes from './SlideTip.module.css';
-import Title from '../Title/Title';
-import ModalTip from '../Modal/ModalTip';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from "react";
+import classes from "./SlideTip.module.css";
+import Title from "../Title/Title";
+import ModalTip from "../Modal/ModalTip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const SlideTip = () => {
   const [wineTips, setWineTips] = useState([]);
   const [gmTips, setGmTips] = useState([]);
   const [breadTips, setBreadTips] = useState([]);
+  const [biereTips, setBiereTips] = useState([]);
   const [currentWineIndex, setCurrentWineIndex] = useState(0);
   const [currentGmIndex, setCurrentGmIndex] = useState(0);
   const [currentBreadIndex, setCurrentBreadIndex] = useState(0);
+  const [currentBiereIndex, setCurrentBiereIndex] = useState(0);
   const [isTipShow, setIsTipShow] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTip, setActiveTip] = useState(null);
@@ -20,23 +22,25 @@ const SlideTip = () => {
 
   useEffect(() => {
     const fetchTips = async () => {
-      const response = await fetch('http://localhost:5001/tips');
+      const response = await fetch("http://localhost:5001/tips");
       const data = await response.json();
       setWineTips(data.filter((tip) => tip.title)); // Général
       setGmTips(data.filter((tip) => tip.titleGM)); // Grand-mère
       setBreadTips(data.filter((tip) => tip.titleBread)); // Pain
-
+      setBiereTips(data.filter((tip) => tip.titleBiere)); // Biere
     };
 
     fetchTips();
   }, []);
 
-  const updateStateModalTip = (bool, tip, wine, bread) => {
+  const updateStateModalTip = (bool, tip, wine, bread, biere) => {
     setIsModalOpen(bool);
     setIsTipShow(bool);
     if (bool) {
       setActiveTip(tip);
       setIsWine(wine);
+      setIsWine(bread);
+      setIsWine(biere);
     }
   };
 
@@ -70,141 +74,219 @@ const SlideTip = () => {
     return () => clearInterval(intervalId);
   }, [breadTips, isModalOpen]);
 
+  useEffect(() => {
+    if (biereTips.length === 0 || isModalOpen) return;
 
-  if (wineTips.length === 0 && gmTips.length === 0 && breadTips.length === 0) {
+    const intervalId = setInterval(() => {
+      setCurrentBiereIndex((prevIndex) => (prevIndex + 1) % biereTips.length);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [biereTips, isModalOpen]);
+
+  if (
+    wineTips.length === 0 &&
+    gmTips.length === 0 &&
+    breadTips.length === 0 &&
+    biereTips.length === 0
+  ) {
     return <p>Chargement des conseils...</p>;
   }
 
   return (
     <>
-    <div>
-      <Title type="h1">Trucs & Astuces</Title>
-      <Title type="h3">Quels vins pour quels plats ?</Title>
-      <div
-        className={classes.carousel}
-        style={{
-          backgroundImage: `url(${wineTips[currentWineIndex]?.image || ''})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className={classes.slide}>
-          <h3>{wineTips[currentWineIndex]?.title}</h3>
-        </div>
-        <div className={classes.navigation}>
-          <button
-            className={classes.arrowButton}
-            onClick={() =>
-              setCurrentWineIndex(
-                (prevIndex) => (prevIndex - 1 + wineTips.length) % wineTips.length
-              )
-            }
-          >
-            <FontAwesomeIcon icon={faArrowLeft}/>
-          </button>
-          <button
-            className={classes.arrowButton}
-            onClick={() =>
-              setCurrentWineIndex((prevIndex) => (prevIndex + 1) % wineTips.length)
-            }
-          >
-            <FontAwesomeIcon icon={faArrowRight}/>
-          </button>
-        </div>
-        <button
-          className={classes.moreButton}
-          onClick={() =>
-            updateStateModalTip(true, wineTips[currentWineIndex], true)
-          }
+      <div>
+        <Title type="h1">Trucs & Astuces</Title>
+        <Title type="h3">Quels vins pour quels plats ?</Title>
+        <div
+          className={classes.carousel}
+          style={{
+            backgroundImage: `url(${wineTips[currentWineIndex]?.image || ""})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          Voir plus
-        </button>
-      </div>
+          <div className={classes.slide}>
+            <h3>{wineTips[currentWineIndex]?.title}</h3>
+          </div>
+          <div className={classes.navigation}>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentWineIndex(
+                  (prevIndex) =>
+                    (prevIndex - 1 + wineTips.length) % wineTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentWineIndex(
+                  (prevIndex) => (prevIndex + 1) % wineTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+          <button
+            className={classes.moreButton}
+            onClick={() =>
+              updateStateModalTip(true, wineTips[currentWineIndex], true)
+            }
+          >
+            Voir plus
+          </button>
+        </div>
 
-      <Title type="h3">Astuces de Grand-mère ?</Title>
-      <div
-        className={classes.carousel}
-        style={{
-          backgroundImage: `url(${gmTips[currentGmIndex]?.imageGM || ''})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className={classes.slide}>
-          <h3>{gmTips[currentGmIndex]?.titleGM}</h3>
-        </div>
-        <div className={classes.navigation}>
-          <button
-            className={classes.arrowButton}
-            onClick={() =>
-              setCurrentGmIndex(
-                (prevIndex) => (prevIndex - 1 + gmTips.length) % gmTips.length
-              )
-            }
-          >
-            <FontAwesomeIcon icon={faArrowLeft}/>
-          </button>
-          <button
-            className={classes.arrowButton}
-            onClick={() =>
-              setCurrentGmIndex((prevIndex) => (prevIndex + 1) % gmTips.length)
-            }
-          >
-            <FontAwesomeIcon icon={faArrowRight}/>
-          </button>
-        </div>
-        <button
-          className={classes.moreButton}
-          onClick={() => updateStateModalTip(true, gmTips[currentGmIndex], false)}
+        <Title type="h3">Astuces de Grand-mère ?</Title>
+        <div
+          className={classes.carousel}
+          style={{
+            backgroundImage: `url(${gmTips[currentGmIndex]?.imageGM || ""})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          Voir plus
-        </button>
-      </div>
-
-
-      <Title type="h3">Quels pains pour quels plats ?</Title>
-      <div
-        className={classes.carousel}
-        style={{
-          backgroundImage: `url(${breadTips[currentBreadIndex]?.imageBread || ''})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className={classes.slide}>
-          <h3>{breadTips[currentBreadIndex]?.titleBread}</h3>
-        </div>
-        <div className={classes.navigation}>
+          <div className={classes.slide}>
+            <h3>{gmTips[currentGmIndex]?.titleGM}</h3>
+          </div>
+          <div className={classes.navigation}>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentGmIndex(
+                  (prevIndex) => (prevIndex - 1 + gmTips.length) % gmTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentGmIndex(
+                  (prevIndex) => (prevIndex + 1) % gmTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
           <button
-            className={classes.arrowButton}
+            className={classes.moreButton}
             onClick={() =>
-              setCurrentBreadIndex(
-                (prevIndex) => (prevIndex - 1 + breadTips.length) % breadTips.length
-              )
+              updateStateModalTip(true, gmTips[currentGmIndex], false)
             }
           >
-            <FontAwesomeIcon icon={faArrowLeft}/>
-          </button>
-          <button
-            className={classes.arrowButton}
-            onClick={() =>
-              setCurrentBreadIndex((prevIndex) => (prevIndex + 1) % breadTips.length)
-            }
-          >
-            <FontAwesomeIcon icon={faArrowRight}/>
+            Voir plus
           </button>
         </div>
-        <button
-          className={classes.moreButton}
-          onClick={() => updateStateModalTip(true, breadTips[currentBreadIndex], false)}
+
+        <Title type="h3">Quels pains pour quels plats ?</Title>
+        <div
+          className={classes.carousel}
+          style={{
+            backgroundImage: `url(${
+              breadTips[currentBreadIndex]?.imageBread || ""
+            })`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          Voir plus
-        </button>
-      </div>
+          <div className={classes.slide}>
+            <h3>{breadTips[currentBreadIndex]?.titleBread}</h3>
+          </div>
+          <div className={classes.navigation}>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentBreadIndex(
+                  (prevIndex) =>
+                    (prevIndex - 1 + breadTips.length) % breadTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentBreadIndex(
+                  (prevIndex) => (prevIndex + 1) % breadTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+          <button
+            className={classes.moreButton}
+            onClick={() =>
+              updateStateModalTip(true, breadTips[currentBreadIndex], false)
+            }
+          >
+            Voir plus
+          </button>
+        </div>
 
-      {isTipShow && activeTip && (
-        <ModalTip funcEvent={updateStateModalTip} tipData={activeTip} isWine={isWine} />
-      )}
+        <Title type="h3">Quels bières pour quels plats ?</Title>
+        <div
+          className={classes.carousel}
+          style={{
+            backgroundImage: `url(${
+              biereTips[currentBiereIndex]?.imageBiere || ""
+            })`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className={classes.slide}>
+            <h3>{biereTips[currentBiereIndex]?.titleBiere}</h3>
+          </div>
+          <div className={classes.navigation}>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentBiereIndex(
+                  (prevIndex) =>
+                    (prevIndex - 1 + biereTips.length) % biereTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
+            <button
+              className={classes.arrowButton}
+              onClick={() =>
+                setCurrentBiereIndex(
+                  (prevIndex) => (prevIndex + 1) % biereTips.length
+                )
+              }
+            >
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </div>
+          <button
+            className={classes.moreButton}
+            onClick={() =>
+              updateStateModalTip(true, biereTips[currentBiereIndex], false)
+            }
+          >
+            Voir plus
+          </button>
+        </div>
+
+        {isTipShow && activeTip && (
+          <ModalTip
+            funcEvent={updateStateModalTip}
+            tipData={activeTip}
+            isWine={isWine}
+          />
+        )}
       </div>
     </>
   );

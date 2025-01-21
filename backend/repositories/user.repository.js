@@ -1,5 +1,4 @@
-//dans ce fichier on va avoir toutes nos requêtes à la db
-const { where } = require("sequelize");
+//dans ce fichier on va avoir toutes nos requêtes à la db;
 const User = require("../models/User");
 
 //création d'une fct qui va save un new user
@@ -11,11 +10,9 @@ const saveUser = async (userData) => {
 //créer une fct qui va récupérer un user (select * from email)
 const getUserByEmail = async (emailParam) => {
   try {
-    return await User.findOne({
-      where: {
-        email: emailParam,
-      },
-    });
+    const user = await User.findOne({ where: { email: emailParam } });
+
+    return user.dataValues;
   } catch (error) {
     return error;
   }

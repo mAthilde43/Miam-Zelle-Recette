@@ -1,18 +1,16 @@
-//importer userService
+//importer userService, bcrypt, jwt
 const userService = require("../services/user.service");
-//importer bcrypt pour el hachage du mot de passe
 const bcrypt = require("bcrypt");
-//importer jwt
 const jwt = require("jsonwebtoken");
 
 //créer une nouvelle fct pour gérer l'inscription d'un new user
 const signUp = async (req, res) => {
-  const { email, password } = req.body;
+  const { password } = req.body;
 
   //hachage du mot de passe qui prend 2 arguments
   const hash = await bcrypt.hash(password, 10);
 
-  const newUser = await userService.createUser({ email, password: hash });
+  const newUser = await userService.createUser({ ...req.body, password: hash });
 
   res.status(201).json(newUser); //code 201 car création
 };
@@ -20,7 +18,7 @@ const signUp = async (req, res) => {
 //créer une nouvelle fct pour faire la connexion
 const signIn = async (req, res) => {
   const { email, password } = req.body;
-
+  console.log(req.body);
   try {
     //chercher l'user en bdd
     const userExist = await userService.findUserByEmail(email);
