@@ -1,7 +1,7 @@
 const sequelize = require("../config/db");
 const { DataTypes } = require("sequelize");
 
-const Step = sequelize.define("Category", {
+const Step = sequelize.define("Step", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,

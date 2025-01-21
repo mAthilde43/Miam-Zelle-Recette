@@ -1,6 +1,5 @@
 const User = require("./User");
 const Recipes = require("./Recipes");
-const Favorites = require("./Favorites");
 const Category = require("./Category");
 const Subcategory = require("./Subcategory");
 const Ingredients = require("./Ingredients");
@@ -9,20 +8,20 @@ const Difficulty = require("./Difficulty");
 
 User.hasMany(Recipes);
 Recipes.belongsTo(User);
-User.hasMany(Favorites);
 
 Recipes.belongsTo(Category);
-
 Category.hasMany(Subcategory);
-// Subcategory.belongsTo(Category);
+
 Recipes.hasMany(Ingredients);
 Recipes.hasMany(Step);
 Recipes.hasMany(Difficulty);
 
+User.belongsToMany(Recipes, { through: "Favorites" });
+Recipes.belongsToMany(User, { through: "Favorites" });
+
 module.exports = {
   User,
   Recipes,
-  Favorites,
   Category,
   Subcategory,
   Ingredients,

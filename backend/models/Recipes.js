@@ -4,7 +4,7 @@ const sequelize = require("../config/db");
 const { DataTypes } = require("sequelize");
 
 //créer nouvelle variable avec define de sequelize
-const Recipes = sequelize.define("User", {
+const Recipes = sequelize.define("Recipes", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
