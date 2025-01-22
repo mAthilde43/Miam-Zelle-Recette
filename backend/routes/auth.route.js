@@ -11,5 +11,9 @@ const router = express.Router();
 router.get("/me", auth, authController.getUser);
 router.post("/register", authController.signUp);
 router.post("/login", authController.signIn);
+router.post("/logout", authController.signOut);
+router.put("/:id", authController.updateUser);
+router.delete("/:id", authController.deleteUser);
+
 //exporter le routeur
 module.exports = router;

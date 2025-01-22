@@ -10,4 +10,12 @@ const findUserByEmail = async (email) => {
   return await userRepository.getUserByEmail(email);
 };
 
-module.exports = { createUser, findUserByEmail };
+const modifyUser = async (userId, userData) => {
+  return await userRepository.updateUser(userId, userData);
+};
+
+const destroyUser = async (userId) => {
+  return await userRepository.deleteUser(userId);
+};
+
+module.exports = { createUser, findUserByEmail, modifyUser, destroyUser };

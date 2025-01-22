@@ -21,7 +21,7 @@ sequelize
 
 //synchroniser l'app avec notre db
 sequelize
-  .sync({ alter: true })
+  .sync({})
   .then(() => console.log("Synchronisation réussie"))
   .catch(() => console.log("Synchronisation échouée"));
 

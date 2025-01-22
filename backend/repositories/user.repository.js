@@ -18,4 +18,21 @@ const getUserByEmail = async (emailParam) => {
   }
 };
 
-module.exports = { saveUser, getUserByEmail };
+//MAJ user
+const updateUser = async (userId, userData) => {
+  return await User.update(userData, {
+    where: {
+      id: userId,
+    },
+  });
+};
+
+const deleteUser = async (userId) => {
+  return await User.destroy({
+    where: {
+      id: userId,
+    },
+  });
+};
+
+module.exports = { saveUser, getUserByEmail, updateUser, deleteUser };
