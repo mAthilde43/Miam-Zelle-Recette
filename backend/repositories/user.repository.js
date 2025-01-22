@@ -8,7 +8,19 @@ const saveUser = async (userData) => {
 };
 
 //créer une fct qui va récupérer un user (select * from email)
-const getUserByEmail = async (userId) => {
+const getUserByEmail = async (emailParams) => {
+  try {
+    return await User.findOne({
+      where: {
+        email: emailParams,
+      },
+    });
+  } catch (error) {
+    return error;
+  }
+};
+
+const getUserById = async (userId) => {
   try {
     const user = await User.findOne({ where: { id: userId } });
     if (!user) {
@@ -38,4 +50,10 @@ const deleteUser = async (userId) => {
   });
 };
 
-module.exports = { saveUser, getUserByEmail, updateUser, deleteUser };
+module.exports = {
+  saveUser,
+  getUserById,
+  getUserByEmail,
+  updateUser,
+  deleteUser,
+};

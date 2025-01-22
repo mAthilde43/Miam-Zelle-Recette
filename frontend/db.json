@@ -3021,7 +3021,11 @@
       "title": "Sorbet au citron",
       "categorie": "glaces-sorbets",
       "img": "https://assets.magimix.com/files/rec_9905/glace-citron_photo.jpg",
-      "ingredients": ["4 citrons", "150 g de sucre", "500 ml d'eau"],
+      "ingredients": [
+        "4 citrons",
+        "150 g de sucre",
+        "500 ml d'eau"
+      ],
       "etapes": [
         "Pressez les citrons pour en extraire le jus.",
         "Dans une casserole, faites chauffer l'eau et le sucre jusqu'à dissolution.",
@@ -3084,7 +3088,11 @@
       "title": "Sorbet à la mangue",
       "categorie": "glaces-sorbets",
       "img": "https://www.maspatule.com/blog/wp-content/uploads/2020/07/IMG_MISE_EN_AVT-sorbet-mangue-1440x1128.jpg",
-      "ingredients": ["2 mangues bien mûres", "150 g de sucre", "500 ml d'eau"],
+      "ingredients": [
+        "2 mangues bien mûres",
+        "150 g de sucre",
+        "500 ml d'eau"
+      ],
       "etapes": [
         "Pelez les mangues et coupez-les en morceaux.",
         "Mixez les mangues avec le sucre et l'eau pour obtenir une purée lisse.",
@@ -3733,8 +3741,14 @@
       "subCategory": "Plats végétariens",
       "preparationTime": "20min",
       "difficulty": "Difficile",
-      "ingredients": ["oeufs", "lait", "farine"],
-      "etapes": ["moule a gateau"],
+      "ingredients": [
+        "oeufs",
+        "lait",
+        "farine"
+      ],
+      "etapes": [
+        "moule a gateau"
+      ],
       "img": "blob:http://localhost:3000/804e7908-dbad-4964-a6b8-8b0925bb21ef",
       "userId": 1
     },
@@ -3750,6 +3764,32 @@
       "img": null,
       "userId": 1,
       "isPublic": true
+    },
+    {
+      "id": "5447",
+      "title": "test",
+      "category": "",
+      "subCategory": "",
+      "preparationTime": "",
+      "difficulty": "",
+      "ingredients": [],
+      "etapes": [],
+      "img": null,
+      "userId": 1,
+      "visibility": "private"
+    },
+    {
+      "id": "d88a",
+      "title": "",
+      "category": "",
+      "subCategory": "",
+      "preparationTime": "",
+      "difficulty": "",
+      "ingredients": [],
+      "etapes": [],
+      "img": null,
+      "userId": 1,
+      "visibility": "private"
     }
   ],
   "tips": [
@@ -3993,7 +4033,8 @@
         "Les bières blondes, les pilsners ou les bières blanches sont des choix judicieux. Leur douceur et leur légèreté complètent parfaitement les saveurs délicates des plats.",
         "Elles apportent une sensation de fraîcheur et de vivacité, tout en se mariant harmonieusement avec les notes subtiles des ingrédients."
       ],
-      "imageBiere": "https://mlnz9ode3oxc.i.optimole.com/cb:Lf38.39053/w:392/h:261/q:mauto/f:best/https://adopteunbrasseur.fr/wp-content/uploads/2024/03/biere-sans-alcool-comment-type-conteneur-affecte-fraicheur.jpg"
+      "imageBiere": "https://mlnz9ode3oxc.i.optimole.com/cb:Lf38.39053/w:392/h:261/q:mauto/f:best/https://adopteunbrasseur.fr/wp-content/uploads/2024/03/biere-sans-alcool-comment-type-conteneur-affecte-fraicheur.jpg",
+      "id": "65ec"
     },
     {
       "titleBiere": "Bière houblonnée pour les plats épicés",
@@ -4002,7 +4043,8 @@
         "Les IPA (India Pale Ale) sont souvent dotées d’une amertume prononcée qui peut équilibrer les épices et apaiser le feu des plats épicés.",
         "Les saveurs fruitées et résineuses des houblons ajoutent une dimension aromatique intéressante qui se marie harmonieusement avec les mets épicés."
       ],
-      "imageBiere": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA5ppdTMyBQoJ9qukktXooyLPeiEC9oqCddg&s"
+      "imageBiere": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA5ppdTMyBQoJ9qukktXooyLPeiEC9oqCddg&s",
+      "id": "4703"
     },
     {
       "titleBiere": "Bière brune pour les plats riches et robustes",
@@ -4011,7 +4053,8 @@
         "Leurs saveurs complexes de caramel, de torréfaction et de chocolat complètent merveilleusement bien les plats riches en saveurs.",
         "Les bières brunes offrent une texture veloutée et une profondeur aromatique qui ajoutent une dimension luxueuse à chaque bouchée."
       ],
-      "imageBiere": "https://silly-beer.com/wp-content/uploads/2023/12/enghien-brune-blog-1.jpg"
+      "imageBiere": "https://silly-beer.com/wp-content/uploads/2023/12/enghien-brune-blog-1.jpg",
+      "id": "503f"
     },
     {
       "titleBiere": "Bière ambrée pour les plats grillés",
@@ -4020,7 +4063,8 @@
         "Leur profil de saveur maltée et légèrement caramélisée crée un équilibre parfait avec les notes grillées des aliments.",
         "Les bières ambrées offrent une combinaison délicate de douceur et d’amertume, qui met en valeur les arômes des aliments grillés."
       ],
-      "imageBiere": "https://mlnz9ode3oxc.i.optimole.com/cb:Lf38.39053/w:auto/h:auto/q:mauto/f:best/https://adopteunbrasseur.fr/wp-content/uploads/2024/10/biere-houblonnee-et-viande-grillee.png"
+      "imageBiere": "https://mlnz9ode3oxc.i.optimole.com/cb:Lf38.39053/w:auto/h:auto/q:mauto/f:best/https://adopteunbrasseur.fr/wp-content/uploads/2024/10/biere-houblonnee-et-viande-grillee.png",
+      "id": "a4ca"
     },
     {
       "titleBiere": "Bière fruitée pour les desserts",
@@ -4029,7 +4073,8 @@
         "Les bières fruitées, comme les bières à la framboise, à la cerise ou à l’abricot, apportent une touche de douceur et de fraîcheur aux desserts sucrés.",
         "Leurs saveurs fruitées et légèrement acidulées viennent sublimer les notes sucrées et créent un mariage."
       ],
-      "imageBiere": "https://mlnz9ode3oxc.i.optimole.com/cb:Lf38.39053/w:1024/h:1024/q:mauto/f:best/https://adopteunbrasseur.fr/wp-content/uploads/2024/06/bieres-fruites-et-tartes-aux-fruits.png"
+      "imageBiere": "https://mlnz9ode3oxc.i.optimole.com/cb:Lf38.39053/w:1024/h:1024/q:mauto/f:best/https://adopteunbrasseur.fr/wp-content/uploads/2024/06/bieres-fruites-et-tartes-aux-fruits.png",
+      "id": "7d89"
     }
   ]
 }

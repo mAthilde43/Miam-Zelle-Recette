@@ -349,16 +349,18 @@ const Recipes = () => {
           </button>
         </form>
 
-        <Title type="h2">Mes recettes ajoutées</Title>
-        <div className={classes.recipeList}>
-          {recipes.map((recipe) => (
-            <RecipeCard
-              key={recipe.id}
-              title={recipe.title}
-              img={recipe.img}
-              id={recipe.id}
-            />
-          ))}
+        <div className={classes.myrecipe}>
+          <Title type="h2">Mes recettes ajoutées</Title>
+          <div className={classes.recipeList}>
+            {recipes.map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                title={recipe.title}
+                img={recipe.img}
+                id={recipe.id}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>

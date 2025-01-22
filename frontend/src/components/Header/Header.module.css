@@ -1,166 +1,166 @@
-
 .header {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #FFFFFF;
-    color: #643300;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    width: 100%;
-  }
-
-.header .logo {
-    width: 250px;
-    height: auto;
-    top: 20px;
-    left: 20px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #643300;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
 }
 
-.header .header-logo-container{
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    align-items: center;
+.header .logo {
+  width: 250px;
+  height: auto;
+  top: 20px;
+  left: 20px;
+}
+
+.header .header-logo-container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
 }
 
 .header .header-logo-container p a {
-    font-size: 15px;
-    color: #643300;
-    text-decoration: none;
+  font-size: 15px;
+  color: #643300;
+  text-decoration: none;
 }
 
 .header-nav {
-    display: flex;
-    gap: clamp(20px, 3vw, 40px);
-    margin-right: clamp(5px, 3vw, 0px);
+  display: flex;
+  gap: clamp(20px, 3vw, 40px);
+  margin-right: clamp(5px, 3vw, 0px);
 }
 
 .header .header-logo-container p a:hover {
-    color: #CDA274;
+  color: #cda274;
 }
 
 .header .dropdownMenu {
-    position: absolute;
-    top: 100px; /* Ajuste en fonction de la position de ton bouton */
-    right: 81px; /* Ajuste si nécessaire */
-    background-color: #CDA274;
-    border-radius: 8px;
-    padding: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    z-index: 10;
+  position: absolute;
+  top: 100px; /* Ajuste en fonction de la position de ton bouton */
+  right: 81px; /* Ajuste si nécessaire */
+  background-color: #cda274;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  z-index: 10;
 }
 .header .dropdownMenu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .header .dropdownMenu li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .header .dropdownMenu li a {
-    font-size: 16px;
-    color: #643300;
-    text-decoration: none;
-    display: block;
-    padding: 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  font-size: 16px;
+  color: #643300;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 .header .dropdownMenu li a:hover {
-    background-color: #fff;
-    color: #CDA274;
+  background-color: #fff;
+  color: #cda274;
 }
 
 .hero {
-    background-image: url("../../images/imageHeader.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 485px;
-    border-radius: 100px 0 100px 0;
-    margin: 20px 0 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-image: url("../../images/imageHeader.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 485px;
+  border-radius: 100px 0 100px 0;
+  margin: 20px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.hero--home{
-    height: clamp(485px, 77vw, 620px);
+.hero--home {
+  height: clamp(485px, 77vw, 620px);
 }
 
-.header .hero h1{
-    font-family: "Allura", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: clamp(110px, 13vw, 135px);
-    color: #643300;
-    margin: -40px;
-    text-align: center;
+.header .hero h1 {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(110px, 13vw, 135px);
+  color: #643300;
+  margin: -40px;
+  text-align: center;
 }
 
-.header .hero h2{
-    font-size: clamp(55px, 8vw, 70px);
-    color: #643300;
-    font-weight: 400;
-    margin: 0;
-    text-align: center;
+.header .hero h2 {
+  font-size: clamp(55px, 8vw, 70px);
+  color: #643300;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
 }
 
-.header .hero h3{
-    font-size: clamp(22px, 3vw, 26px);
-    color: #643300;
-    font-weight: 400;
-    margin: 40px;
-    text-align: center;
-    width: 500px;
+.header .hero h3 {
+  font-size: clamp(22px, 3vw, 26px);
+  color: #643300;
+  font-weight: 400;
+  margin: 40px;
+  text-align: center;
+  width: 500px;
 }
 
 .header .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #FFFFFF;
-    border: 2px solid #CDA274;
-    padding: 5px 0;
-    border-radius: 18px;
-    width: clamp(575px, 85vw, 850px);
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 2px solid #cda274;
+  padding: 5px 0;
+  border-radius: 18px;
+  width: clamp(515px, 85vw, 850px);
+  margin: 0 auto;
 }
 
 .header .navbar ul {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; 
-    border-radius: 20px; 
-    background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #fff;
 }
 
 .header .navbar li a {
-    font-size: 16px;
-    color: #643300;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.1s ease;
-    display: inline-block; 
-    border-radius: 10px;
-    margin: 0 7px;
-    padding: 10px 25px;
-    text-decoration: none;
+  font-size: 16px;
+  color: #643300;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.1s ease;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0 7px;
+  padding: 10px 25px;
+  text-decoration: none;
 }
 
 .header .navbar li:hover {
-    background-color: #CDA274; 
-    color: #fff; 
-    border-radius: 10px;
+  background-color: #cda274;
+  color: #fff;
+  border-radius: 10px;
 }

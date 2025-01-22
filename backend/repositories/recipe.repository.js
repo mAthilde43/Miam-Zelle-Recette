@@ -35,20 +35,3 @@ const deleteRecipe = async (recipeId) => {
   });
 };
 module.exports = { saveRecipe, getRecipeById, updateRecipe, deleteRecipe };
-
-//fct qui crée une recette
-// const createRecipe = async (recipeData) => {
-//   return await Recipes.create(recipeData);
-// };
-
-// //fct qui MAJ une recette
-// const updateRecipe = async (recipeId, updates) => {
-//   return await Recipes.update(updates, { where: { id: recipeId } });
-// };
-
-// //fct qui supprime une recette
-// const deleteRecipe = async (recipeId) => {
-//   return await Recipes.destroy({ where: { id: recipeId } });
-// };
-
-// module.exports = { createRecipe, updateRecipe, deleteRecipe };

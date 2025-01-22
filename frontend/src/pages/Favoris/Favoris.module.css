@@ -1,47 +1,50 @@
 .favoritesContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .listfavori {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    max-width: 1200px;
-    width: 100%;
-  }
-  
-  .favoriteCard {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .favoriteCard img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .favoriteCard h3 {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #333;
-  }
-  
-  .noFavorites {
-    text-align: center;
-    font-size: 18px;
-    color: #888;
-  }
-  
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.favoris {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.listfavori {
+  display: ruby;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.favoriteCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.favoriteCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.favoriteCard h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.noFavorites {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}

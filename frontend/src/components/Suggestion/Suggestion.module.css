@@ -1,114 +1,134 @@
 .carousel {
-    display: flex;
-    gap: 16px;
-    transition: transform 0.5s ease-in-out; 
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carouselContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
 }
-  
+
 /* Style unique RecipeCard */
 .suggestionCard {
-    border-radius: 45px;
-    border: 2px solid #CDA274;
-    overflow: hidden; 
-    padding: 20px;
-    background-color: #fff;
+  border-radius: 45px;
+  border: 2px solid #cda274;
+  overflow: hidden;
+  padding: clamp(15px, 2vw, 20px);
+  background-color: #fff;
 }
 
 /* Style unique image RecipeCard */
 .suggestionImage {
-    border-radius: 30px 30px 0 0;
-    object-fit: cover;
-    width: 100%;
+  border-radius: 30px 30px 0 0;
+  object-fit: cover;
+  width: 100%;
 }
-  
+
 .navButton {
-    background: none;
-    border: none;
-    font-size: 23px;
-    cursor: pointer;
-    padding: 8px;
-    color: #000;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
+  background: none;
+  border: none;
+  font-size: 23px;
+  cursor: pointer;
+  padding: 8px;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
 }
-  
+
 .navButton:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
-  
+
 .arrowCircle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #CDA274; 
-    background-color: #CDA274;
-    border-radius: 50%;
-    font-size: 30px; 
-    color: #fff; 
-    transition: all 0.3s ease; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(40px, 5vw, 50px);
+  height: clamp(40px, 5vw, 50px);
+  border: 2px solid #cda274;
+  background-color: #cda274;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin: 15px;
 }
 
 .arrowCircle:hover {
-    background-color: #CDA274; 
-    color: #fff;
-    border-color: #CDA274;
+  background-color: #cda274;
+  color: #fff;
+  border-color: #cda274;
 }
 
 /* Styles pour les barres horizontales */
 .horizontalBarTop {
-    width: 400px; 
-    height: 4px; 
-    background-color: #CDA274; 
-    margin: 13px;
-    position: relative;
-    left: 50%;
+  width: 400px;
+  height: 4px;
+  background-color: #cda274;
+  margin: 13px;
+  position: relative;
+  left: 50%;
 }
-  
-  .horizontalBarTop:nth-child(1) {
-    transform: translateX(-50%) translateX(20px); /* décalage droite 20px */
-  }
-  
-  .horizontalBarTop:nth-child(2) {
-    transform: translateX(-50%) translateX(-20px); /* décalage gauche 20px */
-  }
 
-  .horizontalBarBottom {
-    margin: 76px 0 25px 0;
-  }
+.horizontalBarTop:nth-child(1) {
+  transform: translateX(-50%) translateX(20px); /* décalage droite 20px */
+}
 
-  .horizontalBarTopSet {
-    margin: 34px 0 30px 0 ;
-  }
+.horizontalBarTop:nth-child(2) {
+  transform: translateX(-50%) translateX(-20px); /* décalage gauche 20px */
+}
 
-  .horizontalBarBottomTop {
-    width: 400px;
-    height: 3px;
-    background-color: #CDA274;
-    margin: 13px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) translateX(20px); /* décalage droite 20px */
-  }
-  
-  .horizontalBarBottomBottom {
-    width: 400px;
-    height: 4px;
-    background-color: #CDA274;
-    margin: 10px 0;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) translateX(-20px); /* cécalage gauche 20px */
-  }
-  
+.horizontalBarBottom {
+  margin: 76px 0 25px 0;
+}
 
-  
+.horizontalBarTopSet {
+  margin: 34px 0 30px 0;
+}
+
+.horizontalBarBottomTop {
+  width: 400px;
+  height: 3px;
+  background-color: #cda274;
+  margin: 13px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) translateX(20px); /* décalage droite 20px */
+}
+
+.horizontalBarBottomBottom {
+  width: 400px;
+  height: 4px;
+  background-color: #cda274;
+  margin: 10px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) translateX(-20px); /* cécalage gauche 20px */
+}
+
+@media (max-width: 1024px) {
+  .carousel {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    gap: 10px;
+    flex-wrap: wrap; /* Les éléments s'enrouleront si l'espace est limité */
+    justify-content: center; /* Centre horizontalement les éléments */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre horizontalement les éléments */
+  }
+}

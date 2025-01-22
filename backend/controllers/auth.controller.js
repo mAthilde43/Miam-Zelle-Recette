@@ -50,16 +50,16 @@ const signIn = async (req, res) => {
   }
 };
 
-const signOut = async (req, res) => {
-  res.status(200).json({ message: "Votre compte a été déconnecté" });
-};
+// const signOut = async (req, res) => {
+// res.status(200).json({ message: "Votre compte a été déconnecté" });
+// };
 
 const updateUser = async (req, res) => {
   const userId = req.params.id;
   const userData = req.body;
   try {
     // const updatedUser = await userService.modifyUser(userId, userData);
-    const userExist = await userService.findUserByEmail(userId);
+    const userExist = await userService.findUserById(userId);
     await userService.modifyUser(userExist.id, userData);
     res.status(200).json({ message: "Votre utilisateur a bien été modifié" });
   } catch (error) {
@@ -72,7 +72,7 @@ const deleteUser = async (req, res) => {
   const userId = req.params.id;
   try {
     // const deletedUser = await userService.destroyUser(userId);
-    const userExist = await userService.findUserByEmail(userId);
+    const userExist = await userService.findUserById(userId);
     await userService.destroyUser(userId);
     res.status(200).json({ message: "Votre utilisateur a bien été supprimé" });
   } catch (error) {
@@ -92,5 +92,4 @@ module.exports = {
   signIn,
   updateUser,
   deleteUser,
-  signOut,
 };

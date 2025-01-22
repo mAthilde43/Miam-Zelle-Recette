@@ -1,36 +1,37 @@
 .titre {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #643300;
-    font-size: clamp(30px, 4vw, 36px);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #643300;
+  font-size: clamp(30px, 4vw, 36px);
 }
 
 .titreh2 {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #643300;
-    font-size: 30px;
-    text-align: left;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #643300;
+  font-size: clamp(25px, 4vw, 30px);
+  text-align: left;
+  margin-left: clamp(100px, 31vw, 250px);
 }
 
 .titreh3 {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #643300;
-    font-size: clamp(25px, 4vw, 30px);
-    text-align: left;
-    margin-left: clamp(30px, 5vw, 120px);
-    margin-top: 50px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #643300;
+  font-size: clamp(25px, 4vw, 30px);
+  text-align: left;
+  margin-left: clamp(30px, 5vw, 120px);
+  margin-top: 50px;
 }
 
 .titreh4 {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #643300;
-    font-size: 23px;
-    margin: 0 0 15px 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #643300;
+  font-size: 23px;
+  margin: 0 0 15px 0;
 }

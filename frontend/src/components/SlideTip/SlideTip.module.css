@@ -1,99 +1,97 @@
 .carousel {
-    height: 270px;
-    width: clamp(580px, 55vw, 850px);
-    margin: 0 auto;
-    border-radius: 18px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 30px;
-    margin-top: 15px;
-  }
+  height: 270px;
+  width: clamp(525px, 55vw, 850px);
+  margin: 0 auto;
+  border-radius: 18px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
 
 .slide {
-    text-align: left;
-    max-width: 850px;
+  text-align: left;
+  max-width: 850px;
 }
 
 .slide h3 {
-    font-size: 25px;
-    font-weight: 300;
-    color: #643300;
-    background-color: transparent; 
-    position: relative; 
-    z-index: 1; 
-    padding: 10px 20px;
-    margin: 10px 40px;
-    text-align: left;
-    display: inline-block;
+  font-size: 25px;
+  font-weight: 300;
+  color: #643300;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  margin: 10px 40px;
+  text-align: left;
+  display: inline-block;
 }
 
 .slide h3::before {
-    content: ''; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white; 
-    border-radius: 10px; 
-    filter: blur(8px); 
-    z-index: -1; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border-radius: 10px;
+  filter: blur(8px);
+  z-index: -1;
 }
-  
 
 .image {
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
 }
-  
+
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-  
+
 .arrowButton {
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    color: #CDA274;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #cda274;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .arrowButton:first-child {
-    left: 10px;
+  left: 10px;
 }
 
 .arrowButton:last-child {
-    right: 10px;
+  right: 10px;
 }
-  
+
 .arrowButton:hover {
-    color: #643300; 
+  color: #643300;
 }
-  
+
 .moreButton {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    padding: 10px 20px;
-    background-color: #643300;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #643300;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
-  
+
 .moreButton:hover {
-    background-color: #CDA274; 
+  background-color: #cda274;
 }
-  

@@ -6,9 +6,13 @@ const createUser = async (userData) => {
 };
 
 //on recupere un email
-const findUserByEmail = async (userId) => {
-  // return await userRepository.getUserByEmail(email);
-  const user = await userRepository.getUserByEmail(userId);
+const findUserByEmail = async (email) => {
+  return await userRepository.getUserByEmail(email);
+};
+
+const findUserById = async (userId) => {
+  // return await userRepository getUserById(email);
+  const user = await userRepository.getUserById(userId);
   if (!user) {
     throw new Error("L'utilisateur n'existe pas");
   }
@@ -23,4 +27,10 @@ const destroyUser = async (userId) => {
   return await userRepository.deleteUser(userId);
 };
 
-module.exports = { createUser, findUserByEmail, modifyUser, destroyUser };
+module.exports = {
+  createUser,
+  findUserById,
+  findUserByEmail,
+  modifyUser,
+  destroyUser,
+};
