@@ -58,8 +58,10 @@ const updateUser = async (req, res) => {
   const userId = req.params.id;
   const userData = req.body;
   try {
-    const updatedUser = await userService.modifyUser(userId, userData);
-    res.status(200).json({ message: "Votre user a bien été modifié" });
+    // const updatedUser = await userService.modifyUser(userId, userData);
+    const userExist = await userService.findUserByEmail(userId);
+    await userService.modifyUser(userExist.id, userData);
+    res.status(200).json({ message: "Votre utilisateur a bien été modifié" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -69,8 +71,10 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
   const userId = req.params.id;
   try {
-    const deletedUser = await userService.destroyUser(userId);
-    res.status(200).json({ message: "Votre recette a bien été supprimé" });
+    // const deletedUser = await userService.destroyUser(userId);
+    const userExist = await userService.findUserByEmail(userId);
+    await userService.destroyUser(userId);
+    res.status(200).json({ message: "Votre utilisateur a bien été supprimé" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

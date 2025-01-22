@@ -8,13 +8,16 @@ const saveUser = async (userData) => {
 };
 
 //créer une fct qui va récupérer un user (select * from email)
-const getUserByEmail = async (emailParam) => {
+const getUserByEmail = async (userId) => {
   try {
-    const user = await User.findOne({ where: { email: emailParam } });
-
+    const user = await User.findOne({ where: { id: userId } });
+    if (!user) {
+      return null;
+    }
     return user.dataValues;
   } catch (error) {
-    return error;
+    // return error;
+    throw new Error("Erreur lors de la récupération de l'utilisateur");
   }
 };
 

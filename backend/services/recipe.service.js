@@ -4,6 +4,15 @@ const createRecipe = async (recipeData) => {
   return await recipeRepository.saveRecipe(recipeData);
 };
 
+const findRecipeById = async (recipeId) => {
+  //   return await recipeRepository.getRecipeById(recipeId);
+  const recipe = await recipeRepository.getRecipeById(recipeId);
+  if (!recipe) {
+    throw new Error("La recette demandée n'existe pas");
+  }
+  return recipe;
+};
+
 const modifyRecipe = async (recipeId, recipeData) => {
   return await recipeRepository.updateRecipe(recipeId, recipeData);
 };
@@ -12,19 +21,4 @@ const destroyRecipe = async (recipeId) => {
   return await recipeRepository.deleteRecipe(recipeId);
 };
 
-module.exports = { createRecipe, modifyRecipe, destroyRecipe };
-// const recipeRepository = require("../repositories/recipe.repository");
-
-// const createdRecipe = async (recipeData) => {
-//   return await recipeRepository.createRecipe(recipeData);
-// };
-
-// const updatedRecipe = async (recipeId, updates) => {
-//   return await recipeRepository.updateRecipe(recipeId, updates);
-// };
-
-// const deletedRecipe = async (recipeId) => {
-//   return await recipeRepository.deleteRecipe(recipeId);
-// };
-
-// module.exports = { createdRecipe, updatedRecipe, deletedRecipe };
+module.exports = { createRecipe, findRecipeById, modifyRecipe, destroyRecipe };

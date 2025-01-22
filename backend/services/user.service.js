@@ -6,8 +6,13 @@ const createUser = async (userData) => {
 };
 
 //on recupere un email
-const findUserByEmail = async (email) => {
-  return await userRepository.getUserByEmail(email);
+const findUserByEmail = async (userId) => {
+  // return await userRepository.getUserByEmail(email);
+  const user = await userRepository.getUserByEmail(userId);
+  if (!user) {
+    throw new Error("L'utilisateur n'existe pas");
+  }
+  return user;
 };
 
 const modifyUser = async (userId, userData) => {
