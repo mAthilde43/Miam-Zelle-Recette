@@ -164,3 +164,31 @@
   color: #fff;
   border-radius: 10px;
 }
+
+.searchcontainer {
+  position: absolute;
+  top: 200px;
+  right: 300px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.searchcontainer input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #cda274;
+  border-radius: 25px;
+  font-size: 15px;
+  margin: 6px;
+  padding: 6px 20px;
+}
+
+.searchbutton {
+  background-color: #cda274;
+  padding: 6px 7px;
+  border-radius: 25px;
+}
+
+.searchbutton:hover {
+  background-color: #643300;
+}

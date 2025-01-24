@@ -2,15 +2,25 @@ import classes from "./Header.module.css";
 import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
 import Wrapper from "../Wrapper/Wrapper";
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // Import de l'icône
+
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
 const Header = ({ isHome = false }) => {
   const { isLogged } = useContext(AuthContext);
+  const [searchTerm, setSearchTerm] = useState(""); // État pour la recherche
+  const navigate = useNavigate();
 
-  //   const currentUser = localStorage.getItem("loggedInUser");
-  //   setIsLoggedIn(!!currentUser); //MAJ état de connexion
-  // }, []);
+  const handleSearch = (e) => {
+    e.preventDefault(); // Empêche le rechargement de la page
+    if (searchTerm.trim() !== "") {
+      // Redirige vers la page de recherche avec le mot-clé
+      navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+    }
+  };
 
   const linkActive = ({ isActive }) => {
     return isActive ? "active" : "";
@@ -50,6 +60,20 @@ const Header = ({ isHome = false }) => {
             </p>
           </div>
         </div>
+
+        {/* Barre de recherche */}
+        <form onSubmit={handleSearch} className={classes.searchcontainer}>
+          <input
+            type="search"
+            placeholder="Rechercher une recette..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className={classes["search-input"]}
+          />
+          <button type="submit" className={classes.searchbutton}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </form>
 
         <div className={heroClass}>
           <h1>Miam'Zelle</h1>

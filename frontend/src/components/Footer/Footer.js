@@ -103,8 +103,6 @@ const Footer = ({ footer }) => {
 
         <div className={classes.copiright}>
           <p>Copyright © Miam'Zelle Recette</p>
-          <p>Mentions légales</p>
-          <p>Politique de protection des données</p>
         </div>
       </Wrapper>
     </div>

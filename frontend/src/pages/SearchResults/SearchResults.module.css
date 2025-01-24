@@ -1,0 +1,41 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #ff4500;
+}
+
+.recipecard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes */
+  gap: 20px; /* Espacement entre les colonnes */
+  padding: 20px;
+}
+
+.recipecard p {
+  font-size: 20px;
+}
+
+.searchresults {
+  margin: 30px;
+}

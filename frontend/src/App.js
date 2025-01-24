@@ -15,6 +15,7 @@ import Favoris from "./pages/Favoris/Favoris";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import Mentions from "./pages/RGPD/Mentions";
 import PasswordForgotten from "./pages/PasswordForgotten/PasswordForgotten";
+import SearchResults from "./pages/SearchResults/SearchResults";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           element={<PasswordForgotten />}
         ></Route>
         <Route path="/mentions" element={<Mentions />}></Route>
+        <Route path="/search" element={<SearchResults />} />
 
         <Route path="/ptitdej" element={<Ptitdej />}></Route>
         <Route path="/aperitifs" element={<Aperitifs />}></Route>
