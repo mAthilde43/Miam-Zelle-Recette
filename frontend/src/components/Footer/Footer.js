@@ -89,12 +89,14 @@ const Footer = ({ footer }) => {
             </ul>
           </div>
 
-          <div className={classes.contact}>
-            <p>Contact</p>
+          <div className={classes.lien}>
+            <p>Liens utiles</p>
             <ul>
-              <li>234 Avenue de Colmar 67021 Strasbourg</li>
-              <li>email</li>
-              <li>03.88.43.08.00</li>
+              <li>
+                <NavLink to="/mentions" className={linkActive}>
+                  Mentions légales
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

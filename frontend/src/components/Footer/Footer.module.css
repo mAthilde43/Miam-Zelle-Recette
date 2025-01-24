@@ -1,98 +1,98 @@
 .footer {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #FFFFFF;
-    color: #643300;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    width: 100%;
-    display: flex;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #643300;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
 }
 .footer .footer-infos {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #FFFFFF;
-    color: #643300;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    width: 100%;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #643300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .footer .footer-image {
-    padding: 20px 0;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-  }
+  padding: 20px 0;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+}
 
 .footer .footer-image .imageFooter {
-    width: 100vw;
-    height: clamp(140px, 19vw, 300px);
-    object-fit: cover;
+  width: 100vw;
+  height: clamp(140px, 19vw, 300px);
+  object-fit: cover;
 }
 
 .footer .footer-logo .logo {
-    width: clamp(200px, 18vw, 250px);
-    height: auto;
+  width: clamp(200px, 18vw, 250px);
+  height: auto;
 }
 
 .footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  
+
 .footer-logo img {
-    width: 120px; 
-    margin-bottom: 20px;
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 .footer .pages,
 .footer .connexion,
-.footer .contact {
-    margin-bottom: 30px;
-    width: 20%;
+.footer .lien {
+  margin-bottom: 30px;
+  width: 20%;
 }
 .footer .pages p,
 .footer .connexion p,
-.footer .contact p {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.footer .lien p {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .footer .pages ul,
 .footer .connexion ul,
-.footer .contact ul {
-    list-style: none;
-    padding: 0;
+.footer .lien ul {
+  list-style: none;
+  padding: 0;
 }
 
 .footer .pages ul li a,
 .footer .connexion ul li a,
-.footer .contact ul li {
-    color: #643300;
-    text-decoration: none;
-    font-size: 14px;
+.footer .lien ul li {
+  color: #643300;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .footer .pages ul li a:hover,
 .footer .connexion ul li a:hover,
-.footer .contact ul li:hover {
-    color: #CDA274;
+.footer .lien ul li:hover {
+  color: #cda274;
 }
 
 .footer .copiright p {
-    font-size: 13px;
-    text-align: center;
+  font-size: 13px;
+  text-align: center;
 }

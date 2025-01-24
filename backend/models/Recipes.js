@@ -21,7 +21,7 @@ const Recipes = sequelize.define("Recipes", {
   },
   image: {
     type: DataTypes.STRING,
-    allowNull: false,
+    // allowNull: false,
   },
 });
 

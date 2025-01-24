@@ -17,7 +17,9 @@ const signUp = async (req, res) => {
 
 //créer une nouvelle fct pour faire la connexion
 const signIn = async (req, res) => {
-  const { email, password } = req.body;
+  const { username: email, password } = req.body;
+  console.log(email);
+  console.log(password);
   try {
     //chercher l'user en bdd
     const userExist = await userService.findUserByEmail(email);
@@ -50,42 +52,36 @@ const signIn = async (req, res) => {
   }
 };
 
-// const signOut = async (req, res) => {
-// res.status(200).json({ message: "Votre compte a été déconnecté" });
-// };
-
 const updateUser = async (req, res) => {
   const userId = req.params.id;
   const userData = req.body;
   try {
-    // const updatedUser = await userService.modifyUser(userId, userData);
     const userExist = await userService.findUserById(userId);
     await userService.modifyUser(userExist.id, userData);
     res.status(200).json({ message: "Votre utilisateur a bien été modifié" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
-  // res.status(200).json({ message: " user modifié" });
 };
 
 const deleteUser = async (req, res) => {
   const userId = req.params.id;
   try {
-    // const deletedUser = await userService.destroyUser(userId);
     const userExist = await userService.findUserById(userId);
     await userService.destroyUser(userId);
     res.status(200).json({ message: "Votre utilisateur a bien été supprimé" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
-  // res.status(200).json({ message: " user supprimé" });
 };
 
-const getUser = (req, res) => {
-  res.status(200).json({ message: "Ici on ne joue pas Fortnite" });
+const getUser = async (req, res) => {
+  const userId = req.user.sub;
+
+  const user = await userService.findUserById(userId);
+  res.status(200).json(user);
 };
 
-//exporter getUser
 module.exports = {
   getUser,
   signUp,

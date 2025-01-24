@@ -1,7 +1,7 @@
 import classes from "./Recipes.module.css";
 import Header from "../../components/Header/Header";
 import Title from "../../components/Title/Title";
-import RecipeCard from "../../components/RecipeCard/RecipeCard";
+import RecipeCardModify from "../../components/RecipeCard/RecipeCardModify";
 import { useState, useEffect } from "react";
 import React from "react";
 import CreatableSelect from "react-select/creatable";
@@ -18,10 +18,14 @@ const Recipes = () => {
   const [stepValue, setStepValue] = useState("");
   const [img, setImg] = useState(null);
   const [recipes, setRecipes] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   // const [ingredientsLength, setIngredientsLength] = useState(0);
   // const [stepsLength, setStepsLength] = useState(0);
   const [isFetch, setIsFetch] = useState(false);
   const [isPrivate, setIsPrivate] = useState(true);
+
+  const closeModal = () => setIsModalOpen(false);
 
   useEffect(
     function () {
@@ -110,8 +114,10 @@ const Recipes = () => {
 
   const imgChangeHandler = (e) => {
     const file = e.target.files[0];
+
+    console.log(file);
     if (file) {
-      setImg(URL.createObjectURL(file));
+      setImg(file);
     }
   };
 
@@ -119,36 +125,70 @@ const Recipes = () => {
     setIsPrivate(!isPrivate);
   };
 
-  const submitRecipeHandler = (e) => {
+  const submitRecipeHandler = async (e) => {
     e.preventDefault();
+    try {
+      console.log();
+      const formData = new FormData();
+      formData.append("title", titleRecipe);
+      formData.append("category", category);
+      formData.append("subCategory", subCategory);
+      formData.append("preparationTime", preparationTime);
+      formData.append("difficulty", difficulty);
+      formData.append("ingredients", ingredients);
+      formData.append("etapes", steps);
+      formData.append("image", img);
 
-    const newRecipe = {
-      title: titleRecipe,
-      category,
-      subCategory,
-      preparationTime,
-      difficulty,
-      ingredients,
-      etapes: steps,
-      img,
-      userId: 1,
-      visibility: isPrivate ? "private" : "public",
-    };
+      console.log(formData.get("image"));
 
-    console.log("SUBMIT RECIP ", newRecipe);
-
-    fetch("http://localhost:5001/recipe", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(newRecipe),
-    })
-      .then(function (data) {
-        console.log(data);
-        setIsFetch(true);
-      })
-      .catch(function (err) {
-        console.log(err);
+      const addrecipe = await fetch("http://localhost:4008/recipe/add", {
+        method: "POST",
+        body: formData,
+        credentials: "include",
       });
+
+      console.log(addrecipe);
+
+      if (!addrecipe.ok) {
+        const error = await addrecipe.json();
+        throw new Error(
+          error.message || "Erreur lors de la création de la recette"
+        );
+      }
+
+      const data = await addrecipe.json();
+      alert(data.message || "Recette créé avec succès");
+      closeModal();
+    } catch (error) {
+      alert(error.message);
+    }
+
+    // const newRecipe = {
+    //   title: titleRecipe,
+    //   category,
+    //   subCategory,
+    //   preparationTime,
+    //   difficulty,
+    //   ingredients,
+    //   etapes: steps,
+    //   img,
+    //   userId: 1,
+    // };
+
+    // console.log("SUBMIT RECIP ", newRecipe);
+
+    // fetch("http://localhost:5001/recipe", {
+    //   method: "POST",
+    //   headers: { "Content-type": "application/json" },
+    //   body: JSON.stringify(newRecipe),
+    // })
+    //   .then(function (data) {
+    //     console.log(data);
+    //     setIsFetch(true);
+    //   })
+    //   .catch(function (err) {
+    //     console.log(err);
+    //   });
 
     // Reset form
     setTitleRecipe("");
@@ -336,7 +376,12 @@ const Recipes = () => {
 
           <div className={classes.formGroup}>
             <label>Image de la recette :</label>
-            <input type="file" accept="image/*" onChange={imgChangeHandler} />
+            <input
+              type="file"
+              accept="image/*"
+              onChange={imgChangeHandler}
+              name="image"
+            />
             {img && (
               <div className={classes.imagePreview}>
                 <img src={img} alt="Prévisualisation" />
@@ -353,7 +398,7 @@ const Recipes = () => {
           <Title type="h2">Mes recettes ajoutées</Title>
           <div className={classes.recipeList}>
             {recipes.map((recipe) => (
-              <RecipeCard
+              <RecipeCardModify
                 key={recipe.id}
                 title={recipe.title}
                 img={recipe.img}

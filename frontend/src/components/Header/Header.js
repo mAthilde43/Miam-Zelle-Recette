@@ -2,16 +2,15 @@ import classes from "./Header.module.css";
 import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
 import Wrapper from "../Wrapper/Wrapper";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Header = ({ isHome = false }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLogged } = useContext(AuthContext);
 
-  //verifier si user est connecté
-  useEffect(() => {
-    const currentUser = localStorage.getItem("loggedInUser");
-    setIsLoggedIn(!!currentUser); //MAJ état de connexion
-  }, []);
+  //   const currentUser = localStorage.getItem("loggedInUser");
+  //   setIsLoggedIn(!!currentUser); //MAJ état de connexion
+  // }, []);
 
   const linkActive = ({ isActive }) => {
     return isActive ? "active" : "";
@@ -39,7 +38,7 @@ const Header = ({ isHome = false }) => {
               </NavLink>
             </p>
             <p>
-              {isLoggedIn ? (
+              {isLogged ? (
                 <NavLink to="/myaccount" className={linkActive}>
                   Mon compte
                 </NavLink>

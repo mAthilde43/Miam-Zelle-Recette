@@ -1,8 +1,6 @@
-//importer sequelize
 const { Sequelize } = require("sequelize");
-require("dotenv").config(); //avoir accès a l'environnement pour la connexion a la base de données
+require("dotenv").config();
 
-//connecter sequelize avec la db (la db doit exister au prealable)
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
@@ -13,13 +11,11 @@ const sequelize = new Sequelize(
   }
 );
 
-//tester connexion a la db
 sequelize
   .authenticate()
   .then(() => console.log("Connexion réussie"))
   .catch(() => console.log("Connexion échouée"));
 
-//synchroniser l'app avec notre db
 sequelize
   .sync({})
   .then(() => console.log("Synchronisation réussie"))

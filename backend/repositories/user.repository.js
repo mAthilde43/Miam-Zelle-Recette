@@ -1,4 +1,3 @@
-//dans ce fichier on va avoir toutes nos requêtes à la db;
 const User = require("../models/User");
 
 //création d'une fct qui va save un new user
@@ -28,7 +27,6 @@ const getUserById = async (userId) => {
     }
     return user.dataValues;
   } catch (error) {
-    // return error;
     throw new Error("Erreur lors de la récupération de l'utilisateur");
   }
 };

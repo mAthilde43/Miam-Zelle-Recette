@@ -1,6 +1,5 @@
 const Recipe = require("../models/Recipes");
 
-//fct qui save/crée recette
 const saveRecipe = async (recipeData) => {
   const newRecipe = await Recipe.create(recipeData);
   return newRecipe;
@@ -14,7 +13,6 @@ const getRecipeById = async (recipeId) => {
     }
     return recipe.dataValues;
   } catch (error) {
-    // return error;
     throw new Error("Erreur lors de la récupération de la recette");
   }
 };

@@ -1,9 +1,10 @@
 import Header from "../../components/Header/Header";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Title from "../../components/Title/Title";
 import ModalAccount from "../../components/ModalAccount/ModalAccount";
 import classes from "./Seconnecter.module.css";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Seconnecter = () => {
   const [usernameLogin, setUsernameLogin] = useState("");
@@ -17,21 +18,23 @@ const Seconnecter = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [subscribeToEmails, setSubscribeToEmails] = useState(false);
 
+  const { signIn } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   //recupere user depuis localStorage
-  const getStoredUsers = () => {
-    const users = localStorage.getItem("users");
-    return users ? JSON.parse(users) : []; // retour vide si aucun user n'est stocke
-  };
+  // const getStoredUsers = () => {
+  //   const users = localStorage.getItem("users");
+  //   return users ? JSON.parse(users) : []; // retour vide si aucun user n'est stocke
+  // };
 
   //save user dans localStorage
-  const saveUsersToStorage = (users) => {
-    localStorage.setItem("users", JSON.stringify(users));
-  };
+  // const saveUsersToStorage = (users) => {
+  //   localStorage.setItem("users", JSON.stringify(users));
+  // };
 
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -45,62 +48,102 @@ const Seconnecter = () => {
     else if (name === "passwordAccount") setPasswordAccount(value);
   };
 
-  const submitLoginHandler = (e) => {
+  const submitLoginHandler = async (e) => {
     e.preventDefault();
-    const users = getStoredUsers();
-
-    // Vérifier si l'utilisateur existe
-    const user = users.find(
-      (u) => u.username === usernameLogin && u.password === passwordLogin
-    );
-
-    if (user) {
-      localStorage.setItem("loggedInUser", user.username); //stoke user connecté avec bonne clé
-      navigate("/home"); //redirige page home
-    } else {
-      setErrorMessage(
-        "Compte non trouvé. Veuillez vérifier vos informations ou créer un compte."
-      );
+    try {
+      signIn(usernameLogin, passwordLogin);
+      navigate("/home");
+      closeModal();
+    } catch (error) {
+      alert(error.message || "Une erreur est survenue");
     }
   };
 
-  const submitAccountHandler = (e) => {
+  //   const users = getStoredUsers();
+
+  // Vérifier si l'utilisateur existe
+  //   const user = users.find(
+  //     (u) => u.username === usernameLogin && u.password === passwordLogin
+  //   );
+
+  //   if (user) {
+  //     localStorage.setItem("loggedInUser", user.username); //stoke user connecté avec bonne clé
+  //     navigate("/home"); //redirige page home
+  //   } else {
+  //     setErrorMessage(
+  //       "Compte non trouvé. Veuillez vérifier vos informations ou créer un compte."
+  //     );
+  //   }
+  // };
+
+  const submitAccountHandler = async (e) => {
     e.preventDefault();
-    const users = getStoredUsers();
+    try {
+      const register = await fetch("http://localhost:4008/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          name,
+          firstName,
+          email: emailAccount,
+          username: usernameAccount,
+          password: passwordAccount,
+          subscribeToEmails,
+        }),
+      });
 
-    //verifie nom user si déjà utilisé
-    const existingUser = users.find((u) => u.username === usernameAccount);
-    if (existingUser) {
-      alert(
-        "Ce nom d'utilisateur est déjà pris. Veuillez en choisir un autre."
-      );
-      return;
+      if (!register.ok) {
+        const error = await register.json();
+        throw new Error(
+          error.message || "Erreur lors de la création de compte"
+        );
+      }
+
+      const data = await register.json();
+      alert(data.message || "Compte créé avec succès");
+      closeModal();
+    } catch (error) {
+      alert(error.message);
     }
-
-    //verifie email si déjà utilisé
-    const existingEmail = users.find((u) => u.email === emailAccount);
-    if (existingEmail) {
-      alert(
-        "Cette adresse mail est déjà utiliée. Veuillez en choisir une autre."
-      );
-      return;
-    }
-
-    //add new user
-    const newUser = {
-      name,
-      firstName,
-      email: emailAccount,
-      username: usernameAccount,
-      password: passwordAccount,
-      subscribeToEmails,
-    };
-
-    users.push(newUser);
-    saveUsersToStorage(users); //save dans localStorage
-    alert("Compte créé avec succès !");
-    closeModal();
   };
+  //   const users = getStoredUsers();
+
+  //   //verifie nom user si déjà utilisé
+  //   const existingUser = users.find((u) => u.username === usernameAccount);
+  //   if (existingUser) {
+  //     alert(
+  //       "Ce nom d'utilisateur est déjà pris. Veuillez en choisir un autre."
+  //     );
+  //     return;
+  //   }
+
+  //   //verifie email si déjà utilisé
+  //   const existingEmail = users.find((u) => u.email === emailAccount);
+  //   if (existingEmail) {
+  //     alert(
+  //       "Cette adresse mail est déjà utiliée. Veuillez en choisir une autre."
+  //     );
+  //     return;
+  //   }
+
+  //add new user
+  // const newUser = {
+  //   name,
+  //   firstName,
+  //   email: emailAccount,
+  //   username: usernameAccount,
+  //   password: passwordAccount,
+  //   subscribeToEmails,
+  // };
+
+  //   users.push(newUser);
+  //   saveUsersToStorage(users); //save dans localStorage
+  //   alert("Compte créé avec succès !");
+  //   closeModal();
+  // };
 
   return (
     <>
@@ -111,12 +154,12 @@ const Seconnecter = () => {
           {errorMessage && <p className={classes.error}>{errorMessage}</p>}
           <form onSubmit={submitLoginHandler}>
             <div>
-              <label>Nom d'utilisateur :</label>
+              <label>Adresse mail :</label>
               <input
                 type="text"
                 name="usernameLogin"
                 value={usernameLogin}
-                placeholder="Nom d'utilisateur"
+                placeholder="Adresse mail"
                 onChange={inputChangeHandler}
               />
             </div>
@@ -129,6 +172,9 @@ const Seconnecter = () => {
                 placeholder="Mot de passe"
                 onChange={inputChangeHandler}
               />
+            </div>
+            <div className={classes.forgotPassword}>
+              <a href="/passwordforgotten">Mot de passe oublié ?</a>
             </div>
             <button className={classes.buttonForm} type="Submit">
               Se connecter

@@ -1,14 +1,17 @@
 import classes from "./MyAccount.module.css";
 import { Document, Packer, Paragraph, TextRun, AlignmentType } from "docx";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Header from "../../components/Header/Header";
 import Title from "../../components/Title/Title";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEye,
+  faEyeSlash,
+  faPen,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const MyAccount = () => {
   const [user, setUser] = useState(null); //etat user connecté
@@ -22,20 +25,44 @@ const MyAccount = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [editedUser, setEditedUser] = useState({});
   const navigate = useNavigate();
+  const { token } = useContext(AuthContext);
 
   //recuperer user connecté depuis LocalStorage
   useEffect(() => {
-    const storedUsers = localStorage.getItem("users");
-    const storedUser = localStorage.getItem("loggedInUser");
+    (async function () {
+      try {
+        console.log(token);
+        const informations = await fetch("http://localhost:4008/auth/me", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include",
+        });
+        const userData = await informations.json();
 
-    if (storedUsers && storedUser) {
-      const users = JSON.parse(storedUsers);
-      const currentUser = users.find((u) => u.username === storedUser);
-      if (currentUser) {
-        setUser(currentUser);
-        setEditedUser(currentUser); //initialise etat pour edit
+        console.log(userData);
+
+        setUser(userData);
+      } catch (error) {
+        alert(error.message);
       }
-    }
+    })();
+
+    // };
+
+    // const storedUsers = localStorage.getItem("users");
+    // const storedUser = localStorage.getItem("loggedInUser");
+
+    // if (storedUsers && storedUser) {
+    //   const users = JSON.parse(storedUsers);
+    //   const currentUser = users.find((u) => u.username === storedUser);
+    //   if (currentUser) {
+    //     setUser(currentUser);
+    //     setEditedUser(currentUser); //initialise etat pour edit
+    //   }
+    // }
   }, []);
 
   //gerer les changements d'entrée
@@ -46,14 +73,17 @@ const MyAccount = () => {
 
   //save les modifications
   const saveChangesHandler = (field) => {
-    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const updatedUsers = storedUsers.map((u) =>
-      u.username === user.username ? { ...user, ...editedUser } : u
-    );
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-    setUser(editedUser); //MAJ etat user
-    setIsEditing((prev) => ({ ...prev, [field]: false })); //desactiver edition
+    const updatedData = { ...user, [field]: editedUser[field] };
+    setIsEditing((prev) => ({ ...prev, [field]: false }));
+    updateAccountHandler(user.id, updatedData);
   };
+  // const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+  // const updatedUsers = storedUsers.map((u) =>
+  //   u.username === user.username ? { ...user, ...editedUser } : u
+  // );
+  // localStorage.setItem("users", JSON.stringify(updatedUsers));
+  // setUser(editedUser); //MAJ etat user
+  // setIsEditing((prev) => ({ ...prev, [field]: false })); //desactiver edition
 
   //basculer la visibilité du password
   const togglePasswordVisibility = () => {
@@ -66,20 +96,73 @@ const MyAccount = () => {
     navigate("/seconnecter"); //rediriger page connexion
   };
 
-  //supprimer compte
-  const deleteAccountHandler = () => {
-    if (window.confirm("Êtes-vous sûr de vouloir supprimer votre compte ?")) {
-      const storedUsers = localStorage.getItem("users");
-      if (storedUsers) {
-        const users = JSON.parse(storedUsers);
-        const updatedUsers = users.filter((u) => u.username !== user.username);
-        localStorage.setItem("users", JSON.stringify(updatedUsers));
+  //mettre a jour les informations
+  const updateAccountHandler = async (userId, updatedData) => {
+    try {
+      const response = await fetch(`http://localhost:4008/auth/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        credentials: "include",
+        body: JSON.stringify(updatedData),
+      });
+
+      if (response.ok) {
+        const updatedUser = await response.json();
+        console.log(updatedData);
+        // alert("Compte mis à jour avec succès");
+        setUser(updatedUser);
+        setEditedUser(updatedUser);
+      } else {
+        const errorData = await response.json();
+        alert(errorData.message);
       }
-      localStorage.removeItem("loggedInUser");
-      alert("Compte supprimé avec succès.");
-      navigate("/seconnecter"); //redirection après suppression compte
+    } catch (error) {
+      alert(error.message);
     }
   };
+
+  //supprimer compte
+  const deleteAccountHandler = async (userId) => {
+    if (window.confirm("Êtes-vous sûr de vouloir supprimer votre compte ?")) {
+      try {
+        console.log(userId);
+        const response = await fetch(`http://localhost:4008/auth/${userId}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include",
+        });
+
+        if (response.ok) {
+          alert("Compte supprimé avec succès.");
+          navigate("/seconnecter");
+        } else {
+          const errorData = await response.json();
+          alert(errorData.message || "Une erreur est survenue.");
+        }
+      } catch (error) {
+        alert(error.message);
+      }
+    }
+  };
+
+  // if (window.confirm("Êtes-vous sûr de vouloir supprimer votre compte ?")) {
+  //   const storedUsers = localStorage.getItem("users");
+  //   if (storedUsers) {
+  //     const users = JSON.parse(storedUsers);
+  //     const updatedUsers = users.filter((u) => u.username !== user.username);
+  //     localStorage.setItem("users", JSON.stringify(updatedUsers));
+  //   }
+  //   localStorage.removeItem("loggedInUser");
+  //   alert("Compte supprimé avec succès.");
+  //       navigate("/seconnecter"); //redirection après suppression compte
+  //     }
+  // }
 
   //fonction pour générer le fichier Word
   const generateWordFile = () => {
@@ -132,7 +215,7 @@ const MyAccount = () => {
           <div className={classes.userInfo}>
             {/* Nom */}
             <p>
-              Nom : {""}
+              Nom :
               {isEditing.name ? (
                 <>
                   <input
@@ -151,7 +234,7 @@ const MyAccount = () => {
               ) : (
                 <>
                   {user.name}
-                  {""}
+
                   <button
                     onClick={() =>
                       setIsEditing((prev) => ({ ...prev, name: true }))
@@ -163,12 +246,12 @@ const MyAccount = () => {
                     />
                   </button>
                 </>
-              )}{" "}
+              )}
             </p>
 
             {/* Prénom */}
             <p>
-              Prénom : {""}
+              Prénom :
               {isEditing.firstName ? (
                 <>
                   <input
@@ -187,7 +270,7 @@ const MyAccount = () => {
               ) : (
                 <>
                   {user.firstName}
-                  {""}
+
                   <button
                     onClick={() =>
                       setIsEditing((prev) => ({ ...prev, firstName: true }))
@@ -199,12 +282,12 @@ const MyAccount = () => {
                     />
                   </button>
                 </>
-              )}{" "}
+              )}
             </p>
 
             {/* Email */}
             <p>
-              Email : {""}
+              Email :
               {isEditing.email ? (
                 <>
                   <input
@@ -239,7 +322,7 @@ const MyAccount = () => {
 
             {/* Nom d'utilisateur */}
             <p>
-              Nom d'utilisateur : {""}
+              Nom d'utilisateur :
               {isEditing.username ? (
                 <>
                   <input
@@ -258,7 +341,7 @@ const MyAccount = () => {
               ) : (
                 <>
                   {user.username}
-                  {""}
+
                   <button
                     onClick={() =>
                       setIsEditing((prev) => ({ ...prev, username: true }))
@@ -270,12 +353,12 @@ const MyAccount = () => {
                     />
                   </button>
                 </>
-              )}{" "}
+              )}
             </p>
 
             {/* Mot de passe */}
             <p>
-              Mot de passe : {""}
+              Mot de passe :
               {isEditing.password ? (
                 <>
                   <input
@@ -315,7 +398,7 @@ const MyAccount = () => {
                     />
                   </button>
                 </>
-              )}{" "}
+              )}
             </p>
 
             <div className={classes.buttonSection}>
@@ -328,7 +411,7 @@ const MyAccount = () => {
                 </button>
                 <button
                   className={classes.deleteButton}
-                  onClick={deleteAccountHandler}
+                  onClick={() => deleteAccountHandler(user.id)}
                 >
                   Supprimer mon compte
                 </button>

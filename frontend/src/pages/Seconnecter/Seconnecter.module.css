@@ -101,3 +101,17 @@
     padding: 10px;
   }
 }
+
+.forgotPassword {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgotPassword a {
+  color: #808080;
+  text-decoration: none;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}

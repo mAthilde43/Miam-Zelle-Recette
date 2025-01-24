@@ -5,7 +5,6 @@ const createRecipe = async (recipeData) => {
 };
 
 const findRecipeById = async (recipeId) => {
-  //   return await recipeRepository.getRecipeById(recipeId);
   const recipe = await recipeRepository.getRecipeById(recipeId);
   if (!recipe) {
     throw new Error("La recette demandée n'existe pas");
