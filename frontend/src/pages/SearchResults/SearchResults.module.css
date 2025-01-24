@@ -25,11 +25,31 @@
   background-color: #ff4500;
 }
 
+.searchresults h1 {
+  font-size: clamp(20px, 5vw, 36px);
+}
+
 .recipecard {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes */
-  gap: 20px; /* Espacement entre les colonnes */
+  gap: 20px;
   padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .recipecard {
+    grid-template-columns: repeat(2, 1fr); /* Réduit à 2 colonnes */
+  }
+}
+
+/* Écrans petits (mobiles, ~480px) */
+@media (max-width: 768px) {
+  .recipecard {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Une seule colonne pour les très petits écrans */
+  }
 }
 
 .recipecard p {

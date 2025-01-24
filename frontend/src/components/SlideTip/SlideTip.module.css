@@ -1,6 +1,6 @@
 .carousel {
-  height: 270px;
-  width: clamp(525px, 55vw, 850px);
+  height: clamp(210px, 52vw, 270px);
+  width: clamp(360px, 90vw, 850px);
   margin: 0 auto;
   border-radius: 18px;
   position: relative;
@@ -16,7 +16,7 @@
 }
 
 .slide h3 {
-  font-size: 25px;
+  font-size: clamp(20px, 5vw, 25px);
   font-weight: 300;
   color: #643300;
   background-color: transparent;
@@ -84,7 +84,7 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  padding: 10px 20px;
+  padding: clamp(8px, 1vw, 10px) clamp(12px, 1vw, 20px);
   background-color: #643300;
   color: white;
   border: none;

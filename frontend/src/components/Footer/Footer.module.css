@@ -24,7 +24,6 @@
   justify-content: space-between;
   text-align: center;
   margin: 0;
-  padding: 20px 0;
   width: 100%;
 }
 
@@ -42,7 +41,7 @@
 }
 
 .footer .footer-logo .logo {
-  width: clamp(200px, 18vw, 250px);
+  width: clamp(150px, 18vw, 250px);
   height: auto;
 }
 
@@ -53,14 +52,14 @@
 }
 
 .footer-logo img {
-  width: 120px;
-  margin-bottom: 20px;
+  width: clamp(150px, 20vw, 250px);
+  height: auto;
 }
 
 .footer .pages,
 .footer .connexion,
 .footer .lien {
-  margin-bottom: 30px;
+  margin-bottom: clamp(1px, 1vw, 30px);
   width: 20%;
 }
 .footer .pages p,

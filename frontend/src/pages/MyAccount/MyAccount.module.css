@@ -67,5 +67,12 @@ button {
   font-size: 15px;
   cursor: pointer;
   transition: color 0.3s ease;
-  padding: 0 0 0 10px;
+}
+
+.iconStyle:hover {
+  color: #cda274;
+}
+
+.iconStyleButton:hover {
+  color: #cda274;
 }

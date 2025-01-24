@@ -86,11 +86,12 @@
   background-size: cover;
   height: 485px;
   border-radius: 100px 0 100px 0;
-  margin: 20px 0 50px 0;
+  margin: 20px 0 clamp(20px, 3vw, 50px) 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative; /* Ajouté pour que les éléments absolus se positionnent par rapport à ce conteneur */
 }
 
 .hero--home {
@@ -101,14 +102,14 @@
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(110px, 13vw, 135px);
+  font-size: clamp(80px, 17vw, 135px);
   color: #643300;
   margin: -40px;
   text-align: center;
 }
 
 .header .hero h2 {
-  font-size: clamp(55px, 8vw, 70px);
+  font-size: clamp(40px, 9vw, 70px);
   color: #643300;
   font-weight: 400;
   margin: 0;
@@ -121,7 +122,7 @@
   font-weight: 400;
   margin: 40px;
   text-align: center;
-  width: 500px;
+  width: clamp(315px, 80vw, 500px);
 }
 
 .header .navbar {
@@ -131,7 +132,7 @@
   border: 2px solid #cda274;
   padding: 5px 0;
   border-radius: 18px;
-  width: clamp(515px, 85vw, 850px);
+  width: clamp(360px, 91vw, 850px);
   margin: 0 auto;
 }
 
@@ -155,7 +156,7 @@
   display: inline-block;
   border-radius: 10px;
   margin: 0 7px;
-  padding: 10px 25px;
+  padding: clamp(8px, 2vw, 10px) clamp(10px, 3vw, 25px);
   text-decoration: none;
 }
 
@@ -167,8 +168,8 @@
 
 .searchcontainer {
   position: absolute;
-  top: 200px;
-  right: 300px;
+  bottom: 20px; /* Toujours 20px du bas de l'élément .hero */
+  right: 50px;
   display: flex;
   align-items: center;
   z-index: 10;
@@ -191,4 +192,20 @@
 
 .searchbutton:hover {
   background-color: #643300;
+}
+
+@media (max-width: 768px) {
+  .header .logo {
+    width: 180px;
+    margin: -20px;
+  }
+  .header .header-logo-container {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  .searchcontainer {
+    bottom: 10px; /* Réduit l'espace en bas sur les petits écrans */
+    left: 10px; /* Réduit l'espace à gauche sur les petits écrans */
+  }
 }

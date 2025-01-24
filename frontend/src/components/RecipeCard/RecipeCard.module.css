@@ -1,10 +1,10 @@
 .recipeCard {
-  width: clamp(130px, 20vw, 200px);
+  width: clamp(90px, 23vw, 200px);
   text-align: center;
   background: #fff;
   border-radius: 0 clamp(50px, 10vw, 100px) 0 0;
   border: 2px solid #cda274;
-  padding: 11px;
+  padding: 10px;
   margin: 10px;
 }
 

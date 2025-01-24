@@ -15,7 +15,7 @@
   background: white;
   padding: 20px;
   border-radius: 8px;
-  width: clamp(490px, 80vw, 850px);
+  width: clamp(330px, 81vw, 850px);
   max-height: 85%;
   overflow: hidden;
   text-align: center;
@@ -50,7 +50,7 @@ h1 {
 
 .recipeImage {
   width: clamp(200px, 36vw, 250px);
-  height: clamp(200px, 36vw, 250px);
+  height: clamp(150px, 36vw, 250px);
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 25px;
@@ -66,8 +66,8 @@ h1 {
   display: flex;
   /* justify-content: space-between; */
   padding: 10px;
-  font-size: 14px;
-  gap: 20px;
+  font-size: clamp(12px, 3vw, 14px);
+  gap: clamp(5px, 1vw, 20px);
 }
 
 @media (max-width: 768px) {
@@ -121,8 +121,9 @@ h1 {
   flex: 1;
   text-align: left;
 }
-.ingredients h2 {
-  font-size: 20px;
+.ingredients h2,
+.etapes h2 {
+  font-size: clamp(18px, 4vw, 20px);
   color: #643300;
   margin-bottom: 10px;
 }
@@ -130,29 +131,23 @@ h1 {
 .ingredients ul {
   padding-left: 20px;
   list-style-type: disc;
-  font-size: 17px;
+  font-size: clamp(15px, 3vw, 17px);
 }
 
 .etapes {
   text-align: left;
 }
 
-.etapes h2 {
-  font-size: 20px;
-  color: #643300;
-  margin-bottom: 10px;
-}
-
 .etapes ol {
   padding-left: 20px;
   list-style-type: decimal;
-  font-size: 17px;
+  font-size: clamp(15px, 3vw, 17px);
   line-height: 30px;
 }
 
 .buttonClose {
-  margin-top: 20px;
-  padding: 10px 15px;
+  margin-top: clamp(1px, 1vw, 20px);
+  padding: clamp(6px, 1vw, 10px) clamp(11px, 2vw, 15px);
   background-color: #cda274;
   color: white;
   border: none;
@@ -171,7 +166,7 @@ h1 {
   overflow-y: auto;
   padding-right: 3px;
   scrollbar-width: thin;
-  margin: 0 25px;
+  margin: 0 clamp(2px, 1vw, 25px);
 }
 
 .modalScrollable::-webkit-scrollbar {

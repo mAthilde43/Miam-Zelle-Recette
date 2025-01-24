@@ -24,7 +24,7 @@ const Favoris = () => {
               <RecipeCard key={fav.id} {...fav} /> // Afficher chaque recette favorite
             ))
           ) : (
-            <p>Aucun favori n'a été ajouté.</p>
+            <p>Aucun favori n'a été ajouté...</p>
           )}
         </div>
       </div>{" "}

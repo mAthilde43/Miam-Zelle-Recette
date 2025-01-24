@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: clamp(430px, 71vw, 700px);
+  width: clamp(300px, 71vw, 700px);
   margin: 0 auto;
-  padding: 40px;
+  padding: clamp(25px, 6vw, 40px);
   border: 2px solid #cda274;
   border-radius: 25px;
 }
@@ -30,7 +30,7 @@
 } */
 
 .recipesPage form label {
-  width: 120px;
+  width: clamp(80px, 21vw, 120px);
   text-align: left;
   font-weight: normal;
   margin-right: 15px;

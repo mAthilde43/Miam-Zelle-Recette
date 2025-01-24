@@ -49,7 +49,7 @@ const SearchResults = () => {
     <>
       <Header />
       <div className={classes.searchresults}>
-        <Title type="h1">Résultats de recherche pour "{searchQuery}"</Title>
+        <h1>Résultats de recherche pour "{searchQuery}"</h1>
 
         <div className={classes.recipecard}>
           {recipes.length === 0 ? (

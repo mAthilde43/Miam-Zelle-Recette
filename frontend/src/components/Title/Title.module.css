@@ -3,7 +3,7 @@
   font-weight: 400;
   font-style: normal;
   color: #643300;
-  font-size: clamp(30px, 4vw, 36px);
+  font-size: clamp(26px, 4vw, 36px);
 }
 
 .titreh2 {
@@ -11,9 +11,9 @@
   font-weight: 400;
   font-style: normal;
   color: #643300;
-  font-size: clamp(25px, 4vw, 30px);
+  font-size: clamp(20px, 4vw, 30px);
   text-align: left;
-  margin-left: clamp(100px, 31vw, 250px);
+  margin-left: clamp(50px, 13vw, 250px);
 }
 
 .titreh3 {
@@ -21,10 +21,10 @@
   font-weight: 400;
   font-style: normal;
   color: #643300;
-  font-size: clamp(25px, 4vw, 30px);
+  font-size: clamp(22px, 4vw, 30px);
   text-align: left;
-  margin-left: clamp(30px, 5vw, 120px);
-  margin-top: 50px;
+  margin-left: clamp(25px, 5vw, 120px);
+  margin-top: clamp(25px, 6vw, 50px);
 }
 
 .titreh4 {

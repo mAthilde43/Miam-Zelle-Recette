@@ -1,7 +1,7 @@
 .histoire p {
   font-size: 18px;
   text-align: justify;
-  width: clamp(500px, 55vw, 850px);
+  width: clamp(325px, 84vw, 850px);
   position: relative;
   margin: 30px 35px 30px 35px;
 }

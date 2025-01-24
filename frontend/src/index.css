@@ -7,7 +7,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -15,3 +15,9 @@ code {
   display: flex;
   justify-content: center;
 }
+
+/* @media (max-width: 768px) {
+  body {
+    margin: 2rem;
+  }
+} */

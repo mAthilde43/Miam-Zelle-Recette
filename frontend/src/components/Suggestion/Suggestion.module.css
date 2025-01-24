@@ -14,10 +14,10 @@
 
 /* Style unique RecipeCard */
 .suggestionCard {
-  border-radius: 45px;
+  border-radius: clamp(40px, 10vw, 45px);
   border: 2px solid #cda274;
   overflow: hidden;
-  padding: clamp(15px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
   background-color: #fff;
 }
 
@@ -48,15 +48,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(40px, 5vw, 50px);
-  height: clamp(40px, 5vw, 50px);
+  width: clamp(35px, 5vw, 50px);
+  height: clamp(35px, 5vw, 50px);
   border: 2px solid #cda274;
   background-color: #cda274;
   border-radius: 50%;
-  font-size: 30px;
+  font-size: clamp(20px, 5vw, 30px);
   color: #fff;
   transition: all 0.3s ease;
-  margin: 15px;
+  margin: clamp(1px, 0vw, 15px);
 }
 
 .arrowCircle:hover {
@@ -67,7 +67,7 @@
 
 /* Styles pour les barres horizontales */
 .horizontalBarTop {
-  width: 400px;
+  width: clamp(250px, 63vw, 400px);
   height: 4px;
   background-color: #cda274;
   margin: 13px;
@@ -92,7 +92,7 @@
 }
 
 .horizontalBarBottomTop {
-  width: 400px;
+  width: clamp(250px, 63vw, 400px);
   height: 3px;
   background-color: #cda274;
   margin: 13px;
@@ -102,7 +102,7 @@
 }
 
 .horizontalBarBottomBottom {
-  width: 400px;
+  width: clamp(250px, 63vw, 400px);
   height: 4px;
   background-color: #cda274;
   margin: 10px 0;
@@ -127,7 +127,7 @@
 
 @media (max-width: 480px) {
   .carousel {
-    gap: 8px;
+    gap: 0;
     flex-wrap: wrap;
     justify-content: center; /* Centre horizontalement les éléments */
   }

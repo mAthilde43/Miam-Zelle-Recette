@@ -14,7 +14,7 @@ import {
 import { AuthContext } from "../../contexts/AuthContext";
 
 const MyAccount = () => {
-  const [user, setUser] = useState(null); //etat user connecté
+  const [user, setUser] = useState(null);
   const [isEditing, setIsEditing] = useState({
     name: false,
     firstName: false,
@@ -49,20 +49,6 @@ const MyAccount = () => {
         alert(error.message);
       }
     })();
-
-    // };
-
-    // const storedUsers = localStorage.getItem("users");
-    // const storedUser = localStorage.getItem("loggedInUser");
-
-    // if (storedUsers && storedUser) {
-    //   const users = JSON.parse(storedUsers);
-    //   const currentUser = users.find((u) => u.username === storedUser);
-    //   if (currentUser) {
-    //     setUser(currentUser);
-    //     setEditedUser(currentUser); //initialise etat pour edit
-    //   }
-    // }
   }, []);
 
   //gerer les changements d'entrée
@@ -77,13 +63,6 @@ const MyAccount = () => {
     setIsEditing((prev) => ({ ...prev, [field]: false }));
     updateAccountHandler(user.id, updatedData);
   };
-  // const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-  // const updatedUsers = storedUsers.map((u) =>
-  //   u.username === user.username ? { ...user, ...editedUser } : u
-  // );
-  // localStorage.setItem("users", JSON.stringify(updatedUsers));
-  // setUser(editedUser); //MAJ etat user
-  // setIsEditing((prev) => ({ ...prev, [field]: false })); //desactiver edition
 
   //basculer la visibilité du password
   const togglePasswordVisibility = () => {
@@ -151,19 +130,6 @@ const MyAccount = () => {
     }
   };
 
-  // if (window.confirm("Êtes-vous sûr de vouloir supprimer votre compte ?")) {
-  //   const storedUsers = localStorage.getItem("users");
-  //   if (storedUsers) {
-  //     const users = JSON.parse(storedUsers);
-  //     const updatedUsers = users.filter((u) => u.username !== user.username);
-  //     localStorage.setItem("users", JSON.stringify(updatedUsers));
-  //   }
-  //   localStorage.removeItem("loggedInUser");
-  //   alert("Compte supprimé avec succès.");
-  //       navigate("/seconnecter"); //redirection après suppression compte
-  //     }
-  // }
-
   //fonction pour générer le fichier Word
   const generateWordFile = () => {
     const doc = new Document({
@@ -201,8 +167,7 @@ const MyAccount = () => {
     Packer.toBlob(doc).then((blob) => {
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "user_data.docx"; // Nom du fichier téléchargé
-      link.click();
+      link.download = "mes_donnees.docx";
     });
   };
 

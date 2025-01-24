@@ -61,20 +61,6 @@ const Header = ({ isHome = false }) => {
           </div>
         </div>
 
-        {/* Barre de recherche */}
-        <form onSubmit={handleSearch} className={classes.searchcontainer}>
-          <input
-            type="search"
-            placeholder="Rechercher une recette..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className={classes["search-input"]}
-          />
-          <button type="submit" className={classes.searchbutton}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </button>
-        </form>
-
         <div className={heroClass}>
           <h1>Miam'Zelle</h1>
           <h2>Recette</h2>
@@ -82,6 +68,20 @@ const Header = ({ isHome = false }) => {
             Cuisiner malin, savourer comme un chef, sans passer des heures en
             cuisine !
           </h3>
+
+          {/* Barre de recherche */}
+          <form onSubmit={handleSearch} className={classes.searchcontainer}>
+            <input
+              type="search"
+              placeholder="Rechercher une recette..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className={classes["search-input"]}
+            />
+            <button type="submit" className={classes.searchbutton}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+          </form>
         </div>
 
         <div className={classes.navbar}>

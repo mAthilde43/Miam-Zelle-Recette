@@ -16,12 +16,12 @@ const Footer = ({ footer }) => {
       </div>
 
       <Wrapper>
-        <div className={classes["footer-infos"]}>
-          <div className={classes["footer-logo"]}>
-            <img className={classes.logo} src={logo} alt="Logo" />
-            {/* logo Facebbok/insta/pinterest */}
-          </div>
+        <div className={classes["footer-logo"]}>
+          <img className={classes.logo} src={logo} alt="Logo" />
+          {/* logo Facebook/Insta/Pinterest */}
+        </div>
 
+        <div className={classes["footer-infos"]}>
           <div className={classes.pages}>
             <p>Pages</p>
             <ul>

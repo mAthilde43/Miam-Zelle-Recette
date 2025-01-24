@@ -1,5 +1,10 @@
-.wrapper{
-    max-width: 1080px;
-    width: 100%;
+.wrapper {
+  max-width: 1080px;
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    all: unset;
+  }
+}
