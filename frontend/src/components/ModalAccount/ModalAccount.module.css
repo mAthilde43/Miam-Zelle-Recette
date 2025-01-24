@@ -13,11 +13,10 @@
 
 .modalContent {
   background-color: #fff;
-
   padding: 20px;
   border-radius: 25px;
   text-align: center;
-  width: 400px;
+  width: clamp(320px, 80vw, 400px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   color: #fff;
 }
