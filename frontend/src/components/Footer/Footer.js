@@ -89,13 +89,11 @@ const Footer = ({ footer }) => {
             </ul>
           </div>
 
-          <div className={classes.lien}>
+          <div className={classes.connexion}>
             <p>Liens utiles</p>
             <ul>
               <li>
-                <NavLink to="/mentions" className={linkActive}>
-                  Mentions légales
-                </NavLink>
+                <NavLink to="/mentions">Mentions légales</NavLink>
               </li>
             </ul>
           </div>

@@ -9,13 +9,14 @@ import Desserts from "./pages/Desserts";
 import Boissons from "./pages/Boissons";
 import Seconnecter from "./pages/Seconnecter/Seconnecter";
 import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 import Recipes from "./pages/Recipes/Recipes";
 import Favoris from "./pages/Favoris/Favoris";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import Mentions from "./pages/RGPD/Mentions";
 import PasswordForgotten from "./pages/PasswordForgotten/PasswordForgotten";
 import SearchResults from "./pages/SearchResults/SearchResults";
+import Apropos from "./pages/Apropos/Apropos";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         ></Route>
         <Route path="/mentions" element={<Mentions />}></Route>
         <Route path="/search" element={<SearchResults />} />
+        <Route path="/apropos" element={<Apropos />} />
 
         <Route path="/ptitdej" element={<Ptitdej />}></Route>
         <Route path="/aperitifs" element={<Aperitifs />}></Route>

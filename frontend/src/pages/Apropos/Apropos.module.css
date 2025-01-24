@@ -1,0 +1,4 @@
+.apropos p {
+  font-size: 20px;
+  width: clamp(350px, 90vw, 650px);
+}
