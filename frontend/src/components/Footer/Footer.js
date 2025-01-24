@@ -95,6 +95,9 @@ const Footer = ({ footer }) => {
               <li>
                 <NavLink to="/mentions">Mentions légales</NavLink>
               </li>
+              <li>
+                <NavLink to="/apropos">À propos</NavLink>
+              </li>
             </ul>
           </div>
         </div>
