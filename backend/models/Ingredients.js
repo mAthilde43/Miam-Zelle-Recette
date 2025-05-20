@@ -6,7 +6,7 @@ const Ingredients = sequelize.define("Ingredients", {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
-    allowNull: false, //ce champ ne peut pas etre null, il doit obligatoirement contenir qqch
+    allowNull: false,
   },
   name: {
     type: DataTypes.STRING,

@@ -1,19 +1,28 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../db"); // Connexion à ta BDD
+const Tips = require("../models/Tips"); // importer le modèle Tips
 
-router.get("/", (req, res) => {
-  const sql = "SELECT * FROM tips";
-  db.query(sql, (err, result) => {
-    if (err) return res.status(500).json({ error: err.message });
+router.get("/", async (req, res) => {
+  try {
+    const tips = await Tips.findAll();
 
-    const tips = result.map((tip) => ({
-      ...tip,
-      description: JSON.parse(tip.description), // Si description est un JSON string
-    }));
+    const parsedTips = tips.map((tip) => {
+      let descriptionParsed;
+      try {
+        descriptionParsed = JSON.parse(tip.description);
+      } catch {
+        descriptionParsed = tip.description;
+      }
+      return {
+        ...tip.toJSON(), // convertir instance Sequelize en objet JS
+        description: descriptionParsed,
+      };
+    });
 
-    res.json(tips);
-  });
+    res.json(parsedTips);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 module.exports = router;

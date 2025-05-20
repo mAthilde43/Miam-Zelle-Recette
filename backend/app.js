@@ -6,6 +6,7 @@ const recipeRouter = require("./routes/recipe.route");
 require("./models");
 const cors = require("cors");
 const tipsRoute = require("./routes/tips.route");
+const favoritesRoutes = require("./routes/favorites.route");
 
 //créer l'app
 const app = express();
@@ -26,7 +27,8 @@ app.use("/uploads", express.static("uploads"));
 //avec use on prefixe la route et uriliser le routeur
 app.use("/auth", userRouter);
 app.use("/recipe", recipeRouter);
-app.use("/", tipsRoute);
+app.use("/tips", tipsRoute);
+app.use("/favorites", favoritesRoutes);
 app.use("/uploads", express.static("uploads"));
 
 //definir le PORT pour le lancer

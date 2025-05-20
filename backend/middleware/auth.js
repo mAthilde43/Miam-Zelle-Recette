@@ -1,30 +1,37 @@
-//importer JWT
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-//fct qui extrait le token, le verifie
 const auth = (req, res, next) => {
   try {
-    const token = req.headers.authorization.split(" ")[1];
-
-    //verifier que ce token recu a bien été créer avec la meme clé secret JWT_SECRET
-    const payload = jwt.verify(token, process.env.JWT_SECRET);
-
-    //si payload est null = erreur
-    if (!payload) {
-      throw {
-        status: 401,
-        message: "Unauthorized",
-      };
+    if (!req.headers.authorization) {
+      console.log("Authorization header missing");
+      return res.status(401).json({ message: "Token manquant" });
     }
 
-    //créer une nouvelle propriété à l'object req
-    req.user = payload;
+    const authHeader = req.headers.authorization;
+    console.log("Authorization header:", authHeader);
 
-    //appeler la method NEXT
+    const tokenParts = authHeader.split(" ");
+    if (tokenParts.length !== 2 || tokenParts[0] !== "Bearer") {
+      console.log("Format token invalide");
+      return res.status(401).json({ message: "Format du token invalide" });
+    }
+
+    const token = tokenParts[1];
+
+    const payload = jwt.verify(token, process.env.JWT_SECRET);
+    if (!payload) {
+      console.log("Token invalide");
+      return res.status(401).json({ message: "Token invalide" });
+    }
+
+    req.user = payload;
+    console.log("User payload:", payload);
+
     next();
   } catch (error) {
-    res.status(401).json(error);
+    console.log("Erreur auth middleware:", error.message);
+    return res.status(401).json({ message: "Token invalide ou expiré" });
   }
 };
 

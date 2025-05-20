@@ -2,73 +2,17 @@
 
 ## 1. Introduction
 
-- Présenter brièvement l’application (React + MongoDB)
-- Expliquer les objectifs du guide
-- Lister les prérequis pour suivre ce guide (matériel, logiciels, configuration minimale du serveur)
-
-## 2. Préparation du Serveur
-
-- Étapes pour installer les outils nécessaires :
-  - Node.js (et npm)
-  - MongoDB
-  - Serveur web (ex : NGINX)
-- Configuration réseau (ouverture des ports nécessaires)
-- Paramètres de sécurité de base :
-  - Mise à jour du système
-  - Configuration du pare-feu (ex : UFW ou iptables)
-
-## 3. Configuration de la Base de Données PostreSQL
-
-- Installation et initialisation de MongoDB
-- Création de l’utilisateur et de la base de données
-- Configuration des permissions pour l’application
-
-## 4. Déploiement de l’Application React
-
-- Compilation de l’application pour la production (build)
-- Transfert des fichiers vers le serveur (ex : SCP, rsync)
-- Configuration d’un serveur web (NGINX) pour servir les fichiers statiques
-
-## 5. Backend et API (si nécessaire)
-
-- Explication de la connexion entre l’application React et MongoDB
-- Configuration des variables d’environnement (fichiers .env)
-- Mise en place et test de l’API (ex : Express.js). Si concerné.
-
-## 6. Mise en Production
-
-- Déploiement d’un gestionnaire de processus (ex : PM2 pour Node.js)
-- Configuration du reverse proxy (ex : NGINX)
-- Certificat SSL (via Let’s Encrypt) pour sécuriser l’application (Facultatif).
-- Test de l’accès public à l’application
-
-## 7. Sécurisation de l’Environnement
-
-- Protection des données sensibles (gestion des fichiers .env)
-- Bonnes pratiques de sécurité pour MongoDB (authentification, restrictions d’accès)
-- Configuration HTTPS
-
-## 8. Résolution des Problèmes
-
-- Liste des problèmes courants lors du déploiement (erreurs de connexion, dépendances manquantes, etc)
-- Solutions et ressources
-
-## 9. Conclusion
-
-- Synthèse des étapes réalisées.
-- Conseils pour le maintien en condition opérationnelle de l’application.
-
-# --------------
-
-## 1. Introduction
-
 ### Présentation de l'application
 
-L'application "Miam'Zelle Recette" est une plateforme web permettant aux utilisateurs de consulter et d'ajouter des recettes culinaires.
+L'application "Miam'Zelle Recette" est une plateforme web destinée aux passionnés de cuisine.
+
+Elle permet aux utilisateurs de consulter, d'ajouter des recettes culinaires et d'ajouter en favoris des recettes.
+
+Conçues en React.js pour le front-end, avec un backend en Node.js / Express et une base de données MySQL.
 
 ### Objectif du guide
 
-Ce guide a pour objectif de mettre en ligne une application sur un serveur NGINX.
+Ce guide a pour objectif d'accompagner le déploiement complet de l'application Miam'Zelle Recette sur un serveur distant. Il couvre toutes les étapes nécessaires : de l’installation des dépendances à la configuration du serveur web (NGINX), en passant par la base de données, la sécurité, le backend API, le frontend et les tests finaux. À la fin de ce guide, vous aurez une application opérationnelle et sécurisée, accessible en ligne.
 
 ### Prérequis
 
@@ -77,7 +21,7 @@ Pour suivre ce guide, vous aurez besoin de :
 - Matériel : Un serveur ou une machine virtuelle
 - Logiciels :
   - Node.js et npm
-  - MongoDB
+  - MySQL Workbench
   - Un serveur web (NGINX)
   - Git pour le suivi de version
 - Configuration minimale :
@@ -97,9 +41,11 @@ Dans un terminal, exécuter la commande :
 sudo apt install node.js npm
 ```
 
+Vérifiez l'installation
+
 ```bash
 npm init
-npm install <modul> ???????
+npm install <nom_du_module>
 ```
 
 #### Git :
@@ -108,7 +54,8 @@ npm install <modul> ???????
    Ouvrir un terminal et exécuter cette commande :
 
 ```bash
-apt install git
+sudo apt install git
+git --version
 ```
 
 2. Générer une clé SSH
@@ -136,42 +83,21 @@ cat ~/.ssh/id_rsa.pub
 
 ```bash
 git clone <url-du-projet>
+cd votreprojet
 ```
 
-#### MongoDB :
+#### MySQL Workbench :
 
 1. Télécharger les outils nécessaires
 
-- Rendez-vous sur le site : "https://www.mongodb.com/try/download/atlascli" et télecharger les différents outils.
+- Rendez-vous sur le site : "https://dev.mysql.com/downloads/workbench/" et télecharger les différents outils.
 
-2. Lancer le serveur MongoDB (pour MacOs)
+2.  Lancer MySQL Workbench (pour MacOs)
 
-- Ouvrez un terminal et exécutez les commandes :
-
-```bash
-cd mongodeb-macos-aarch64-8.0.3
-cd bin
-./mongod -- dbpath/chemin/data
-```
-
-Cette commande lance le démon de MongoDB, qui permet à la base de données de fonctionner.
-
-3. Accéder au Shell MongoDB
-
-- Ouvrez un 2ème terminal et exécutez les commandes suivantes :
-
-```bash
-cd mongodeb-macos-aarch64-8.0.3
-cd bin
-./mongosh
-```
-
-Vous pouvez exécuter toutes les commandes liées à la base de données depuis ce terminal.
-
-4. Lancer "MongoDB Compass" pour une interface visuelle.
-
-- Ouvrez MongoDB Compass
-- Cliquer sur "+" puis "Save and connect".
+- Ouvrez MySQL Workbench
+- Connectez-vous à votre serveur MySQL local ou distant
+- Utilisez l'interface graphique pour exécuter des scripts SQL, gérer les utilisateurs, exporter des bases, etc.
+- Préparez le script de création de base de données et des tables
 
 #### Serveur web (NGINX) :
 
@@ -271,6 +197,10 @@ server {
 - Surveiller les logs : Si vous rencontrez des problèmes, consultez les fichiers de logs spécifiés dans la configuration pour obtenir des informations détaillées sur les erreurs éventuelles.
 
 ### Configuration du réseau
+
+Pour que votre application soit accessible publiquement, vous devez configurer correctement le réseau de votre serveur.
+
+Assurez-vous que les ports 80 (HTTP) et 443 (HTTPS) sont ouverts sur votre serveur :
 
 - Ouverture des ports nécesaire
   COMMANDE

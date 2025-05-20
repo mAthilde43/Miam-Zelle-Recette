@@ -25,17 +25,6 @@ const Seconnecter = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  //recupere user depuis localStorage
-  // const getStoredUsers = () => {
-  //   const users = localStorage.getItem("users");
-  //   return users ? JSON.parse(users) : []; // retour vide si aucun user n'est stocke
-  // };
-
-  //save user dans localStorage
-  // const saveUsersToStorage = (users) => {
-  //   localStorage.setItem("users", JSON.stringify(users));
-  // };
-
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
 
@@ -51,30 +40,13 @@ const Seconnecter = () => {
   const submitLoginHandler = async (e) => {
     e.preventDefault();
     try {
-      signIn(usernameLogin, passwordLogin);
+      await signIn(usernameLogin, passwordLogin);
       navigate("/home");
       closeModal();
     } catch (error) {
       alert(error.message || "Une erreur est survenue");
     }
   };
-
-  //   const users = getStoredUsers();
-
-  // Vérifier si l'utilisateur existe
-  //   const user = users.find(
-  //     (u) => u.username === usernameLogin && u.password === passwordLogin
-  //   );
-
-  //   if (user) {
-  //     localStorage.setItem("loggedInUser", user.username); //stoke user connecté avec bonne clé
-  //     navigate("/home"); //redirige page home
-  //   } else {
-  //     setErrorMessage(
-  //       "Compte non trouvé. Veuillez vérifier vos informations ou créer un compte."
-  //     );
-  //   }
-  // };
 
   const submitAccountHandler = async (e) => {
     e.preventDefault();
@@ -109,41 +81,6 @@ const Seconnecter = () => {
       alert(error.message);
     }
   };
-  //   const users = getStoredUsers();
-
-  //   //verifie nom user si déjà utilisé
-  //   const existingUser = users.find((u) => u.username === usernameAccount);
-  //   if (existingUser) {
-  //     alert(
-  //       "Ce nom d'utilisateur est déjà pris. Veuillez en choisir un autre."
-  //     );
-  //     return;
-  //   }
-
-  //   //verifie email si déjà utilisé
-  //   const existingEmail = users.find((u) => u.email === emailAccount);
-  //   if (existingEmail) {
-  //     alert(
-  //       "Cette adresse mail est déjà utiliée. Veuillez en choisir une autre."
-  //     );
-  //     return;
-  //   }
-
-  //add new user
-  // const newUser = {
-  //   name,
-  //   firstName,
-  //   email: emailAccount,
-  //   username: usernameAccount,
-  //   password: passwordAccount,
-  //   subscribeToEmails,
-  // };
-
-  //   users.push(newUser);
-  //   saveUsersToStorage(users); //save dans localStorage
-  //   alert("Compte créé avec succès !");
-  //   closeModal();
-  // };
 
   return (
     <>

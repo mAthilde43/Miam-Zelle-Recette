@@ -5,6 +5,8 @@ const Subcategory = require("./Subcategory");
 const Ingredients = require("./Ingredients");
 const Step = require("./Step");
 const Difficulty = require("./Difficulty");
+const Tips = require("./Tips");
+const Favorites = require("./Favorites");
 
 User.hasMany(Recipes);
 Recipes.belongsTo(User);
@@ -16,8 +18,22 @@ Recipes.hasMany(Ingredients);
 Recipes.hasMany(Step);
 Recipes.hasMany(Difficulty);
 
-User.belongsToMany(Recipes, { through: "Favorites" });
-Recipes.belongsToMany(User, { through: "Favorites" });
+User.belongsToMany(Recipes, {
+  through: Favorites,
+  foreignKey: "UserId",
+  as: "favorites",
+});
+Recipes.belongsToMany(User, {
+  through: Favorites,
+  foreignKey: "RecipeId",
+  as: "favoritedBy",
+});
+
+Favorites.belongsTo(User, { foreignKey: "UserId" });
+Favorites.belongsTo(Recipes, { foreignKey: "RecipeId", as: "recipe" });
+
+User.hasMany(Favorites, { foreignKey: "UserId" });
+Recipes.hasMany(Favorites, { foreignKey: "RecipeId" });
 
 module.exports = {
   User,
@@ -27,4 +43,6 @@ module.exports = {
   Ingredients,
   Step,
   Difficulty,
+  Tips,
+  Favorites,
 };

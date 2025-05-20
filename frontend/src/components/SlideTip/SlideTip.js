@@ -22,26 +22,53 @@ const SlideTip = () => {
 
   useEffect(() => {
     const fetchTips = async () => {
-      const response = await fetch("http://localhost:5001/tips");
-      const data = await response.json();
-      setWineTips(data.filter((tip) => tip.title)); // Général
-      setGmTips(data.filter((tip) => tip.titleGM)); // Grand-mère
-      setBreadTips(data.filter((tip) => tip.titleBread)); // Pain
-      setBiereTips(data.filter((tip) => tip.titleBiere)); // Biere
+      try {
+        const response = await fetch("http://localhost:4008/tips");
+        const contentType = response.headers.get("content-type");
+        if (!response.ok) throw new Error(`Erreur HTTP: ${response.status}`);
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new TypeError("La réponse n'est pas en JSON");
+        }
+
+        const data = await response.json();
+
+        // Filtrage selon category_id
+        setWineTips(data.filter((tip) => tip.category_id === 1));
+        setGmTips(data.filter((tip) => tip.category_id === 2));
+        setBreadTips(data.filter((tip) => tip.category_id === 3));
+        setBiereTips(data.filter((tip) => tip.category_id === 4));
+      } catch (error) {
+        console.error("Erreur dans fetchTips:", error);
+      }
     };
 
     fetchTips();
   }, []);
 
-  const updateStateModalTip = (bool, tip, wine, bread, biere) => {
+  const updateStateModalTip = (
+    bool,
+    tip,
+    isWine = false,
+    isBread = false,
+    isBiere = false
+  ) => {
     setIsModalOpen(bool);
     setIsTipShow(bool);
     if (bool) {
       setActiveTip(tip);
-      setIsWine(wine);
-      setIsWine(bread);
-      setIsWine(biere);
+
+      // Logique pour identifier la catégorie active
+      if (isWine) {
+        setIsWine(true);
+      } else if (isBread || isBiere) {
+        setIsWine(false); // Pas du vin
+      }
     }
+  };
+
+  const getTipTitle = (tip) => {
+    if (!tip) return "";
+    return typeof tip.title === "string" ? tip.title : tip.title?.text || "";
   };
 
   useEffect(() => {
@@ -101,13 +128,15 @@ const SlideTip = () => {
         <div
           className={classes.carousel}
           style={{
-            backgroundImage: `url(${wineTips[currentWineIndex]?.image || ""})`,
+            backgroundImage: `url(${
+              wineTips[currentWineIndex]?.image_url || ""
+            })`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className={classes.slide}>
-            <h3>{wineTips[currentWineIndex]?.title}</h3>
+            <h3>{getTipTitle(wineTips[currentWineIndex])}</h3>
           </div>
           <div className={classes.navigation}>
             <button
@@ -146,13 +175,13 @@ const SlideTip = () => {
         <div
           className={classes.carousel}
           style={{
-            backgroundImage: `url(${gmTips[currentGmIndex]?.imageGM || ""})`,
+            backgroundImage: `url(${gmTips[currentGmIndex]?.image_url || ""})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className={classes.slide}>
-            <h3>{gmTips[currentGmIndex]?.titleGM}</h3>
+            <h3>{gmTips[currentGmIndex]?.title}</h3>
           </div>
           <div className={classes.navigation}>
             <button
@@ -191,14 +220,14 @@ const SlideTip = () => {
           className={classes.carousel}
           style={{
             backgroundImage: `url(${
-              breadTips[currentBreadIndex]?.imageBread || ""
+              breadTips[currentBreadIndex]?.image_url || ""
             })`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className={classes.slide}>
-            <h3>{breadTips[currentBreadIndex]?.titleBread}</h3>
+            <h3>{breadTips[currentBreadIndex]?.title}</h3>
           </div>
           <div className={classes.navigation}>
             <button
@@ -226,7 +255,12 @@ const SlideTip = () => {
           <button
             className={classes.moreButton}
             onClick={() =>
-              updateStateModalTip(true, breadTips[currentBreadIndex], false)
+              updateStateModalTip(
+                true,
+                breadTips[currentBreadIndex],
+                false,
+                true
+              )
             }
           >
             Voir plus
@@ -238,14 +272,14 @@ const SlideTip = () => {
           className={classes.carousel}
           style={{
             backgroundImage: `url(${
-              biereTips[currentBiereIndex]?.imageBiere || ""
+              biereTips[currentBiereIndex]?.image_url || ""
             })`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className={classes.slide}>
-            <h3>{biereTips[currentBiereIndex]?.titleBiere}</h3>
+            <h3>{biereTips[currentBiereIndex]?.title}</h3>
           </div>
           <div className={classes.navigation}>
             <button
@@ -273,7 +307,13 @@ const SlideTip = () => {
           <button
             className={classes.moreButton}
             onClick={() =>
-              updateStateModalTip(true, biereTips[currentBiereIndex], false)
+              updateStateModalTip(
+                true,
+                biereTips[currentBiereIndex],
+                false,
+                false,
+                true
+              )
             }
           >
             Voir plus
